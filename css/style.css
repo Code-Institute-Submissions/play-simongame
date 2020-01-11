@@ -3,7 +3,8 @@
      margin:0;
  }
 
-body{  background-image:url ("/images/vintage-concrete.png" alt = "game">);
+body{  
+    background:url ("assets/images/vintage-concrete.png" alt = "game">);
 background-repeat: no repeat;
 background-size :cover;
 }
