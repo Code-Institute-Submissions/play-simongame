@@ -2,9 +2,9 @@
  header{
      margin:0;
  }
-
+/* Background pattern from Toptal Subtle Patterns */
 body{  
-    background:url ("assets/images/vintage-concrete.png" alt = "game">);
+    background:url("../assets/images/vintage-concrete.png");
 background-repeat: no repeat;
 background-size :cover;
 }
