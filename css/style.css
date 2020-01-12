@@ -8,3 +8,40 @@ body{
 background-repeat: no repeat;
 background-size :cover;
 }
+.container{
+    margin: 0 auto;
+    text-align: center;
+}
+h1{ 
+    font-size: 100px;
+}
+
+.gamePad{
+    margin:0 auto;
+    margin top: 20px;
+    padding:50px;
+    border: 10px  solid  black;
+    width:300px;
+    height:300px;
+    border radius:300px;
+    box-shadow: -10px 10px 7px 0px ;
+}
+
+.gamePad {
+  margin: 0;
+  float: left;
+  position: relative;
+  width: 290px;
+  height: 290px;
+  z-index: 8;
+  border: 5px solid black;
+
+  .gameButton {
+    background-color:#0a0;
+    -moz-border-radius: 300px 0 0 0;
+    border-radius: 300px 0 0 0;    
+}
+
+.blue-active {
+  background-color: darkgreen !important;
+}
