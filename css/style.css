@@ -37,6 +37,18 @@ h1{
     
 }
 
+.game-console{
+ position: absolute;
+ border: 15px solid black;
+  height: 250px;
+  width: 250px;
+  border-radius: 145px;
+  background-color: white;
+  clear: both;
+    z-index: 10;
+  margin-top: 195px;
+  margin-left: 195px;
+}
 .button{
 width: 300px;
   height: 300px;
@@ -98,7 +110,16 @@ width: 300px;
 
 }
  
-
+/* .circle {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  width: 250px;
+  height: 250px;
+  background:white;
+  border-radius: 250px;
+  z-index: 6;
+} */
 
 
 
