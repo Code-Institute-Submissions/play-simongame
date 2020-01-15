@@ -52,6 +52,7 @@ h1{
 .button{
 width: 300px;
   height: 300px;
+  cursor: pointer;
   float: left;
   z-index: 1;
   margin: 10px;
