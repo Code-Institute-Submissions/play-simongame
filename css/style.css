@@ -17,7 +17,6 @@ background-size :cover;
 
 
 
-
 h1{ 
     font-size: 100px;
 }
@@ -110,6 +109,76 @@ width: 300px;
   background-color: orange!important;
 
 }
+.title {
+  font-size: 30px;
+  margin-top: auto;
+  margin-bottom:  30px;
+  font-weight: 900;
+}
+
+.inline {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.display {  
+  border: solid 2px black;
+  border-radius: 30px;
+  color:hotpink;
+  width:50px;
+  height:45px;
+  font-size: 40px;
+  background-color: #522842;
+}
+
+.start, .strict {
+  text-align: center;
+  margin: 0 auto;
+  margin-left: 20px;
+  border: solid 4px black;
+  width:55px;
+  height: 45px;
+  border-radius:30px;
+  color: black;
+  line-height: 55px;
+}
+
+.start {  
+  background-color: rgb(223, 57, 57);
+}
+
+ .strict {
+  background-color: rgb(206, 206, 41);
+}
+
+.switch-container {
+  margin-top: 10px;
+}
+
+.outter-switch {
+  border: solid 2px black;
+  width:30px;
+  height: 25px;
+  background-color: black;  
+}
+
+.outter-active {
+  background-color: black !important;
+}
+
+.inner-switch {
+  background-color: whitesmoke;
+  width: 30px;
+  height: 25px;
+  position: relative !important;
+}
+
+.inner-inactive {
+  background-color: black !important;
+}
+
+
+
  
 /* .circle {
   position: absolute;
