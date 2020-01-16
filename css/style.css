@@ -151,13 +151,13 @@ width: 300px;
   background-color: rgb(206, 206, 41);
 }
 
-.switch-container {
+.switch-box {
   margin-top: 10px;
 }
 
 .outter-switch {
   border: solid 2px black;
-  width:30px;
+  width:60px;
   height: 25px;
   background-color: black;  
 }
