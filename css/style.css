@@ -121,17 +121,17 @@ width: 300px;
   vertical-align: middle;
 }
 
-.display {  
+.score {  
   border: solid 2px black;
   border-radius: 30px;
   color:hotpink;
   width:50px;
-  height:45px;
+  height:50px;
   font-size: 40px;
   background-color: #522842;
 }
 
-.start, .strict {
+.start {
   text-align: center;
   margin: 0 auto;
   margin-left: 20px;
@@ -147,8 +147,8 @@ width: 300px;
   background-color: rgb(223, 57, 57);
 }
 
- .strict {
-  background-color: rgb(206, 206, 41);
+ .level {
+  background-color: rgb(206, 168, 41);
 }
 
 .switch-box {
