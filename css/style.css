@@ -32,9 +32,9 @@ h1{
     border-radius:640px;
     background-clip: border-box;
     background-color: black;
-     filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70); 
+     /* filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70); 
    -moz-opacity: 0.7; 
-  opacity:  0.7;
+  opacity:  0.7; */
     
 }
 
@@ -71,7 +71,7 @@ width: 300px;
 }
 
 .blue-active {
-  background-color: rgb(0, 2, 100) !important;
+  background-color:  blue rgb(17, 21, 240) !important;
 }
 
 .yellow {

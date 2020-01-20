@@ -16,9 +16,7 @@
 	active= false, //whether a turn is active or not
 	handler= false, // whether the click and sound handlers are active
 	shape= shape, // cached string for the button class
-
- var boardSound =[
-
+var boardSound [
     "https://freesound.org/data/previews/337/337112_5872390-lq.mp3"	, //blue
     "https://freesound.org/data/previews/128/128229_2238068-lq.mp3",	//green
 	
@@ -27,4 +25,23 @@
         "https://freesound.org/data/previews/128/128349_2238068-lq.mp3", //yellow
         "https://freesound.org/data/previews/151/151605_57789-lq.mp3",//winner
 	
-];
+};
+
+ //start board sequence 
+ $(document). ready(function(){
+$(".score").text("");
+
+
+ })
+$("start").click(function(){
+strict =false;
+error =false;
+level=0;
+level++;
+playSequence=[];
+UserSequence=[];
+strict=true;
+playSequence();
+
+
+})
