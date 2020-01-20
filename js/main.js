@@ -13,4 +13,16 @@ var game={ //game object
 	active: false, //whether a turn is active or not
 	handler: false, // whether the click and sound handlers are active
 	shape: shape, // cached string for the button class
- 
+}
+var boardSound =[
+
+			
+    "https://freesound.org/data/previews/337/337112_5872390-lq.mp3"	 //blue
+    "https://freesound.org/data/previews/128/128229_2238068-lq.mp3"	//green
+	
+        "https://freesound.org/data/previews/151/151022_1838182-lq.mp3" //oranges
+        
+        "https://freesound.org/data/previews/128/128349_2238068-lq.mp3" //yellow
+        "https://freesound.org/data/previews/151/151605_57789-lq.mp3"//winner
+	
+];
