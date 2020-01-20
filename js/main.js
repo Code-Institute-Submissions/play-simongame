@@ -12,5 +12,21 @@ var game={ //game object
     score: 0, //current score
 	active: false, //whether a turn is active or not
 	handler: false, // whether the click and sound handlers are active
-	shape: shape, // cached string for the button class
- 
+    shape: shape, // cached string for the button class
+    flash :'function', // to make the button flash
+}
+
+//start game sequence 
+$(document).ready(function() {
+    $("start").click(function() {
+        level++;
+        startSequence();
+    })
+})
+
+//playSequence
+functon startSequence() {
+    $(".display").text(level);
+}
+
+
