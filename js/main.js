@@ -12,6 +12,5 @@ var game={ //game object
     score: 0, //current score
 	active: false, //whether a turn is active or not
 	handler: false, // whether the click and sound handlers are active
-	shape: '.shape', // cached string for the button class
-    let win ; //winner sound display 
-    let flash; //this will flash the button wich trigger the sound 
+	shape: shape, // cached string for the button class
+ 
