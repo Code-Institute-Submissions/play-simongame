@@ -102,9 +102,7 @@ width: 300px;
 .orange {
   background-color: orange;
   border-bottom-right-radius: 300px;
-  /* -moz-border-radius: 0 0 300px 0;
-  border-radius: 0 0 300px 0; */
-  float: left;
+    float: left;
 }
 
 .orange-active {
