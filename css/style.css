@@ -71,7 +71,7 @@ width: 300px;
 }
 
 .blue-active {
-  background-color:  blue rgb(17, 21, 240) !important;
+  background-color:  red !important;
 }
 
 .yellow {
@@ -85,7 +85,7 @@ width: 300px;
 
 
 .yellow-active {
-  background-color: #e6d47e !important;
+  background-color: rgb(238, 130, 238) !important;
 }
 
 .green {
@@ -96,7 +96,7 @@ width: 300px;
 }
 
 .green-active {
-  background-color: green !important;
+  background-color:#ff9999	rgb(255, 153, 153)  !important;
 }
 
 .orange {
@@ -106,7 +106,7 @@ width: 300px;
 }
 
 .orange-active {
-  background-color: orange!important;
+  background-color: rgb(75, 0, 130)!important;
 
 }
 .title {
@@ -147,7 +147,7 @@ width: 300px;
   background-color: rgb(223, 57, 57);
 }
 
- .level {
+ .mode {
   background-color: rgb(206, 168, 41);
 }
 
