@@ -4,11 +4,11 @@ const game = {
     numLevels: 20
 };
 const boardSound = [
-    "https://freesound.org/data/previews/337/337112_5872390-lq.mp3",    // blue button
-    "https://freesound.org/data/previews/128/128229_2238068-lq.mp3",	// green button
-    "https://freesound.org/data/previews/151/151022_1838182-lq.mp3",   // orange button
-    "https://freesound.org/data/previews/128/128349_2238068-lq.mp3",    // yellow button
-    "https://freesound.org/data/previews/151/151605_57789-lq.mp3"      // winner button
+    "https://freesound.org/data/previews/151/151022_1838182-lq.mp3",    // blue button
+    "https://freesound.org/data/previews/156/156859_2538033-lq.mp3",	// yellow button
+    "https://freesound.org/data/previews/171/171495_2437358-lq.mp3",   // green button
+    "https://freesound.org/data/previews/191/191591_2437358-lq.mp33",    // orange button
+    "https://freesound.org/data/previews/151/151605_57789-lq.mp3"  ,    // winner button
 ];
 const blue = document.querySelector('#shapeB');
 const green = document.querySelector('#shapeY');
