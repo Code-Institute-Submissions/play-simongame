@@ -46,7 +46,7 @@ h1{
   border-radius: 145px;
   background-color: gray;
   clear: both;
-    z-index: 10;
+  z-index: 10;
   margin-top: 195px;
   margin-left: 195px;
 }
@@ -65,13 +65,13 @@ width: 300px;
    .blue {
 
     background-color:rgb(26, 0, 170);
-    border-top-left-radius: blue;
+    border-top-left-radius: 300;
     -moz-border-radius: 300px 0 0 0;
     border-radius: 300px 0 0 0;    
 }
 
 .blue-active {
-  background-color:  red !important;
+  background-color:  lightblue !important;
 }
 
 .yellow {
@@ -85,7 +85,7 @@ width: 300px;
 
 
 .yellow-active {
-  background-color: rgb(238, 130, 238) !important;
+  background-color: lightgoldenrodyellow !important;
 }
 
 .green {
@@ -96,7 +96,7 @@ width: 300px;
 }
 
 .green-active {
-  background-color:#ff9999	rgb(255, 153, 153)  !important;
+  background-color:	lightgreen  !important;
 }
 
 .orange {
@@ -106,7 +106,7 @@ width: 300px;
 }
 
 .orange-active {
-  background-color: rgb(75, 0, 130)!important;
+  background-color: lightsalmon!important;
 
 }
 .title {
@@ -121,7 +121,7 @@ width: 300px;
   vertical-align: middle;
 }
 
-.score {  
+.counter {  
   border: solid 2px black;
   border-radius: 30px;
   color:hotpink;
@@ -147,7 +147,7 @@ width: 300px;
   background-color: rgb(223, 57, 57);
 }
 
- .mode {
+ .strict{
   background-color: rgb(206, 168, 41);
 }
 
