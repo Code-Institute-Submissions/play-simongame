@@ -2,6 +2,7 @@ const game = {
     userSequence: [], //array containing the generated/random button
     playSequence: [], //array containing the users selected button
     numLevels: 20
+     
 };
 const boardSound = [
     "https://freesound.org/data/previews/151/151022_1838182-lq.mp3",    // blue button
@@ -16,8 +17,8 @@ const orange = document.querySelector('#shapeG');
 const yellow = document.querySelector('#shapeO');
 const start = document.querySelector('.start');
 start.addEventListener('click', (event) => {
-    $(".count").text("01");
-    let number = generateRandomNumber()
+      $(".counter").text("01");
+        let number = generateRandomNumber()
     game.playSequence.push(number)
     play(game.playSequence)
 });
