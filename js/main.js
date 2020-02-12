@@ -1,6 +1,6 @@
 const game = {
-    userSequence: [], //array containing the generated/random button
-    playSequence: [], //array containing the users selected button
+    playerSequence: [], //array containing the generated/random button
+    simonSequence: [], //array containing the users selected button
     numLevels: 20
      
 };
@@ -16,11 +16,17 @@ const green = document.querySelector('#shapeY');
 const orange = document.querySelector('#shapeG');
 const yellow = document.querySelector('#shapeO');
 const start = document.querySelector('.start');
+
+document.getElementById("strict").addEventListener("click", function(){
+ console.log("checked")
+});
+
+
 start.addEventListener('click', (event) => {
       $(".counter").text("01");
         let number = generateRandomNumber()
-    game.playSequence.push(number)
-    play(game.playSequence)
+    game.simonSequence.push(number)
+    play(game.simonSequence)
 });
 function generateRandomNumber(){
     return Math.floor(Math.random() * 4)
@@ -44,3 +50,19 @@ function play(sequence){
         new Audio(sound).play()
     })
 }
+function play(){
+    playerSequence =[];
+    simonSequence=[];
+    flash=0;
+    for (var i =0; i <20; i++){
+        simonSequence.push(math.floor(math.random()*4 )+1);
+    }
+    simonSequence =true;
+    intervalId = setInterval(counter,1000 ); {
+        
+    }
+}
+function playSound (id){
+    var sound = new Audio (boardSound[id]);
+               sound.play();
+    };

@@ -1,65 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-    <link rel= "stylesheet" href="css/style.css" type="text/css" />
-       <title> Simon Game</title>
-    
-</head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+            <link rel= "stylesheet" href="css/style.css" type="text/css" />
+            <title> Simon Game</title>
+ </head>    
 <body>
-
-<div class="container" >
+ <div class="container" >
 <div class="header">
 <h1>Play Simon Game </h1>
 </div>
-
-<div class= "gameboard">
-    <div id="shapeB" class=" button blue"></div>
-    <div id="shapeY" class="button yellow"></div>
-    <div id="shapeG" class="button green"></div>
-    <div id="shapeO" class="button orange"></div>  
-
+<div class= "gameBoard">
+<div id="shapeB" class=" button blue"></div>
+<div id="shapeY" class="button yellow"></div>
+<div id="shapeG" class="button green"></div>
+<div id="shapeO" class="button orange"></div>  
 
 <div class = "game-console">
-    <div class="title"><h5>SIMON GAME</h5></div>
-    <div class="counter inline">00</div>
-    <div class="start inline">START</div>
-    <div class="strict inline ">
-		<input type="radio" id="radio-one" name="switch-one" value="1" checked/>
-		<label for="radio-one">Easy</label>
-		<input type="radio" id="radio-two" name="switch-one" value="0.3" />
-		<label for="radio-two">Hard</label>
-    <!-- <input type="radio" class="toggle" name=" strict" value="1">Easy
-    <input type="radio" class="toggle" name="strict" value="0.3">Hard  -->
-    </div>
-
-   <div class="switch-box">
-    <p class="off inline">OFF</p>
-    <div class="switch outter-switch inline"><div class="inner-switch"></div></div>
-    <p class="on inline">ON</p>
-                
-    </div>
+<div class="title"><h5>SIMON GAME</h5></div>
+<div class="counter inline">00</div>
+<div class=" start inline ">START</div>
+<div class ="switch-box"> 
+<div class ="Mode inline"> STRICT
+   <input type ="checkbox" class = "toggle"  id ="strict">
+ </div>
+     
+</div>
 </div>
 </div>
 </div>
 
 
 <!-- Icons made by https://www.flaticon.com/authors/prosymbols  -->
-   
+
 
 <div class="icon"><span>Help</span>
 
 <a href= "../assets/images/game-help.pdf"  download  ><i class="fa fa-question-circle" aria-hidden="true"></i>
-<img class="call" src="  ../assets/images/faq.png" >
+<!-- <img class="call" src="  ../assets/images/faq.png" > -->
 <!-- <i class="fa fa-question-circle" aria-hidden="true"></i> -->
 </a>
 </div>
 
- <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
-  <script src="js/main.js"></script>
+<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
 

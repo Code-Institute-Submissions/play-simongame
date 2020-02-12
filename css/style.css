@@ -21,7 +21,7 @@ h1{
     font-size: 100px;
 }
 
-.gameboard{
+.gameBoard{
     margin:0 auto;
     margin-top:10px;
     padding:0px;
@@ -146,35 +146,22 @@ width: 300px;
 .start {  
   background-color: rgb(223, 57, 57);
 }
+.mode{
+text-align: center;
+margin: 0 auto;
+margin-left: 20px;
+border: solid 4px black;
+width:100px;
+height: 45px;
+border-radius:50px;
+color: black;
+line-height: 55px;
+ background-color: whitesmoke;
 
- .strict{
-  background-color: rgb(206, 168, 41);
 }
-
 .switch-box {
-  margin-top: 10px;
-}
+  margin-top: 10px; 
 
-.outter-switch {
-  border: solid 2px black;
-  width:60px;
-  height: 25px;
-  background-color: black;  
-}
-
-.outter-active {
-  background-color: black !important;
-}
-
-.inner-switch {
-  background-color: whitesmoke;
-  width: 30px;
-  height: 25px;
-  position: relative !important;
-}
-
-.inner-inactive {
-  background-color: black !important;
 }
 
 .icon{
@@ -194,16 +181,6 @@ border-radius: 25%;
 
  
  
-/* .circle {
-  position: absolute;
-  top: 200px;
-  left: 200px;
-  width: 250px;
-  height: 250px;
-  background:white;
-  border-radius: 250px;
-  z-index: 6;
-} */
 
 
 
