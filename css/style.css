@@ -135,26 +135,25 @@ width: 300px;
 #countBox {
   vertical-align: top;
   display: inline-block;
-  height: 50px;
-  width: 50.3px;
+  height: 90px;
+  width: 90px;
 }
 #countDisplay {
-  border: solid 2px black;
-  border-radius: 30px;
- background :hotpink;
-  width:50px;
-  height:50px;
-  margin: 0px 6px 0px 6px;
-    font-size: 20px;
-  line-height: 50px;
-  text-align: center;
+  border: solid 3px black;
+  border-radius: 50%;
+  height: 30px;
+  margin: 0px 10px 0px 10px;
+  background: pink;
+    font-size: 30px;
+  line-height: 30px;
+  text-align: middle;
 }
 #countText {
   height: 30%;
   margin: 4px 6px 0px 6px;
   font-size: 10px;
   color: black;
-  font-weight: bold;
+  font-weight: 900;
   text-align: center;
 }
 #displayText {
@@ -166,101 +165,99 @@ width: 300px;
 #startBox {
   vertical-align: top;
   display: inline-block;
-  height: 50px;
-  width: 50.4px;
+  height: 90px;
+  width: 90px;
 }
 #startButton {
-  border: solid 3px black;
+   border: solid 3px black;
   border-radius: 50%;
-  height: 50%;
-  margin: 0px 12.7px 0px 12.7px;
+  height: 30px;
+  margin: 0px 10px 0px 10px;
   background: red;
-  font-size: 20px;
-  line-height: 17px;
-  text-align: center;
+    font-size: 30px;
+  line-height: 30px;
+  text-align: middle;
 }
 #startText {
   height: 30%;
   margin: 4px 6px 0px 6px;
   font-size: 10px;
   color: black;
-  font-weight: bold;
+  font-weight: 900;
   text-align: center;
 }
 #strictBox {
   vertical-align: top;
   display: inline-block;
   height: 50px;
-  width: 50.4px;
+  width: 50px;
 }
 #strictButton {
-  border: solid 3px black;
+   border: solid 3px black;
   border-radius: 50%;
-  height: 50%;
-  width: 25px;
-  margin: 0px 12.5px 0px 12.5px;
-  background: yellow;
-  color: black;
-  font-size: 17px;
-  line-height: 20px;
-  text-align: center;
+  height: 30px;
+  margin: 0px 10px 0px 10px;
+  background: white;
+    font-size: 30px;
+  line-height: 30px;
+  text-align: middle;
 }
 #strictText {
   height: 30%;
   margin: 4px 6px 0px 6px;
   font-size: 10px;
   color: black;
-  font-weight: bold;
+  font-weight:900;
   text-align: center;
 }
 #onText {
-  vertical-align: top;
+  vertical-align: center;
   display: inline-block;
   height: 40px;
   line-height: 25px;
   width: 60px;
   font-size: 10px;
-  color: black;
-  font-weight: bold;
+  color: whitesmoke;
+  font-weight: 700;
   text-align: right;
 }
 #powerSwitch {
-  background: grey;
-  vertical-align: top;
+  background :paleturquoise;
+  vertical-align: middle;
   display: inline-block;
-  border: solid 1px black;
-  margin-top: 5px;
-  height: 15px;
-  width: 30px;
-}
+  border: solid 3px black;
+  width: 60px;
+  height: 25px; 
+  }
 #buttonOn {
   visibility: hidden;
-  background: blue;
+  /* background: rgb(219, 219, 219); */
   vertical-align: top;
   display: inline-block;
-  border-radius: 15%;
-  margin: 1px 2.8px 0px 1px;
+  border-radius: 30px;
+  /* margin: 1px 2.8px 0px 1px; */
+  margin-top: 100px;
   height: 10px;
-  width: 12px;
+  width: 15px;
 }
 #buttonOff {
-  background: blue;
-  vertical-align: top;
+  background: lightslategrey;
+  vertical-align: middle;
   display: inline-block;
-  border-radius: 15%;
+  border-radius: 50px;
   margin: 1px 0px 0px 0px;
-  height: 10px;
+  height: 20px;
   width: 12px;
 }
 #offText {
-  vertical-align: top;
+  vertical-align: centre;
   display: inline-block;
-  height: 40px;
+  height: 30px;
   line-height: 25px;
-  width: 60px;
+  width: 25px;
   font-size: 10px;
-  color: black;
-  font-weight: bold;
+  color: whitesmoke;
+  font-weight: 700;
 }
 /* .start {
   text-align: center;
@@ -293,7 +290,7 @@ line-height: 55px;
 /* .switch-box {
   margin-top: 10px;  */
 
-}
+
 
 .icon{
 width: 25%;
