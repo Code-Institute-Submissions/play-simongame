@@ -132,15 +132,15 @@ width: 300px;
 } */
 
 
-#countBox {
+#count {
   vertical-align: top;
   display: inline-block;
   height: 90px;
   width: 90px;
 }
-#countDisplay {
+#displayCount {
   border: solid 3px black;
-  border-radius: 50%;
+  border-radius: 8px;
   height: 30px;
   margin: 0px 10px 0px 10px;
   background: pink;
@@ -149,7 +149,7 @@ width: 300px;
   text-align: middle;
 }
 #countText {
-  height: 30%;
+  height:4.8px;
   margin: 4px 6px 0px 6px;
   font-size: 10px;
   color: black;
@@ -162,7 +162,7 @@ width: 300px;
 
 
 
-#startBox {
+#start {
   vertical-align: top;
   display: inline-block;
   height: 90px;
@@ -170,7 +170,7 @@ width: 300px;
 }
 #startButton {
    border: solid 3px black;
-  border-radius: 50%;
+  border-radius: 8px;
   height: 30px;
   margin: 0px 10px 0px 10px;
   background: red;
@@ -186,7 +186,7 @@ width: 300px;
   font-weight: 900;
   text-align: center;
 }
-#strictBox {
+#strict {
   vertical-align: top;
   display: inline-block;
   height: 50px;
@@ -194,7 +194,7 @@ width: 300px;
 }
 #strictButton {
    border: solid 3px black;
-  border-radius: 50%;
+  border-radius: 8px;
   height: 30px;
   margin: 0px 10px 0px 10px;
   background: white;
@@ -210,7 +210,7 @@ width: 300px;
   font-weight:900;
   text-align: center;
 }
-#onText {
+#textOn {
   vertical-align: center;
   display: inline-block;
   height: 40px;
@@ -249,11 +249,11 @@ width: 300px;
   height: 20px;
   width: 12px;
 }
-#offText {
+#textOff {
   vertical-align: centre;
   display: inline-block;
   height: 30px;
-  line-height: 25px;
+  line-height: 156.25%;
   width: 25px;
   font-size: 10px;
   color: whitesmoke;
