@@ -26,41 +26,42 @@ let on =false;
 
 //Start board console 
 //Power button
+document.getElementById("powerSwitch").addEventListener("click", function(){
+  this.style.backgroundColor = "blue";
 
-if (powerSwitch.addEventListener('click' , (event) =>{
-    if (power =="off")
+});
+
+//  (powerSwitch.addEventListener('click' , (event) =>{
+//     if (power =="off")
     
 
-        $("strictButton".addclass("fa fa-check"));
-        strict="on";
-    }
-    });
 
 
+        
 
 
 
 
 //To turn the button On 
-onButton.addEventListener('click' , (event)=>{
-    if (buttonOn.checked ==true){
-        strict=true;
-    }else{
-        strict =false;
+// onButton.addEventListener('click' , (event)=>{
+//     if (buttonOn.checked ==true){
+//         strict=true;
+//     }else{
+//         strict =false;
 
-    }
-});
-//start 
-strictButton.addEventListener('click' , (event)=>{
-    if (strictButton.checked =true){
-        strict=true;
-    }else{
-        strict =false;
+//     }
+// });
+// //start 
+// strictButton.addEventListener('click' , (event)=>{
+//     if (strictButton.checked =true){
+//         strict=true;
+//     }else{
+//         strict =false;
 
-        $("strictButton".addclass("fa fa-check"));
-        strict="on";
-    }
-    });
+//         $("strictButton".addclass("fa fa-check"));
+//         strict="on";
+//     }
+//     });
 
 
 
@@ -133,5 +134,4 @@ strictButton.addEventListener('click' , (event)=>{
 // // }
 // // function playSound (id){
 // //     var sound = new Audio (boardSound[id]);
-// //                sound.play();
-// // }
+            //    sound.play()
