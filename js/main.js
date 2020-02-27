@@ -21,15 +21,32 @@ let strict=false;
 let levelCount=1;
 let noise =true;
 let win;
+let power=false;
 
 let on =false;
 
 //Start board console 
 //Power button
-document.getElementById("powerSwitch").addEventListener("click", function(){
-  this.style.backgroundColor = "blue";
+$('input').lc_switch();
+// $(".switch").click (function(){
+//     gameOn= (gameOn ==false) ? true :false;
+//     console.log(gameOn);
+//     if(gameOn) {
+//         $(".switch").addClass("active");
+//         $(".display").text(00)
+//     }
+// });
 
-});
+
+
+
+// document.getElementById("powerSwitch").addEventListener("click", function(){
+// //   this.style.backgroundColor = "blue";
+// $( "#powerSwitch" ).toggleClass( activeSwitch );
+// };
+
+
+    
 
 //  (powerSwitch.addEventListener('click' , (event) =>{
 //     if (power =="off")

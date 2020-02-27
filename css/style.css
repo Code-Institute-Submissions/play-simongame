@@ -230,7 +230,7 @@ width: 300px;
   height: 25px; 
   }
 #onButton {
-  /* visibility: hidden; */
+  visibility: hidden; 
   /* background: rgb(219, 219, 219); */
   vertical-align: top;
   display: inline-block;
@@ -242,18 +242,18 @@ width: 300px;
   
 }
 
-  
 
-#offButton {
+ 
+/* #offButton {
   background: lightslategrey;
   vertical-align: middle;
   display: inline-block;
   border-radius: 50px;
   margin: 1px 0px 0px 0px;
   height: 20px;
-  width: 12px;
-}
-#textOff {
+  width: 12px; */
+/* }
+/* #textOff { */
   vertical-align: centre;
   display: inline-block;
   height: 30px;
@@ -262,7 +262,7 @@ width: 300px;
   font-size: 10px;
   color: whitesmoke;
   font-weight: 700;
-}
+} */
 /* .start {
   text-align: center;
   margin: 0 auto;
