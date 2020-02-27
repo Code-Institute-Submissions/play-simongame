@@ -12,10 +12,11 @@ const boardSound = [
     "https://freesound.org/data/previews/151/151605_57789-lq.mp3",    // winner button
 ];
 
-let green = document.getElementById("shapeG")
-let blue = document.getElementById("shapeB")
-let orange = document.getElementById("shapeO")
-let yellow = document.getElementById("shapeY")
+let green = document.getElementById("shapeG");
+let blue = document.getElementById("shapeB");
+let orange = document.getElementById("shapeO");
+let yellow = document.getElementById("#shapeY");
+let Onbutton =  document.getElementById("myonoffswitch");
 
 let strict=false;
 let levelCount=1;
@@ -27,7 +28,18 @@ let on =false;
 
 //Start board console 
 //Power button
-$('input').lc_switch();
+
+
+
+myonoffswitch.addEventlistner('click', (event) => {
+    if (myonoffswitch.checked ==true){
+        on = true;
+        displayText ="!!";
+    }else {
+        on =false;
+    })
+
+});
 // $(".switch").click (function(){
 //     gameOn= (gameOn ==false) ? true :false;
 //     console.log(gameOn);
@@ -48,9 +60,6 @@ $('input').lc_switch();
 
     
 
-//  (powerSwitch.addEventListener('click' , (event) =>{
-//     if (power =="off")
-    
 
 
 
