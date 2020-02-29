@@ -1,7 +1,11 @@
 const game = {
     playerSequence: [], //array containing the generated/random button
     simonSequence: [], //array containing the users selected button
-    numLevels: 20
+    numLevels: 20,
+    turn: 00, //
+    handler: false,
+    active: false,
+
 
 };
 const boardSound = [
@@ -25,27 +29,45 @@ let orangeSound = new Audio ("https://freesound.org/data/previews/191/191591_243
 let winSound = new Audio ( "https://freesound.org/data/previews/151/151605_57789-lq.mp3")
 
 
-
-
 let strict=false;
 let levelCount=1;
 let noise =true;
 let win;
 let power=false;
-
 let on =false;
+
+
 
 //Start board console 
 //Power button
+function init() {
+    if(this.handlers ==false){
+    this.init buttonHandler();
+    }
+this.newGame();
+
+
+	initbuttonHandler: function(){
+
+		that=this;
+
+		$('.button').on('mouseup',function(){
+
+			if(that.active===true){
+
+				var button=parseInt($(this).data('button'),10);
+					
+				that.flash($(this),1,300, pad);
+
+				that.logPlayerSequence(pad);
+
+			}
+		});
+
+    
 
 
 
-onButton.addEventlistener('click', (event) => {
-    if (onButton.checked ==true){
-        on = true;
-        displayText ="!!";
-    }else {
-    on= false;
 
 
 
@@ -137,7 +159,7 @@ onButton.addEventlistener('click', (event) => {
 // //             return [yellow, boardSound[3], "yellow-active"]
 // //     }
 // // }
-// // function play(sequence){
+// function play(sequence){
 // //     sequence.forEach(function (number) {
 // //         let [button, sound, className] = derive(number)
 // //         button.classList.add(className)
