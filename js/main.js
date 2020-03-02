@@ -40,144 +40,23 @@ let on =false;
 
 //Start board console 
 //Power button
-function init() {
-    if(this.handlers ==false){
-    this.init buttonHandler();
-    }
-this.newGame();
 
-
-	initbuttonHandler: function(){
-
-		that=this;
-
-		$('.button').on('mouseup',function(){
-
-			if(that.active===true){
-
-				var button=parseInt($(this).data('button'),10);
-					
-				that.flash($(this),1,300, pad);
-
-				that.logPlayerSequence(pad);
-
-			}
-		});
-
-    
-
-
-
-
-
-
-
-// document.getElementById("powerSwitch").addEventListener("click", function(){
-// //   this.style.backgroundColor = "blue";
-// $( "#powerSwitch" ).toggleClass( activeSwitch );
-// };
-
-
-    
-
-
-
-
+$(document).ready(function () {
+    $("#start").click(function () {
+        level++;
         
+        startSequence();
+    })
+})
+// simonSequence
+     function startSequence(){
+        $(#displayCount).text(level);
+        getRandomNum();
+        var i =0;
 
+     }
 
-
-
-//To turn the button On 
-// onButton.addEventListener('click' , (event)=>{
-//     if (buttonOn.checked ==true){
-//         strict=true;
-//     }else{
-//         strict =false;
-
-//     }
-// });
-// //start 
-// strictButton.addEventListener('click' , (event)=>{
-//     if (strictButton.checked =true){
-//         strict=true;
-//     }else{
-//         strict =false;
-
-//         $("strictButton".addclass("fa fa-check"));
-//         strict="on";
-//     }
-//     });
-
-
-
-
-
-
-
-
-
-    
-
-
-//     function generateRandomNumber() {
-//         return Math.floor(Math.random() * 4)
-
-//         function derive(number) {
-//             switch (number) {
-//                 case 0:
-//                     return [blue, boardSound[0], "blue-active"]
-//                 case 1:
-//                     return [green, boardSound[1], "green-active"]
-//                 case 2:
-//                     return [orange, boardSound[2], "orange-active"]
-//                 case 3:
-//                     return [yellow, boardSound[3], "yellow-active"]
-//             }
-//         }
-//     }
-// });
-
-// //     start.addEventListener('click', (event) => {
-// //       $(".counter").text("01");
-// //         let number = generateRandomNumber()
-// //     game.simonSequence.push(number)
-// //     play(game.simonSequence)
-// // });
-// // function generateRandomNumber(){
-// //     return Math.floor(Math.random() * 4)
-// // }
-// // function derive(number){
-// //     switch(number){
-// //         case 0:
-// //             return [blue, boardSound[0], "blue-active"]
-// //         case 1:
-// //             return [green, boardSound[1], "green-active"]
-// //         case 2:
-// //             return [orange, boardSound[2], "orange-active"]
-// //         case 3:
-// //             return [yellow, boardSound[3], "yellow-active"]
-// //     }
-// // }
-// function play(sequence){
-// //     sequence.forEach(function (number) {
-// //         let [button, sound, className] = derive(number)
-// //         button.classList.add(className)
-// //         new Audio(sound).play()
-// //     })
-// // }
-// // function play(){
-// //     playerSequence =[];
-// //     simonSequence=[0,1,2,];
-// //     flash=0;
-// //     for (var i =0; i <20; i++){
-// //         simonSequence.push(Math.floor(Math.random()*4 )+1);
-// //         console.log(simonSequence);
-// //     }
-// //     simonSequence =true;
-// //     intervalId = setInterval(counter,1000 ); {
-// //     }
-// // }
-// // function playSound (id){
-// //     var sound = new Audio (boardSound[id]);
-            //    sound.play()
+    // generated random number 
+function getRandomNum() {
+    var random = Math.floor(Math.random()*4);
+}
