@@ -210,7 +210,55 @@ width: 300px;
   font-weight:900;
   text-align: center;
 }
-#textOn {
+  
+  .boardSwitch {
+    position: relative; width: 69px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    display: inline-block;
+}
+.boardSwitch-checkbox {
+    display: none;
+}
+.boardSwitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 36px;
+}
+.boardSwitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.boardSwitch-inner:before, .boardSwitch-inner:after {
+    display: block; float: left; width: 50%; height: 20px; padding: 0; line-height: 20px;
+    font-size: 11px; color: white; font-family: "Times New Roman", Times, serif; font-weight: 700;
+    box-sizing: border-box;
+}
+.boardSwitch-inner:before {
+    content: "ON";
+    padding-left: 8px;
+    background-color: #34A7C1; color: #FFFFFF;
+}
+.boardSwitch-inner:after {
+    content: "OFF";
+    padding-right: 8px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.boardSwitch-switch {
+    display: block; width: 17px; margin: 1.5px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 45px;
+    border: 2px solid #999999; border-radius: 36px;
+    transition: all 0.3s ease-in 0s; 
+}
+.boardSwitch-checkbox:checked + .boardSwitch-label .boardSwitch-inner {
+    margin-left: 0;
+}
+.boardSwitch-checkbox:checked + .boardSwitch-label .boardSwitch-switch {
+    right: 0px; 
+}
+  
+/* #textOn {
   vertical-align: center;
   display: inline-block;
   height: 40px;
@@ -233,14 +281,14 @@ width: 300px;
   visibility: hidden; 
   /* background: rgb(219, 219, 219); */
   vertical-align: top;
-  display: inline-block;
-  border-radius: 30px;
+  /* display: inline-block;
+  border-radius: 30px; */
   /* margin: 1px 2.8px 0px 1px; */
   margin-top: 100px;
-  height: 10px;
-  width: 15px;
+  /* height: 10px;
+  width: 15px; */
   
-}
+/* } */ */
 
 
  
@@ -254,7 +302,7 @@ width: 300px;
   width: 12px; */
 /* }
 /* #textOff { */
-  vertical-align: centre;
+  /* vertical-align: centre;
   display: inline-block;
   height: 30px;
   line-height: 156.25%;
@@ -262,7 +310,7 @@ width: 300px;
   font-size: 10px;
   color: whitesmoke;
   font-weight: 700;
-} */
+} */ */
 /* .start {
   text-align: center;
   margin: 0 auto;
