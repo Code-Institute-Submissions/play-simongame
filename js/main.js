@@ -30,26 +30,17 @@ let onButton =  document.getElementById("#onoffSwitch");
 // let winSound = new Audio ( "https://freesound.org/data/previews/151/151605_57789-lq.mp3")
 
 
-let strict=false;
-let level=0;
-startSequence;
-level++;
 
-let win;    
-let power=false;
-let on =false;
 
-    
-
-// boardSwitch-inner.addEventListener('click', (event) =>{
-//     if (boardSwitch.checked == true)
-// {
-//     on = true;
-//     displaytext.innerHTML = "!";
-// }else{
-//     on =false;
-// }
-// })
+boardSwitch-inner.addEventListener('click', (event) =>{
+    if (boardSwitch.checked == true)
+{
+    on = true;
+    displaytext.innerHTML = "!";
+}else{
+    on =false;
+}
+})
 
 
 function onoffSwitch(){
