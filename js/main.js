@@ -21,7 +21,7 @@ let green = document.getElementById("shapeG");
 let blue = document.getElementById("shapeB");
 let orange = document.getElementById("shapeO");
 let yellow = document.getElementById("#shapeY");
-let onButton =  document.getElementById("myonoffswitch");
+let onButton =  document.getElementById("#onoffSwitch");
 
 // let blueSound = new Audio( "https://freesound.org/data/previews/151/151022_1838182-lq.mp3")
 //  let yellowSound = new Audio ("https://freesound.org/data/previews/156/156859_2538033-lq.mp3")  
@@ -39,61 +39,26 @@ let win;
 let power=false;
 let on =false;
 
-
-
-onButton.addEventListener('click',(event) =>{
-    if(onButton.checked== true){
-        on=true;
-displayText.innerHTML ="--";
-
-    }else{
-        on =false;
-  displayText.innerHTML ="!";
-    clearInterval();
-    
-    }
-});
     
 
+// boardSwitch-inner.addEventListener('click', (event) =>{
+//     if (boardSwitch.checked == true)
+// {
+//     on = true;
+//     displaytext.innerHTML = "!";
+// }else{
+//     on =false;
+// }
+// })
 
 
-// player Sequence
-
-
-// Start board console 
-// Power button
-
-$(document).ready(function () {
-    $("#start").click(function () {
-        level++;
-        console.log(level);
-        
-        startSequence();
-    })
-})
-// simonSequence
-     function startSequence(){
-        $("#displayCount").text(level);
-        generateRandomNumber();
-        var i =0;
-        var myInterval =setInterval(function() {
-            id =simonSequence[i];
-            color =$("#"+id).attr("class").split("")[1];
-            console.log(id+""+color);
-            addClassSound(id,color);
-            i++;
-if(i==simonSequence.length);
-
-clearInterval(myInterval);
-        },1000);
-
-        
-        }
-
-     
-
-    // generated random number 
-function generateRandomNumber() {
-    var random = Math.floor(Math.random()*4);
-    simonSequence.push(random);
+function onoffSwitch(){
+ onButton = document.getElementById("onoffSwitch")
+  if(onButton == "Off"){
+    document.getElementById("onoffSwitch").value="On";
+  }else{
+    document.getElementById("onoffSwitch").value="Off";
+  }
 }
+
+       
