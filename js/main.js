@@ -3,7 +3,6 @@ const game = {
     simonSequence: [], //array containing the users selected button
     numLevels: 20,
     turn: 00, //
-    handler: false,
     active: false,
     
 
@@ -21,7 +20,12 @@ let green = document.getElementById("shapeG");
 let blue = document.getElementById("shapeB");
 let orange = document.getElementById("shapeO");
 let yellow = document.getElementById("#shapeY");
-let onButton =  document.getElementById("#onoffSwitch");
+// let onButton =  document.getElementById("#onoffSwitch");
+let displayCount = document.getElementById("displayText");
+
+let power =document.getElementsByClassName(".boardSwitch")
+let off;
+let on;
 
 // let blueSound = new Audio( "https://freesound.org/data/previews/151/151022_1838182-lq.mp3")
 //  let yellowSound = new Audio ("https://freesound.org/data/previews/156/156859_2538033-lq.mp3")  
@@ -31,25 +35,20 @@ let onButton =  document.getElementById("#onoffSwitch");
 
 
 
+$(".boardSwitch").on("click", function () {
+    if (power == off) {
+        displayText.innerHTML = "--";
+        }else{
+  on =false;
+        displayText.innerHTML= "!"  ;
+    }
+});
 
-boardSwitch-inner.addEventListener('click', (event) =>{
-    if (boardSwitch.checked == true)
-{
-    on = true;
-    displaytext.innerHTML = "!";
-}else{
-    on =false;
-}
-})
-
-
-function onoffSwitch(){
- onButton = document.getElementById("onoffSwitch")
-  if(onButton == "Off"){
-    document.getElementById("onoffSwitch").value="On";
-  }else{
-    document.getElementById("onoffSwitch").value="Off";
-  }
-}
-
-       
+$(".boardSwitch").on("click", function () {
+    if (power == on) {
+        displayText.innerHTML = 01;
+        }else{
+  off =false;
+        displayText.innerHTML= "-"  ;
+    }
+});
