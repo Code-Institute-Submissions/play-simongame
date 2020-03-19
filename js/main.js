@@ -22,6 +22,7 @@ let orange = document.getElementById("shapeO");
 let yellow = document.getElementById("#shapeY");
 // let onButton =  document.getElementById("#onoffSwitch");
 let displayCount = document.getElementById("displayText");
+// let boardSwitch = document.querySelector(".boardSwitch");
 
 let power =document.getElementsByClassName(".boardSwitch")
 let off;
@@ -34,21 +35,10 @@ let on;
 // let winSound = new Audio ( "https://freesound.org/data/previews/151/151605_57789-lq.mp3")
 
 
-
 $(".boardSwitch").on("click", function () {
-    if (power == off) {
-        displayText.innerHTML = "--";
-        }else{
-  on =false;
-        displayText.innerHTML= "!"  ;
-    }
-});
-
-$(".boardSwitch").on("click", function () {
-    if (power == on) {
-        displayText.innerHTML = 01;
-        }else{
-  off =false;
-        displayText.innerHTML= "-"  ;
-    }
+if (power == off ) {
+     displayText.innerHTML = "..";
+}else {
+     power = "on";
+}
 });
