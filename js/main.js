@@ -4,7 +4,7 @@ const game = {
     numLevels: 20,
     turn: 00, //
     active: false,
-    
+
 
 
 };
@@ -23,12 +23,15 @@ let yellow = document.getElementById("#shapeY");
 //  let onButton =  document.getElementById("#onoffSwitch");
 // let displayCount = document.getElementById("displayText");
 // let boardSwitch = document.querySelector(".boardSwitch");
-let strictButton=document.getElementById("strict");
+let strictButton = document.getElementById("strict");
+let startButton = document.getElementById("start");
 
-let power ;
-let on;
+
+
+let power;
 let off;
-let strict =false;
+let strict = false;
+let on;
 
 
 
@@ -40,28 +43,36 @@ let strict =false;
 
 
 $(".boardSwitch").on("click", function () {
-if (power == off ) {
-$("#displayText").css("opacity","0.1");
-power =on;
-}
-else if (power == on) {
-displayText .innerHTML = "--";
-power = off;
-};
+    if (power == off) {
+        $("#displayText").css("opacity", "0.1");
+        power = on;
+    }
+    else if (power == on) {
+        displayText.innerHTML = "--";
+        power = off;
+    };
 
 });
-strictButton.addEventListener('click',(event)=>{
-    if(power == on ){
-      if ( strict= true) {
-        $("#strictButton").css("background", "coral");
-       $("#strictButton").addClass("fa fa-check");
-            strict="on";
-    }
-        else if(power == off){
-         (strict == false ) 
+strictButton.addEventListener('click', (event) => {
+    if (power == on) {
+        if (strict = false) {
+            $("#strictButton").css("background", "coral");
+            $("#strictButton").addClass("fa fa-check");
+            strict = "on";
+        }
+        else if (power == off) {
+            (strict == true)
             $("#strictButton").css("background", "violet");
             $("#strictButton").removeClass("fa fa-check");
-            strict= off;
+            strict = off;
         };
     };
+});
+startButton.addEventListener('click', (event) => {
+  if (power ==on ) {
+    $("#startButton").css("background", "Tomato");
+      on = true ;
+        displayText.innerHTML =1;
+  
+  }
 });
