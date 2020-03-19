@@ -20,13 +20,17 @@ let green = document.getElementById("shapeG");
 let blue = document.getElementById("shapeB");
 let orange = document.getElementById("shapeO");
 let yellow = document.getElementById("#shapeY");
-// let onButton =  document.getElementById("#onoffSwitch");
-let displayCount = document.getElementById("displayText");
+//  let onButton =  document.getElementById("#onoffSwitch");
+// let displayCount = document.getElementById("displayText");
 // let boardSwitch = document.querySelector(".boardSwitch");
+let strictButton=document.getElementById("strict");
 
-let power =document.getElementsByClassName(".boardSwitch")
-let off;
+let power ;
 let on;
+let off;
+let strict =false;
+
+
 
 // let blueSound = new Audio( "https://freesound.org/data/previews/151/151022_1838182-lq.mp3")
 //  let yellowSound = new Audio ("https://freesound.org/data/previews/156/156859_2538033-lq.mp3")  
@@ -37,8 +41,27 @@ let on;
 
 $(".boardSwitch").on("click", function () {
 if (power == off ) {
-     displayText.innerHTML = "..";
-}else {
-     power = "on";
+$("#displayText").css("opacity","0.1");
+power =on;
 }
+else if (power == on) {
+displayText .innerHTML = "--";
+power = off;
+};
+
+});
+strictButton.addEventListener('click',(event)=>{
+    if(power == on ){
+      if ( strict= true) {
+        $("#strictButton").css("background", "coral");
+       $("#strictButton").addClass("fa fa-check");
+            strict="on";
+    }
+        else if(power == off){
+         (strict == false ) 
+            $("#strictButton").css("background", "violet");
+            $("#strictButton").removeClass("fa fa-check");
+            strict= off;
+        };
+    };
 });
