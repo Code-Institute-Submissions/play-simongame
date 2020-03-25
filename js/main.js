@@ -100,7 +100,21 @@ function derive(number){
 function play(sequence){
     sequence.forEach(function (number) {
         let [button, sound, className] = derive(number)
-        button.classList.add(className)
-        new Audio(sound).play()
+                new Audio(sound).play()
     })
 }
+function flash (times,speed,element, button)
+document.getElementById('element').addEventListener('click', function(){
+    var that =this;
+   if(times >0);{
+   that.playSound( button);
+   element.stop().animate( {opacity:'1'}, {
+       duration:50,
+       function (complete){
+       element.stop().animate( {opacity:'0.6'},300);
+   }
+   
+});
+
+   }
+});
