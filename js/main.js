@@ -37,6 +37,8 @@ let active =false;
 let activeMemory;
 let flash;
 levelCount= 1;
+let win;
+let flashTracker
 
 let blueSound = new Audio( "https://freesound.org/data/previews/151/151022_1838182-lq.mp3")
  let yellowSound = new Audio ("https://freesound.org/data/previews/156/156859_2538033-lq.mp3")  
@@ -82,13 +84,28 @@ $("#strictButton").on("click",function(){
 
 startButton.addEventListener('click',(event)=>{
     if(power== true){
-        active= true;
-        playerSequence=[];
-        simonSequence =[];
-        displayText.innerHTML = "01";
+        playGame();
+        // active= true;
+        // playerSequence=[];
+        // simonSequence =[];
+        // displayText.innerHTML = "01";
     }
 });
+function playGame(){
+    win =false;
+    flashTracker =[];
+    playerSequence =[];
+    flash =0;
+    intervalId =0;
+    turn =1;
+    displayCount.innerHTML= 1;
+    for (var i =0;i<20;i++){
+        flashTracker.push(Math.floor(Math.random()*4)+1);
+       simonSequence= true;
 
+    }
+
+}
 
     
     
