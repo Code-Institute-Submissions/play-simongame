@@ -35,6 +35,8 @@ let on;
 let intervalId;
 let active =false;
 let activeMemory;
+let flash;
+levelCount= 1;
 
 let blueSound = new Audio( "https://freesound.org/data/previews/151/151022_1838182-lq.mp3")
  let yellowSound = new Audio ("https://freesound.org/data/previews/156/156859_2538033-lq.mp3")  
@@ -45,21 +47,17 @@ let winSound = new Audio ( "https://freesound.org/data/previews/151/151605_57789
 
 $("#onoffSwitch").on("click", function () {
     if (power == false) {
-        $("#displayText").css("opacity", "0.1");
+          $("#displayText").css("opacity", "0.1");
         power = true;
     }
     else if (power == true) {
-        displayText.innerHTML = "--";
+        $("#displayText").css("opacity", "0.8" );
         power = false;
         strict= false;
         $("#strictButton").css("background","lime");
-         $("#startButton").css("background", "tan");
-         $("strictButton").Class("fa-fa check");
+         $("strictButton").removeClass("fa-fa check");
          active=false;
-         ("#startButton").css("background","red");
-         simonSequence=[];
-         playerSequence =[];
-         clearInterval(activeMemory);
+        clearInterval(activeMemory);
     };
 
 });
@@ -80,8 +78,19 @@ $("#strictButton").on("click",function(){
     }
 }
 });
+//Start button 
+
+startButton.addEventListener('click',(event)=>{
+    if(power== true){
+        active= true;
+        playerSequence=[];
+        simonSequence =[];
+        displayText.innerHTML = "01";
+    }
+});
 
 
+    
     
             
 
