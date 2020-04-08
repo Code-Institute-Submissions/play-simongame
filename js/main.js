@@ -19,12 +19,13 @@ const boardSound = [
 let green = document.getElementById("shapeG");
 let blue = document.getElementById("shapeB");
 let orange = document.getElementById("shapeO");
-let yellow = document.getElementById("#shapeY");
+let yellow = document.getElementById("shapeY");
 //  let onButton =  document.getElementById("#onoffSwitch");
 // let displayCount = document.getElementById("displayText");
 // let boardSwitch = document.querySelector(".boardSwitch");
 let strictButton = document.getElementById("strict");
 let startButton = document.getElementById("start");
+
 
 
 let power =false;
@@ -33,6 +34,7 @@ let strict = false;
 let on;
 let intervalId;
 let active =false;
+let activeMemory;
 
 let blueSound = new Audio( "https://freesound.org/data/previews/151/151022_1838182-lq.mp3")
  let yellowSound = new Audio ("https://freesound.org/data/previews/156/156859_2538033-lq.mp3")  
@@ -41,7 +43,7 @@ let orangeSound = new Audio ("https://freesound.org/data/previews/191/191591_243
 let winSound = new Audio ( "https://freesound.org/data/previews/151/151605_57789-lq.mp3")
 
 
-$(".boardSwitch").on("click", function () {
+$("#powerSwitch").on("click", function () {
     if (power == false) {
         $("#displayText").css("opacity", "0.1");
         power = true;
@@ -53,31 +55,33 @@ $(".boardSwitch").on("click", function () {
         $("#strictButton").css("background","lime");
          $("#strictButton").removeClass("fa fa-check");
          active =false;
-         $("#startButton").css("background", "black")
+         $("#startButton").css("background", "tan")
+         clearInterval(activeMemory);
     };
 
 });
-strictButton.addEventListener('click', (event) => {
-    if (power == true) {
-        if (strict = false) {
-            // $("#strictButton").css("background", "coral");
-            $("#strictButton").addClass("fa fa-check");
-            strict = "true";
+
+$("#strictButton").on("click",function(){
+    if (power== true ){
+        if (strict == false){
+ $("#strictButton").css("background", "coral");
+   $("#strictButton").addClass("fa fa-check");
+  strict = "true";
+
         }
-        else if (power == false) {
-            (strict == true)
-            $("#strictButton").css("background", "violet");
-            $("#strictButton").removeClass("fa fa-check");
-            strict = false;
-        };
-    };
+    else if (strict = true){
+    $("#strictButton").css("background", "coral");
+   $("#strictButton").removeClass("fa fa-check");
+  strict = "false";
+    }
+}
 });
-startButton.addEventListener('click', (event) => {
-  if (power ==on ) {
-    $("#startButton").css("background", "Tomato");
-      on = true ;
-        displayText.innerHTML =1;
+    
+            
+
+
+
   
-  }
-});
+
+
 
