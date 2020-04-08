@@ -74,7 +74,7 @@ $("#strictButton").on("click",function(){
 
         }
     else if (strict = true){
-    $("#strictButton").css("background", "coral");
+    $("#strictButton").css("background", "navy");
    $("#strictButton").removeClass("fa fa-check");
   strict = "false";
     }
