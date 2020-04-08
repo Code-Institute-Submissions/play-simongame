@@ -3,7 +3,7 @@ const game = {
     simonSequence: [], //array containing generated random buttons
     numLevels: 20,
     turn: 00, //
-    active: false,
+   
 
 
 
@@ -27,12 +27,12 @@ let strictButton = document.getElementById("strict");
 let startButton = document.getElementById("start");
 
 
-let power;
+let power =false;
 let off;
 let strict = false;
 let on;
-
-
+let intervalId;
+let active =false;
 
 let blueSound = new Audio( "https://freesound.org/data/previews/151/151022_1838182-lq.mp3")
  let yellowSound = new Audio ("https://freesound.org/data/previews/156/156859_2538033-lq.mp3")  
@@ -50,6 +50,10 @@ $(".boardSwitch").on("click", function () {
         displayText.innerHTML = "--";
         power = false;
         strict= false;
+        $("#strictButton").css("background","lime");
+         $("#strictButton").removeClass("fa fa-check");
+         active =false;
+         $("#startButton").css("background", "black")
     };
 
 });
