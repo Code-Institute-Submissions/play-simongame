@@ -29,7 +29,7 @@ let startButton = document.getElementById("start");
 
 
 let power =false;
-let off;
+let off ;
 let strict = false;
 let on;
 let intervalId;
@@ -53,13 +53,17 @@ $("#onoffSwitch").on("click", function () {
         power = false;
         strict= false;
         $("#strictButton").css("background","lime");
-         $("#strictButton").removeClass("fa fa-check");
-         active =false;
-         $("#startButton").css("background", "tan")
+         $("#startButton").css("background", "tan");
+         $("strictButton").Class("fa-fa check");
+         active=false;
+         ("#startButton").css("background","red");
+         simonSequence=[];
+         playerSequence =[];
          clearInterval(activeMemory);
     };
 
 });
+//StrictButton  Function
 
 $("#strictButton").on("click",function(){
     if (power== true ){
@@ -76,6 +80,8 @@ $("#strictButton").on("click",function(){
     }
 }
 });
+
+
     
             
 
