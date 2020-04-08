@@ -43,7 +43,7 @@ let orangeSound = new Audio ("https://freesound.org/data/previews/191/191591_243
 let winSound = new Audio ( "https://freesound.org/data/previews/151/151605_57789-lq.mp3")
 
 
-$("#powerSwitch").on("click", function () {
+$("#onoffSwitch").on("click", function () {
     if (power == false) {
         $("#displayText").css("opacity", "0.1");
         power = true;
