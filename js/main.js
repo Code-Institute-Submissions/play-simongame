@@ -57,7 +57,7 @@ $("#onoffSwitch").on("click", function () {
         power = false;
         strict= false;
         $("#strictButton").css("background","lime");
-         $("strictButton").removeClass("fa-fa check");
+         $("#strictButton").removeClass("fa-fa check");
          active=false;
         clearInterval(activeMemory);
     };
@@ -83,33 +83,46 @@ $("#strictButton").on("click",function(){
 //Start button 
 
 startButton.addEventListener('click',(event)=>{
-    if(power== true){
-        playGame();
-        // active= true;
-        // playerSequence=[];
-        // simonSequence =[];
-        // displayText.innerHTML = "01";
-    }
+       $("#displayText").text("01");
+  
+     let number = generateRandomNumber()
+    game.playerSequence.push(number)
+    play(game.playerSequence)
 });
-function playGame(){
-    win =false;
-    flashTracker =[];
-    playerSequence =[];
-    flash =0;
-    intervalId =0;
-    turn =1;
-    displayCount.innerHTML= 1;
-    for (var i =0;i<20;i++){
-        flashTracker.push(Math.floor(Math.random()*4)+1);
-       simonSequence= true;
 
+function generateRandomNumber(){
+    return Math.floor(Math.random() * 4) 
+}
+function derive(number){
+    switch(number){
+        case 0:
+            return [blue, boardSound[0], "blue-active"]
+        case 1:
+            return [green, boardSound[1], "green-active"]
+        case 2:
+            return [orange, boardSound[2], "orange-active"]
+        case 3:
+            return [yellow, boardSound[3], "yellow-active"]
     }
+};
 
+function play(sequence){
+    sequence.forEach(function (number) {
+        let [button, sound, className] = derive(number)
+        button.classList.add(className)
+        new Audio(sound).play()
+    })
+}
+   
+         
+function playerSequence(number){
+    color, sound, colorName = deriveButton(number)
+    color.changebackground(colorName)
+    sound.play()
 }
 
-    
-    
-            
+
+
 
 
 
