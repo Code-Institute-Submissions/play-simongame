@@ -25,11 +25,14 @@ let yellow = document.getElementById("shapeY");
 // let boardSwitch = document.querySelector(".boardSwitch");
 let strictButton = document.getElementById("strict");
 let startButton = document.getElementById("start");
+let displayCountMemory = document.getElementById("displayCount");
+
 
 
 
 let power =false;
 let off ;
+let displayCount;
 let strict = false;
 let on;
 let intervalId;
@@ -38,7 +41,8 @@ let activeMemory;
 let flash;
 levelCount= 1;
 let win;
-let flashTracker
+let flashTracker;
+
 
 let blueSound = new Audio( "https://freesound.org/data/previews/151/151022_1838182-lq.mp3")
  let yellowSound = new Audio ("https://freesound.org/data/previews/156/156859_2538033-lq.mp3")  
@@ -49,20 +53,21 @@ let winSound = new Audio ( "https://freesound.org/data/previews/151/151605_57789
 
 $("#onoffSwitch").on("click", function () {
     if (power == false) {
-          $("#displayText").css("opacity", "0.1");
+          $("#displayText").text("@")
         power = true;
     }
-    else if (power == true) {
-        $("#displayText").css("opacity", "0.8" );
-        power = false;
-        strict= false;
+    else if(power == true){
+        $("displayText").text("!")
+            power=false;
+            strict= false;
         $("#strictButton").css("background","lime");
          $("#strictButton").removeClass("fa-fa check");
          active=false;
         clearInterval(activeMemory);
-    };
+   }
 
-});
+
+
 //StrictButton  Function
 
 $("#strictButton").on("click",function(){
@@ -82,51 +87,54 @@ $("#strictButton").on("click",function(){
 });
 //Start button 
 
-startButton.addEventListener('click',(event)=>{
+start.addEventListener('click',(event)=>{
        $("#displayText").text("01");
-  
-     let number = generateRandomNumber()
-    game.playerSequence.push(number)
-    play(game.playerSequence)
-});
+})
 
-function generateRandomNumber(){
-    return Math.floor(Math.random() * 4) 
-}
-function derive(number){
-    switch(number){
-        case 0:
-            return [blue, boardSound[0], "blue-active"]
-        case 1:
-            return [green, boardSound[1], "green-active"]
-        case 2:
-            return [orange, boardSound[2], "orange-active"]
-        case 3:
-            return [yellow, boardSound[3], "yellow-active"]
-    }
-};
 
-function play(sequence){
-    sequence.forEach(function (number) {
-        let [button, sound, className] = derive(number)
-        button.classList.add(className)
-        new Audio(sound).play()
-    })
-}
-   
-         
-function playerSequence(number){
-    color, sound, colorName = deriveButton(number)
-    color.changebackground(colorName)
-    sound.play()
-}
+// onoffswitch.addEventListener('click',(event)=>{
+//     if(onoffswitch ==true){
+//         on = true;
+//     displayCountMemory.innerHTML= "_";
+//     } else{
+//         on= false;
+//         displayCountMemory.innerHTML = "";
+//         clearcolor();
+//         clearInterval(intervalId);
+//     }
+// });
 
 
 
 
 
+    // playGame(){
+//     win=false;
+//     flashTracker=[];
+//     playerSequence=[];
+//     flash=0;
+//     intervalId=0;
+//     turn=1;
+//     displayText.innerHTML =1;
+//     for(var i =0; i<20; i++){
+//         flashTracker.push(Math.floor(math.random() *4)+1);
 
-  
+//     }
+//     simonSequence =true;
+//     intervalId =setInterval(gameTurn,600);
 
+// }
 
-
+// let gameTurn = function(){
+//     on = false;
+//     if(flash==turn) {
+//         clearInterval(ntervalId);
+//         simonSequence=false;
+//         clearColor();
+//         on= true;
+//     }
+//     if( simonSequence){
+//         clearColor();
+//         setTimeout(()=> {
+//             if(flashTracker[flash]==1) "blue"();
+})
