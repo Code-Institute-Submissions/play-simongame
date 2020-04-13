@@ -42,6 +42,7 @@ let flash;
 levelCount= 1;
 let win;
 let flashTracker;
+let gameStatus= true;
 
 
 let blueSound = new Audio( "https://freesound.org/data/previews/151/151022_1838182-lq.mp3")
@@ -88,53 +89,64 @@ $("#strictButton").on("click",function(){
 //Start button 
 
 start.addEventListener('click',(event)=>{
-       $("#displayText").text("01");
-})
+if(on|| win)
+playSound();
+});
+
+function playSound(){
+flashTracker=[];
+playerSequence=[];
+flash=0;
+displayCount= 1;
+ displayCountMemory.innerHTML =1;
+gameStatus=true;
+for( var i =0; i < 20; i++){
+    playerSequence.push(Math.floor(Math.random() *4) +1);
+
+}
+
+simonSequence =true;
+
+var myInterval =setInterval(function(){
+   myInterval =setInterval(gameTurn,1000);
 
 
-// onoffswitch.addEventListener('click',(event)=>{
-//     if(onoffswitch ==true){
-//         on = true;
-//     displayCountMemory.innerHTML= "_";
-//     } else{
-//         on= false;
-//         displayCountMemory.innerHTML = "";
-//         clearcolor();
-//         clearInterval(intervalId);
-//     }
-// });
+   function gameTurn() {
+       on =false;
 
+       if (flash == turn ){
+           clearInterval(myInterval);
+           simonSequence = false;
+           clearColor();
+           on =true;
+       }
+       if (simonSequence){
+           clearColor();
+           setTimeout(()=>{
 
+            if(flashTracker[flash]== 0)blue();
+             if(flashTracker[flash]== 1)green();
+             if(flashTracker[flash]== 2)orange();
+             if(flashTracker[flash]==3) yellow();
+               flash++;
+            }, 50);
 
-
-
-    // playGame(){
-//     win=false;
-//     flashTracker=[];
-//     playerSequence=[];
-//     flash=0;
-//     intervalId=0;
-//     turn=1;
-//     displayText.innerHTML =1;
-//     for(var i =0; i<20; i++){
-//         flashTracker.push(Math.floor(math.random() *4)+1);
-
-//     }
-//     simonSequence =true;
-//     intervalId =setInterval(gameTurn,600);
-
-// }
-
-// let gameTurn = function(){
-//     on = false;
-//     if(flash==turn) {
-//         clearInterval(ntervalId);
-//         simonSequence=false;
-//         clearColor();
-//         on= true;
-//     }
-//     if( simonSequence){
-//         clearColor();
-//         setTimeout(()=> {
-//             if(flashTracker[flash]==1) "blue"();
-})
+           function derive(number){
+    switch(number){
+        case 0:
+            return [blue, boardSound[0], "blue-active"]
+        case 1:
+            return [green, boardSound[1], "green-active"]
+        case 2:
+            return [orange, boardSound[2], "orange-active"]
+        case 3:
+            return [yellow, boardSound[3], "yellow-active"]
+    };
+};
+function play(sequence){
+    sequence.forEach(function (number) {
+        let [button, sound, className] = derive(number)
+        button.classList.add(className)
+        new Audio(sound).play();
+    }  
+};
