@@ -83,5 +83,5 @@ $("#strictButton").on("click",function(){
    $("#strictButton").removeClass("fa fa-check");
   strict = "false";
     };
-})
-})
+});
+});
