@@ -30,7 +30,7 @@ let displayCountMemory = document.getElementById("displayCount");
 
 
 let power =false;
-let off ;
+let off;
 let displayCount;
 let strict = false;
 let on;
@@ -51,37 +51,53 @@ let orangeSound = new Audio ("https://freesound.org/data/previews/191/191591_243
 let winSound = new Audio ( "https://freesound.org/data/previews/151/151605_57789-lq.mp3")
 
 
-$("#onoffSwitch").on("click", function () {
+$("#onoffSwitch").click(function() {
     if (power == false) {
-          $("#displayText").text("on")
+          $("#displayText").text("--");
         power = true;
+        console.log("ss");
     }
-    else if(power == true){
-        $("displayText").text("!")
-            power=false;
-            strict= false;
-        $("#strictButton").css("background","lime");
-         $("#strictButton").removeClass("fa-fa check");
-         active=false;
-        clearInterval(activeMemory);
+    else{
+        $("#displayText").text("!");
+        power = false;
+        strict= false;
+             
+        console.log("aa");
+      
+              
+        
    }
+});
 
+//Strict button function
 
-//StrictButton  Function
-
-$("#strictButton").on("click",function(){
+$("#strictButton").click(function(){
     if (power== true ){
         if (strict == false){
  $("#strictButton").css("background", "coral");
    $("#strictButton").addClass("fa fa-check");
   strict = "true";
 
-        };
-    }
-    else if (strict == true){
+        }
+    
+        else{
     $("#strictButton").css("background", "navy");
-   $("#strictButton").removeClass("fa fa-check");
-  strict = "false";
-    };
-});
-});
+    $("#strictButton").removeClass("fa fa-check");
+    
+    strict = "false";
+    }   
+}
+
+$("#startButton").click( function(){
+if (power=true){
+    $("#startButton").css("background","yellow");
+     $("#displayText").text(1);
+ power=false;
+}
+     else{
+      $("#displayText").text(00);
+     $("#startButton").css("background","red");
+     power= true;
+}
+     });
+})
