@@ -30,7 +30,7 @@ let displayCountMemory = document.getElementById("displayCount");
 
 
 let power =false;
-let off;
+// let off;
 let displayCount;
 let strict = false;
 let on;
@@ -42,6 +42,7 @@ levelCount= 1;
 let win;
 let flashTracker;
 let gameStatus= true;
+let playGame;
 
 
 let blueSound = new Audio( "https://freesound.org/data/previews/151/151022_1838182-lq.mp3")
@@ -88,16 +89,32 @@ $("#strictButton").click(function(){
     }   
 }
 
-$("#startButton").click( function(){
-if (power=true){
-    $("#startButton").css("background","yellow");
-     $("#displayText").text(1);
- power=false;
+$("#startButton").click(function() {
+if (on||win){
+playGame();
+};
+});
+
+
+function PlayGame() {
+flashTracker=[];
+flash=0;
+intervalId=0;
+win=false;
+displayCount=1;
+displayText.innerHTML=1;
+gameStatus=true;
+for (var i=0; i<20;i++){
+flashTracker.push(Math.floor(Math.random() *4) +1);
+
 }
-     else{
-      $("#displayText").text(00);
-     $("#startButton").css("background","red");
-     power= true;
+{
+console.log(flashTracker[i]);
 }
-     });
-})
+}
+});
+
+
+
+
+    
