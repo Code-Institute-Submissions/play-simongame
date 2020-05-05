@@ -53,18 +53,17 @@ let winSound = new Audio("https://freesound.org/data/previews/151/151605_57789-l
 
 
 $("#onoffSwitch").click(function () {
-    if (power == false) {
-        $("#displayText").text("off");
-        power = true;
-        console.log("power off");
-    }
-    else if (power ==true){
-
-    
+    if (power == false){
         $("#displayText").text("ON");
+         power = true;
+        console.log("power on");
+    }
+    else {
+    
+        $("#displayText").text("OFF");
         power = false;
         strict = false;
-        console.log("power on ");
+        console.log("power off ");
 
 
 
