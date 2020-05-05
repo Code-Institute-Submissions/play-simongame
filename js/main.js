@@ -43,7 +43,7 @@ let win;
 let flashTracker;
 let gameStatus = true;
 let playGame;
-
+let  onoffSwitch =false;
 
 let blueSound = new Audio("https://freesound.org/data/previews/151/151022_1838182-lq.mp3")
 let yellowSound = new Audio("https://freesound.org/data/previews/156/156859_2538033-lq.mp3")
@@ -56,14 +56,15 @@ $("#onoffSwitch").click(function () {
     if (power == false) {
         $("#displayText").text("--");
         power = true;
-        console.log("ss");
+        console.log("power on");
     }
-    else {
+    else if (power ==true){
+
+    
         $("#displayText").text("!");
         power = false;
         strict = false;
-
-        console.log("aa");
+        console.log("power off ");
 
 
 
