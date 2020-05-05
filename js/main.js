@@ -3,7 +3,8 @@ const game = {
     simonSequence: [], //array containing generated random buttons
     numLevels: 20,
     turn: 00, //
-   
+
+
 
 
 
@@ -20,7 +21,7 @@ let green = document.getElementById("shapeG");
 let blue = document.getElementById("shapeB");
 let orange = document.getElementById("shapeO");
 let yellow = document.getElementById("shapeY");
- let onButton =  document.getElementById("#onoffSwitch");
+let onButton = document.getElementById("#onoffSwitch");
 // let displayCount = document.getElementById("displayText");
 // let boardSwitch = document.querySelector(".boardSwitch");
 let strictButton = document.getElementById("strict");
@@ -29,92 +30,91 @@ let displayCountMemory = document.getElementById("displayCount");
 
 
 
-let power =false;
+let power = false;
 // let off;
-let displayCount;
+let displayCount = 1;
 let strict = false;
 let on;
 let intervalId;
-let active =false;
+let activeRunning = false;
 let activeMemory;
 let flash;
-levelCount= 1;
 let win;
 let flashTracker;
-let gameStatus= true;
+let gameStatus = true;
 let playGame;
 
 
-let blueSound = new Audio( "https://freesound.org/data/previews/151/151022_1838182-lq.mp3")
- let yellowSound = new Audio ("https://freesound.org/data/previews/156/156859_2538033-lq.mp3")  
-let greenSound = new Audio ("https://freesound.org/data/previews/171/171495_2437358-lq.mp3" )
-let orangeSound = new Audio ("https://freesound.org/data/previews/191/191591_2437358-lq.mp3")
-let winSound = new Audio ( "https://freesound.org/data/previews/151/151605_57789-lq.mp3")
+let blueSound = new Audio("https://freesound.org/data/previews/151/151022_1838182-lq.mp3")
+let yellowSound = new Audio("https://freesound.org/data/previews/156/156859_2538033-lq.mp3")
+let greenSound = new Audio("https://freesound.org/data/previews/171/171495_2437358-lq.mp3")
+let orangeSound = new Audio("https://freesound.org/data/previews/191/191591_2437358-lq.mp3")
+let winSound = new Audio("https://freesound.org/data/previews/151/151605_57789-lq.mp3")
 
 
-$("#onoffSwitch").click(function() {
+$("#onoffSwitch").click(function () {
     if (power == false) {
-          $("#displayText").text("--");
+        $("#displayText").text("--");
         power = true;
         console.log("ss");
     }
-    else{
+    else {
         $("#displayText").text("!");
         power = false;
-        strict= false;
-             
+        strict = false;
+
         console.log("aa");
-      
-              
-        
-   }
+
+
+
+    }
 });
 
 //Strict button function
 
-$("#strictButton").click(function(){
-    if (power== true ){
-        if (strict == false){
- $("#strictButton").css("background", "coral");
-   $("#strictButton").addClass("fa fa-check");
-  strict = "true";
+$("#strictButton").click(function () {
+    if (power == true) {
+        if (strict == false) {
+            $("#strictButton").css("background", "coral");
+            $("#strictButton").addClass("fa fa-check");
+            strict = "true";
 
         }
-    
-        else{
-    $("#strictButton").css("background", "navy");
-    $("#strictButton").removeClass("fa fa-check");
-    
-    strict = "false";
-    }   
-}
 
-$("#startButton").click(function() {
-if (on||win){
-playGame();
-};
+        else {
+            $("#strictButton").css("background", "navy");
+            $("#strictButton").removeClass("fa fa-check");
+
+            strict = "false";
+        }
+    }
+
+    $("#startButton").click(function () {
+        if (on || win) {
+            playGame();
+        };
+    });
+
+
+    function playGame() {
+        flashTracker = [];
+        flash = 0;
+        intervalId = 0;
+        win = false;
+        displayCount = 1;
+        displayText.innerHTML = 1;
+        gameStatus = true;
+        for (var i = 0; i < 20; i++) {
+            flashTracker.push(Math.floor(Math.random() * 4) + 1);
+            console.log(flashTracker);
+        }
+        {
+
+        }
+    }
 });
 
 
-function PlayGame() {
-flashTracker=[];
-flash=0;
-intervalId=0;
-win=false;
-displayCount=1;
-displayText.innerHTML=1;
-gameStatus=true;
-for (var i=0; i<20;i++){
-flashTracker.push(Math.floor(Math.random() *4) +1);
-
-}
-{
-console.log(flashTracker[i]);
-}
-}
-});
 
 
 
-
-    
