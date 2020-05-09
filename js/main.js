@@ -34,7 +34,7 @@ let power = false;
 // let off;
 let displayCount = 1;
 let strict = false;
-let on;
+// let on;
 let intervalId;
 let activeRunning = false;
 let activeMemory;
@@ -73,20 +73,22 @@ $("#onoffSwitch").click(function () {
 //Strict button function
 
 $("#strictButton").click(function () {
-    if (power == true) {
+    if (power == true ) {
         if (strict == false) {
             $("#strictButton").css("background", "coral");
             $("#strictButton").addClass("fa fa-check");
-            strict = "true";
+            strict = true;
+            console.log(strict);
 
         }
 
-        else if (strict == true)
+        else if  (strict == true)
          {
-            $("#strictButton").css("background", "navy");
+            $("#strictButton").css("background", "white");
             $("#strictButton").removeClass("fa fa-check");
 
-            strict = "false";
+            strict = false;
+            console.log(strict);
         }
     }
 
