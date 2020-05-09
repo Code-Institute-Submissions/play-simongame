@@ -56,14 +56,14 @@ $("#onoffSwitch").click(function () {
     if (power == false){
         $("#displayText").text("ON");
          power = true;
-        console.log("power on");
+        console.log(power);
     }
     else {
     
         $("#displayText").text("OFF");
         power = false;
         strict = false;
-        console.log("power off ");
+        console.log(power);
 
 
 
@@ -81,7 +81,8 @@ $("#strictButton").click(function () {
 
         }
 
-        else {
+        else if (strict == true)
+         {
             $("#strictButton").css("background", "navy");
             $("#strictButton").removeClass("fa fa-check");
 
@@ -96,7 +97,7 @@ $("#strictButton").click(function () {
     });
 
 
-    function playGame() {
+    function playGame() {   
         flashTracker = [];
         flash = 0;
         intervalId = 0;
