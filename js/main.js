@@ -31,17 +31,20 @@ let displayCountMemory = document.getElementById("displayCount");
 
 
 let power = false;
-// let off;
+
 let displayCount = 1;
 let strict = false;
-// let on;
 let intervalId;
 let activeRunning = false;
 let activeMemory;
+// let memoryArray=[];
 let flash;
+let sound= true;
 let win;
+let clearColor;
 let flashTracker;
 let gameStatus = true;
+
 let playGame;
 let  onoffSwitch =false;
 
@@ -86,14 +89,18 @@ $("#strictButton").click(function () {
          {
             $("#strictButton").css("background", "white");
             $("#strictButton").removeClass("fa fa-check");
+            $("#startButton").css("background", "red")
+            $("#displayText").text("1")
+
 
             strict = false;
             console.log(strict);
         }
     }
 
+
     $("#startButton").click(function () {
-        if (on || win) {
+        if (power || win) {
             playGame();
         };
     });
@@ -105,19 +112,36 @@ $("#strictButton").click(function () {
         intervalId = 0;
         win = false;
         displayCount = 1;
-        displayText.innerHTML = 1;
+        // displayText.innerHTML = 1;
         gameStatus = true;
         for (var i = 0; i < 20; i++) {
             flashTracker.push(Math.floor(Math.random() * 4) + 1);
             console.log(flashTracker);
         }
-        {
-
-        }
+        simonSequence= true;
+        intervalId =setInterval(gameStatus,1000);
+        
+function gameCount(){
+    power = false;
+    if(flash== count){
+    clearIntervalId(intervalId);
+    simonSequence=false;
+    clearColor();
+    power= true;
     }
-});
+}
+if (simonSequence){
+    clearColor();
+    setTimeout(()=>{
+        if (flashTracker[falsh]== 1) blue();
+        if (flashTracker[falsh]== 2) yellow();
+        if (flashTracker[falsh]== 3) green();
+        if (flashTracker[falsh]== 4) orange();
+        flash++;
+    },200);
+    
 
+    }
 
-
-
-
+}
+})
