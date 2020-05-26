@@ -147,5 +147,8 @@ function playSequence (one){
         boardSound.playGame();
     }
     noise= true;
-
+    shapeB.style.backgroundColor = "blue-active";
+    
 }
+function clearColor()
+shapeB.style.backgroundColor =
