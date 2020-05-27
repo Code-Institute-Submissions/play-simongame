@@ -1,10 +1,8 @@
 const game = {
     playerSequence: [], //array containing the users selection
     simonSequence: [], //array containing generated random buttons
-    numLevels: 20,
-    turn: 00, //
-
-
+    // numLevels: 20,
+    // turn: 00, //
 
 
 
@@ -28,25 +26,27 @@ let strictButton = document.getElementById("strict");
 let startButton = document.getElementById("start");
 let displayCountMemory = document.getElementById("displayCount");
 
-
+//Variables
 
 let power = false;
-
+let playerSequence = [];
 let displayCount = 1;
 let strict = false;
-let intervalId;
-let activeRunning = false;
+simonSequence=[]; //computer turn
+let intervalId =0;
+// let activeRunning = false;
 let activeMemory;
+let trackCount; //keep track of turn
 // let memoryArray=[];
 let flash;
 let sound = true;
 let win;
-let clearColor;
+// let clearColor;
 let flashTracker;
-let gameStatus = true;
+let gameStatus; // To check players performance (true or false)
 let newAudio;
-let playGame;
-let onoffSwitch = false;
+let playGame; // start of the game 
+let onoffSwitch = false; //power button on or off function
 
 let blueSound = new Audio("https://freesound.org/data/previews/151/151022_1838182-lq.mp3")
 let yellowSound = new Audio("https://freesound.org/data/previews/156/156859_2538033-lq.mp3")
@@ -104,14 +104,14 @@ $("#strictButton").click(function () {
         };
     });
 
-
+//function to start the game
     function playGame() {
         flashTracker = [];
         flash = 0;
         intervalId = 0;
         win = false;
-       Count = 1;
-        // displayText.innerHTML = 1;
+       displayCount = 1;
+        displayCountMemory.innerHTML = 1;
         gameStatus = true;
         for (var i = 0; i < 20; i++) {
             flashTracker.push(Math.floor(Math.random() * 4) + 1);
@@ -122,7 +122,7 @@ $("#strictButton").click(function () {
     
         function gameCount() {
             power = false;
-            if (flash == count) {
+            if (flash == displayCount) {
                 clearIntervalId(intervalId);
                 simonSequence = false;
                 clearColor();
@@ -141,14 +141,32 @@ $("#strictButton").click(function () {
         }
     }
     });
-function playSequence (one){
+function playSequence (blue){
     if(noise){
         const boardSound=document.getElementById("shapeB")
         boardSound.playGame();
     }
     noise= true;
-    shapeB.style.backgroundColor = "blue-active";
+    shapeB.style.backgroundColor ="lightblue";
     
+function clearColor(){
+shapeB.style.backgroundColor ="blue";
+};
+
+function flashLight(){
+    shapeB.style.backgronudColor = "lightblue"
 }
-function clearColor()
-shapeB.style.backgroundColor =
+shapeB.addEventListener('click',(event) =>{
+    if(power)
+    playerSequence.push(1);
+    // check();
+    blue();
+    if(win){
+        setTimeout(() =>{
+            clearColor();
+        },200);
+
+    }
+})
+         
+}
