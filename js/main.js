@@ -33,7 +33,7 @@ let playerSequence = [];
 let displayCount = 1;
 let strict = false;
 let simonCount; //computer turn
-let intervalId =0;
+let intervalId = 0;
 // let activeRunning = false;
 let activeMemory;
 let trackCount; //keep track of turn
@@ -89,7 +89,7 @@ $("#strictButton").click(function () {
             $("#strictButton").css("background", "white");
             $("#strictButton").removeClass("fa fa-check");
             $("#startButton").css("background", "red")
-            $("#displayText").text("1")
+            $("#displayText").text("1");
 
 
             strict = false;
@@ -104,23 +104,22 @@ $("#strictButton").click(function () {
         };
     });
 
-//function to start the game
+    //function to start the game
     function playGame() {
         flashTracker = [];
         flash = 0;
         intervalId = 0;
         win = false;
-       displayCount = 1;
-       clearColor;
+        displayCount = 1;
         displayCountMemory.innerHTML = 1;
         gameStatus = true;
         for (var i = 0; i < 20; i++) {
             flashTracker.push(Math.floor(Math.random() * 4) + 1);
             console.log(flashTracker);
         }
-      simonCount = true;
+        simonCount = true;
         intervalId = setInterval(gameCount, 1000);
-    
+
         function gameCount() {
             power = false;
             if (flash == displayCount) {
@@ -130,47 +129,47 @@ $("#strictButton").click(function () {
                 power = true;
             }
         }
-        if (simonCount){
-           clearColor();
-            setTimeout(() =>{
+        if (simonCount) {
+            clearColor();
+            setTimeout(() => {
                 if (flashTracker[flash] == 1) fOne();
                 if (flashTracker[flash] == 2) fTwo();
                 if (flashTracker[flash] == 3) fThree();
                 if (flashTracker[flash] == 4) fFour();
                 flash++;
-            },300);
-        }   
+            }, 300);
+        }
     }
-    });
+});
 
- 
-function fOne (){
-    if(noise){
-        let  boardSound =document .getElementById("soundB");
+
+function fOne() {
+    if (noise) {
+        let boardSound = document.getElementById("soundB");
         boardSound.playGame();
-             
-    }
-    noise= true;
-    shapeB.style.blue-active
-    
-function clearColor(){
-shapeB.style.backgroundColor ="blue";
-};
-
-function flashLight(){
-    shapeB.style.backgroundColor = "lightblue"
-}
-shapeB.addEventListener('click',(event) =>{
-    if(power)
-    playerSequence.push(1);
-    // check();
-    blue();
-    if(win){
-        setTimeout(() =>{
-            clearColor();
-        },200);
 
     }
-})
-         
+    noise = true;
+    shapeB.style.blue - active
+
+    function clearColor() {
+        shapeB.style.backgroundColor = "blue";
+    };
+
+    function flashLight() {
+        shapeB.style.backgroundColor = "lightblue"
+    }
+    shapeB.addEventListener('click', (event) => {
+        if (power)
+            playerSequence.push(1);
+        // check();
+        blue();
+        if (win) {
+            setTimeout(() => {
+                clearColor();
+            }, 200);
+
+        }
+    })
+
 }
