@@ -1,19 +1,19 @@
 const game = {
     playerSequence: [], //array containing the users selection
-    simonSequence: [], //array containing generated random buttons
+    // simonSequence: [], //array containing generated random buttons
     // numLevels: 20,
     // turn: 00, //
 
 
 
 };
-const boardSound = [
-    "https://freesound.org/data/previews/151/151022_1838182-lq.mp3",    // blue button
-    "https://freesound.org/data/previews/156/156859_2538033-lq.mp3",	// yellow button
-    "https://freesound.org/data/previews/171/171495_2437358-lq.mp3",   // green button
-    "https://freesound.org/data/previews/191/191591_2437358-lq.mp3",    // orange button
-    "https://freesound.org/data/previews/151/151605_57789-lq.mp3",    // winner button
-];
+// const boardSound = [
+//     "https://freesound.org/data/previews/151/151022_1838182-lq.mp3",    // blue button
+//     "https://freesound.org/data/previews/156/156859_2538033-lq.mp3",	// yellow button
+//     "https://freesound.org/data/previews/171/171495_2437358-lq.mp3",   // green button
+//     "https://freesound.org/data/previews/191/191591_2437358-lq.mp3",    // orange button
+//     "https://freesound.org/data/previews/151/151605_57789-lq.mp3",    // winner button
+// ];
 
 let green = document.getElementById("shapeG");
 let blue = document.getElementById("shapeB");
@@ -32,7 +32,7 @@ let power = false;
 let playerSequence = [];
 let displayCount = 1;
 let strict = false;
-simonSequence=[]; //computer turn
+let simonCount; //computer turn
 let intervalId =0;
 // let activeRunning = false;
 let activeMemory;
@@ -111,50 +111,54 @@ $("#strictButton").click(function () {
         intervalId = 0;
         win = false;
        displayCount = 1;
+       clearColor;
         displayCountMemory.innerHTML = 1;
         gameStatus = true;
         for (var i = 0; i < 20; i++) {
             flashTracker.push(Math.floor(Math.random() * 4) + 1);
             console.log(flashTracker);
         }
-      simonSequence = true;
+      simonCount = true;
         intervalId = setInterval(gameCount, 1000);
     
         function gameCount() {
             power = false;
             if (flash == displayCount) {
                 clearIntervalId(intervalId);
-                simonSequence = false;
+                simonCount = false;
                 clearColor();
                 power = true;
             }
         }
-        if (simonSequence){
-            clearColor();
+        if (simonCount){
+           clearColor();
             setTimeout(() =>{
-                if (flashTracker[flash] == 1) blue();
-                if (flashTracker[flash] == 2) yellow();
-                if (flashTracker[flash] == 3) green();
-                if (flashTracker[flash] == 4) orange();
+                if (flashTracker[flash] == 1) fOne();
+                if (flashTracker[flash] == 2) fTwo();
+                if (flashTracker[flash] == 3) fThree();
+                if (flashTracker[flash] == 4) fFour();
                 flash++;
-            },200);
-        }
+            },300);
+        }   
     }
     });
-function playSequence (blue){
+
+ 
+function fOne (){
     if(noise){
-        const boardSound=document.getElementById("shapeB")
+        let  boardSound =document .getElementById("soundB");
         boardSound.playGame();
+             
     }
     noise= true;
-    shapeB.style.backgroundColor ="lightblue";
+    shapeB.style.blue-active
     
 function clearColor(){
 shapeB.style.backgroundColor ="blue";
 };
 
 function flashLight(){
-    shapeB.style.backgronudColor = "lightblue"
+    shapeB.style.backgroundColor = "lightblue"
 }
 shapeB.addEventListener('click',(event) =>{
     if(power)
