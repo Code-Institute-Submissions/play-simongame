@@ -70,9 +70,9 @@ width: 300px;
     border-radius: 300px 0 0 0;    
 }
 
-.blue-active {
+/* .blue-active {
   background-color:  lightblue !important;
-}
+} */
 
 .yellow {
   background-color: yellow;
@@ -84,9 +84,9 @@ width: 300px;
 }
 
 
-.yellow-active {
+/* .yellow-active {
   background-color: lightgoldenrodyellow !important;
-}
+} */
 
 .green {
   background-color: green;
@@ -95,9 +95,9 @@ width: 300px;
   clear: left;
 }
 
-.green-active {
+/* .green-active {
   background-color:	lightgreen  !important;
-}
+} */
 
 .orange {
   background-color: orange;
@@ -105,10 +105,10 @@ width: 300px;
     float: left;
 }
 
-.orange-active {
+/* .orange-active {
   background-color: lightsalmon!important;
 
-}
+} */
 .title {
   font-size: 30px;
   margin-top: auto;

@@ -150,11 +150,9 @@ function fOne() {
         let boardSound = document.getElementById("soundB");
         boardSound.playGame();
     }
-    
+         noise = true;
+    $("#shapeB").css("backgroundcolor","red")
     }
-
-    noise = true;
-    shapeB.style.blue - active
 
     function clearColor() {
         shapeB.style.backgroundColor = "blue";
@@ -167,7 +165,7 @@ function fOne() {
         if (power)
             playerSequence.push(1);
         // check();
-        blue();
+        // blue();
         if (win) {
             setTimeout(() => {
                 clearColor();
