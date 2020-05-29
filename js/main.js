@@ -1,5 +1,5 @@
 const game = {
-    playerSequence: [], //array containing the users selection
+    playerSequence: [],   //array containing the users selection
     // simonSequence: [], //array containing generated random buttons
     // numLevels: 20,
     // turn: 00, //
@@ -104,6 +104,8 @@ $("#strictButton").click(function () {
         };
     });
 
+   
+
     //function to start the game
     function playGame() {
         flashTracker = [];
@@ -140,21 +142,23 @@ $("#strictButton").click(function () {
             }, 300);
         }
     }
-});
+})
 
 
 function fOne() {
     if (noise) {
         let boardSound = document.getElementById("soundB");
         boardSound.playGame();
-
     }
+    
+    }
+
     noise = true;
     shapeB.style.blue - active
 
     function clearColor() {
         shapeB.style.backgroundColor = "blue";
-    };
+    }
 
     function flashLight() {
         shapeB.style.backgroundColor = "lightblue"
@@ -172,4 +176,3 @@ function fOne() {
         }
     })
 
-}
