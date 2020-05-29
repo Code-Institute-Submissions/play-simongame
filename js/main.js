@@ -43,6 +43,7 @@ let trackCount; //keep track of turn
 let flash;
 let sound = true;
 let win;
+
 // let clearColor;
 let flashTracker;
 let gameStatus; // To check players performance (true or false)
@@ -137,9 +138,9 @@ $("#strictButton").click(function () {
             clearColor();
             setTimeout(() => {
                 if (flashTracker[flash] == 1) fOne();
-                // if (flashTracker[flash] == 2) fTwo();
-                // if (flashTracker[flash] == 3) fThree();
-                // if (flashTracker[flash] == 4) fFour();
+                if (flashTracker[flash] == 2) fTwo();
+                if (flashTracker[flash] == 3) fThree();
+                if (flashTracker[flash] == 4) fFour();
                 flash++;
             }, 300);
         }
@@ -153,26 +154,87 @@ function fOne() {
        audio.play(sound);
     }
          noise = true;
-    $("#shapeB").css("backgroundcolor","red")
+    $("#shapeB").css ("background-color","red");
     }
+
+
+ function fTwo() {
+    if (noise) {
+        let audio = document.getElementById("soundY");
+       audio.play(sound);
+    }
+         noise = true;
+    $("#shapeY").css ("background-color","#FFD700"); //GOLD
+    }
+
+
+ function fThree() {
+    if (noise) {
+        let audio = document.getElementById("soundG");
+       audio.play(sound);
+    }
+         noise = true;
+    $("#shapeG").css ("background-color","#FFF5EE"); //seashell
+    }
+
+function fFour() {
+    if (noise) {
+        let audio = document.getElementById("soundO");
+       audio.play(sound);
+    }
+         noise = true;
+    $("#shapeO").css ("background-color","violet"); //#EE82EE
+    }
+
 
     function clearColor() {
         shapeB.style.backgroundColor = "blue";
     }
+ function clearColor() {
+        shapeY.style.backgroundColor = "yellow";
+    }
+ function clearColor() {
+        shapeG.style.backgroundColor = "green";
+    }
+
+     function clearColor() {
+        shapeO.style.backgroundColor = "orange";
+    }
+
 
     function flashLight() {
         shapeB.style.backgroundColor = "lightblue"
     }
-    shapeB.addEventListener('click', (event) => {
-        if (power)
+
+     
+    function flashLight() {
+        shapeY.style.backgroundColor = "lightyellow";
+    }
+   
+   
+    function flashLight() {
+        shapeG.style.backgroundColor = "SpringGreen" //#00FF7F
+    }
+
+
+    function flashLight() {
+        shapeO.style.backgroundColor = "OrangeRed" //#FF4500
+    }
+ function check(){
+     
+ }
+
+    $("#shapeB").click(function() {
+        if (power){
             playerSequence.push(1);
-        // check();
-        // blue();
-        if (win) {
+        check();
+        fOne();
+        if (!win) {
             setTimeout(() => {
                 clearColor();
             }, 200);
 
         }
-    })
+    }
+})
 
