@@ -34,6 +34,8 @@ let displayCount = 1;
 let strict = false;
 let simonCount; //computer turn
 let intervalId = 0;
+let clearIntervalId
+let noise;
 // let activeRunning = false;
 let activeMemory;
 let trackCount; //keep track of turn
@@ -44,7 +46,7 @@ let win;
 // let clearColor;
 let flashTracker;
 let gameStatus; // To check players performance (true or false)
-let newAudio;
+// let newAudio;
 let playGame; // start of the game 
 let onoffSwitch = false; //power button on or off function
 
@@ -100,14 +102,14 @@ $("#strictButton").click(function () {
 
     $("#startButton").click(function () {
         if (power || win) {
-            playGame();
+            play(sound);
         };
     });
 
    
 
     //function to start the game
-    function playGame() {
+    function play(sound) {
         flashTracker = [];
         flash = 0;
         intervalId = 0;
@@ -125,30 +127,30 @@ $("#strictButton").click(function () {
         function gameCount() {
             power = false;
             if (flash == displayCount) {
-                clearIntervalId(intervalId);
+                clearInterval(intervalId);
                 simonCount = false;
                 clearColor();
                 power = true;
-            }
+            
         }
         if (simonCount) {
             clearColor();
             setTimeout(() => {
                 if (flashTracker[flash] == 1) fOne();
-                if (flashTracker[flash] == 2) fTwo();
-                if (flashTracker[flash] == 3) fThree();
-                if (flashTracker[flash] == 4) fFour();
+                // if (flashTracker[flash] == 2) fTwo();
+                // if (flashTracker[flash] == 3) fThree();
+                // if (flashTracker[flash] == 4) fFour();
                 flash++;
             }, 300);
         }
     }
+}
 })
-
 
 function fOne() {
     if (noise) {
-        let boardSound = document.getElementById("soundB");
-        boardSound.playGame();
+        let audio = document.getElementById("soundB");
+       audio.play(sound);
     }
          noise = true;
     $("#shapeB").css("backgroundcolor","red")
