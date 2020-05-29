@@ -1,7 +1,7 @@
 const game = {
     playerSequence: [],   //array containing the users selection
     // simonSequence: [], //array containing generated random buttons
-    // numLevels: 20,
+    numLevels: 20,
     // turn: 00, //
 
 
@@ -221,7 +221,12 @@ function fFour() {
         shapeO.style.backgroundColor = "OrangeRed" //#FF4500
     }
  function check(){
-     
+     if(playerSequence[playerSequence.length -1]!== flashTracker[playerSequence.length -1])
+gameStatus =false;
+if (playerSequence.length== 20 && gamestatus){
+    WinGame();
+    
+}
  }
 
     $("#shapeB").click(function() {
