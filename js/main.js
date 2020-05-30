@@ -63,6 +63,7 @@ $("#onoffSwitch").click(function () {
         $("#displayText").text("ON");
         power = true;
         console.log(power);
+     
     }
     else {
 
@@ -156,7 +157,7 @@ function fOne() {
          noise = true;
     $("#shapeB").css ("background-color","red");
     }
-
+debugger;
 
  function fTwo() {
     if (noise) {
@@ -164,7 +165,7 @@ function fOne() {
        audio.play(sound);
     }
          noise = true;
-    $("#shapeY").css ("background-color","#FFD700"); //GOLD
+    $("#shapeY").css ("background-color","HotPink"); //#FF69B4
     }
 
 
@@ -174,7 +175,7 @@ function fOne() {
        audio.play(sound);
     }
          noise = true;
-    $("#shapeG").css ("background-color","#FFF5EE"); //seashell
+    $("#shapeG").css ("background-color","LawnGreen"); //#7CFC00
     }
 
 function fFour() {
@@ -183,7 +184,7 @@ function fFour() {
        audio.play(sound);
     }
          noise = true;
-    $("#shapeO").css ("background-color","violet"); //#EE82EE
+    $("#shapeO").css ("background-color","Indigo"); //#4B0082
     }
 
 
