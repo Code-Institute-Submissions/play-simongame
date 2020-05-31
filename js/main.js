@@ -1,7 +1,7 @@
 const game = {
     playerSequence: [],   //array containing the users selection
     // simonSequence: [], //array containing generated random buttons
-    numLevels: 20,
+    
     // turn: 00, //
 
 
@@ -32,6 +32,7 @@ let power = false;
 let playerSequence = [];
 let displayCount = 1;
 let strict = false;
+let numLevels = 20; //Total number to declare a winner
 let simonCount; //computer turn
 let intervalId = 0;
 let clearIntervalId
@@ -45,8 +46,8 @@ let sound = true;
 let win;
 
 // let clearColor;
-let flashTracker;
-let gameStatus; // To check players performance (true or false)
+let genSequence;
+let positive; // To check players performance (true or false)
 // let newAudio;
 let playGame; // start of the game 
 let onoffSwitch = false; //power button on or off function
@@ -111,18 +112,28 @@ $("#strictButton").click(function () {
    
 
     //function to start the game
-    function play(sound) {
-        flashTracker = [];
+    function play() {
+     genSequence = [];
         flash = 0;
         intervalId = 0;
         win = false;
         displayCount = 1;
         displayCountMemory.innerHTML = 1;
-        gameStatus = true;
-        for (var i = 0; i < 20; i++) {
-            flashTracker.push(Math.floor(Math.random() * 4) + 1);
-            console.log(flashTracker);
+        positive = true;
+        generateRandNum ();
+
+    
+    
+        function generateRandNum(){
+        for (var i = 0; i < numLevels; i++) {
+            let randNum = (Math.floor(Math.random() * 4) + 1);
+           genSequence.push(randNum);
+            console.log(genSequence);
         }
+    }
+
+
+
         simonCount = true;
         intervalId = setInterval(gameCount, 1000);
 
@@ -138,10 +149,10 @@ $("#strictButton").click(function () {
         if (simonCount) {
             clearColor();
             setTimeout(() => {
-                if (flashTracker[flash] == 1) fOne();
-                if (flashTracker[flash] == 2) fTwo();
-                if (flashTracker[flash] == 3) fThree();
-                if (flashTracker[flash] == 4) fFour();
+                if (genSequence[flash] == 1) fOne();
+                if (genSequence[flash] == 2) fTwo();
+                if (genSequence[flash] == 3) fThree();
+                if (genSequence[flash] == 4) fFour();
                 flash++;
             }, 300);
         }
@@ -157,7 +168,7 @@ function fOne() {
          noise = true;
     $("#shapeB").css ("background-color","red");
     }
-debugger;
+
 
  function fTwo() {
     if (noise) {
@@ -221,16 +232,9 @@ function fFour() {
     function flashLight() {
         shapeO.style.backgroundColor = "OrangeRed" //#FF4500
     }
- function check(){
-     if(playerSequence[playerSequence.length -1]!== flashTracker[playerSequence.length -1])
-gameStatus =false;
-if (playerSequence.length== 20 && gamestatus){
-    WinGame();
-    
-}
- }
+ 
 
-    $("#shapeB").click(function() {
+     $("#shapeB").click(function(){
         if (power){
             playerSequence.push(1);
         check();
@@ -244,3 +248,56 @@ if (playerSequence.length== 20 && gamestatus){
     }
 })
 
+ $("#shapeY").click(function() {
+        if (power){
+            playerSequence.push(2);
+        check();
+        fOne();
+        if (!win) {
+            setTimeout(() => {
+                clearColor();
+            }, 200);
+
+        }
+    }
+})
+
+ $("#shapeG").click(function() {
+        if (power){
+            playerSequence.push(3);
+        check();
+        fOne();
+        if (!win) {
+            setTimeout(() => {
+                clearColor();
+            }, 200);
+
+        }
+    }
+})
+
+
+
+ $("#shapeO").click(function() {
+        if (power){
+            playerSequence.push(4);
+        check();
+        fOne();
+        if (!win) {
+            setTimeout(() => {
+                clearColor();
+            }, 200);
+
+        }
+    }
+})
+
+function check(){
+     if (playerSequence[playerSequence.length - 1] !== genSequence[playerSequence.length - 1]){
+positive =false;
+     }
+if (playerSequence.length == numLevels && positive){
+    WinGame();
+    
+}
+ }
