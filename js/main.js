@@ -114,6 +114,7 @@ $("#strictButton").click(function () {
     //function to start the game
     function play() {
      genSequence = [];
+     playerSequence=[];
         flash = 0;
         intervalId = 0;
         win = false;
@@ -232,11 +233,34 @@ function fFour() {
     function flashLight() {
         shapeO.style.backgroundColor = "OrangeRed" //#FF4500
     }
- 
 
-     $("#shapeB").click(function(){
-        if (power){
-            playerSequence.push(1);
+
+    //user clicks
+
+    $("#shapeB").click(function(){
+       addplayerSequence(1);
+    });
+    
+     $("#shapeY").click(function() {
+
+         addplayerSequence(2);
+    });
+
+
+     $("#shapeG").click(function() {
+
+        addplayerSequence(3);
+    });
+
+      $("#shapeO").click(function() {
+           addplayerSequence(4);
+    });
+/************ */
+
+
+function addplayerSequence(id){
+            if (power){
+            playerSequence.push(id);
         check();
         fOne();
         if (!win) {
@@ -246,51 +270,52 @@ function fFour() {
 
         }
     }
-})
-
- $("#shapeY").click(function() {
-        if (power){
-            playerSequence.push(2);
-        check();
-        fOne();
-        if (!win) {
-            setTimeout(() => {
-                clearColor();
-            }, 200);
-
-        }
-    }
-})
-
- $("#shapeG").click(function() {
-        if (power){
-            playerSequence.push(3);
-        check();
-        fOne();
-        if (!win) {
-            setTimeout(() => {
-                clearColor();
-            }, 200);
-
-        }
-    }
-})
+}
 
 
+//  $("#shapeY").click(function() {
+//         if (power){
+//             playerSequence.push(2);
+//         check();
+//         fOne();
+//         if (!win) {
+//             setTimeout(() => {
+//                 clearColor();
+//             }, 200);
 
- $("#shapeO").click(function() {
-        if (power){
-            playerSequence.push(4);
-        check();
-        fOne();
-        if (!win) {
-            setTimeout(() => {
-                clearColor();
-            }, 200);
+//         }
+//     }
+// })
 
-        }
-    }
-})
+//  $("#shapeG").click(function() {
+//         if (power){
+//             playerSequence.push(3);
+//         check();
+//         fOne();
+//         if (!win) {
+//             setTimeout(() => {
+//                 clearColor();
+//             }, 200);
+
+//         }
+//     }
+// })
+
+
+
+//  $("#shapeO").click(function() {
+//         if (power){
+//             playerSequence.push(4);
+//         check();
+//         fOne();
+//         if (!win) {
+//             setTimeout(() => {
+//                 clearColor();
+//             }, 200);
+
+//         }
+//     }
+// })
 
 function check(){
      if (playerSequence[playerSequence.length - 1] !== genSequence[playerSequence.length - 1]){
