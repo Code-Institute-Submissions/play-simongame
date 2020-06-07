@@ -114,7 +114,7 @@ $("#strictButton").click(function () {
     //function to start the game
     function play() {
      genSequence = [];
-     playerSequence=[];
+    //  playerSequence=[];
         flash = 0;
         intervalId = 0;
         win = false;
@@ -262,7 +262,7 @@ function addplayerSequence(id){
             if (power){
             playerSequence.push(id);
         check();
-        fOne();
+        fOne(id);
         if (!win) {
             setTimeout(() => {
                 clearColor();
