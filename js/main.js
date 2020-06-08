@@ -97,48 +97,40 @@ $("#strictButton").click(function () {
             $("#strictButton").removeClass("fa fa-check");
             $("#startButton").css("background", "red")
             // $("#displayText").text("1");
-
-
             strict = false;
             console.log(strict);
         }
     }
-
+});
 
     $("#startButton").click(function () {
         if (power || win) {
-            play(sound);
+            play();
+            
         };
     });
 
    
-
     //function to start the game
     function play() {
      genSequence = [];
-    //  playerSequence=[];
+      playerSequence=[];
         flash = 0;
         intervalId = 0;
         win = false;
         displayCount= 1;
-        displayCountMemory.innerHTML = 1;
+        // displayCountMemory.innerHTML = 1;
         positive = true;
-        generateRandNum ();
-
-    
-    
-        function generateRandNum(){
         for (var i = 0; i < numLevels; i++) {
-            let randNum = (Math.floor(Math.random() * 4) + 1);
-           genSequence.push(randNum);
-            console.log(genSequence[i]);
-        }
-    }
+          genSequence.push(Math.floor(Math.random() * 4) + 1);
 
-
-
-        simonCount = true;
-        intervalId = setInterval(gameCount, 1000);
+     }
+        
+        simonCount =true;
+        intervalId =  setInterval(gameCount, 1000);
+                   
+                             
+//function for simon count or game turn.
 
         function gameCount() {
             power = false;
@@ -152,119 +144,109 @@ $("#strictButton").click(function () {
         if (simonCount) {
             clearColor();
             setTimeout(() => {
-                if (genSequence[flash] == 1) fOne();
-                if (genSequence[flash] == 2) fTwo();
-                if (genSequence[flash] == 3) fThree();
-                if (genSequence[flash] == 4) fFour();
+                if (genSequence[flash] == 1) seqOne();
+                if (genSequence[flash] == 2) seqTwo();
+                if (genSequence[flash] == 3) seqThree();
+                if (genSequence[flash] == 4) seqFour();
                 flash++;
             }, 300);
         }
-    }
-}
-})
 
-function fOne() {
+function seqOne() {
     if (noise) {
         let audio = document.getElementById("soundB");
        audio.play(sound);
-    }
+    };
          noise = true;
     $("#shapeB").css ("background-color","red");
-    }
+    };
 
-
- function fTwo() {
+ function seqTwo() {
     if (noise) {
         let audio = document.getElementById("soundY");
        audio.play(sound);
-    }
+    };
          noise = true;
     $("#shapeY").css ("background-color","HotPink"); //#FF69B4
-    }
+    };
 
 
- function fThree() {
+ function seqThree() {
     if (noise) {
         let audio = document.getElementById("soundG");
        audio.play(sound);
-    }
+    };
          noise = true;
     $("#shapeG").css ("background-color","LawnGreen"); //#7CFC00
-    }
+    };
 
-function fFour() {
+function seqFour() {
     if (noise) {
         let audio = document.getElementById("soundO");
        audio.play(sound);
-    }
+    };
          noise = true;
     $("#shapeO").css ("background-color","Indigo"); //#4B0082
-    }
+    };
+
+ function flashLight(lightblue) {
+        shapeB.style.backgroundColor = "lightblue"
+    };
+
+     
+    function flashLight(lightyellow) {
+        shapeY.style.backgroundColor = "lightyellow";
+    };
+   
+   
+    function flashLight(SpringGreen) {
+        shapeG.style.backgroundColor = "SpringGreen" //#00FF7F
+    };
+
+
+    function flashLight(OrangeRed) {
+        shapeO.style.backgroundColor = "OrangeRed" //#FF4500
+    };
 
 
     function clearColor() {
         shapeB.style.backgroundColor = "blue";
-    }
+    };
  function clearColor() {
         shapeY.style.backgroundColor = "yellow";
-    }
+    };
  function clearColor() {
         shapeG.style.backgroundColor = "green";
-    }
+    };
 
      function clearColor() {
         shapeO.style.backgroundColor = "orange";
-    }
+    };
 
-
-    function flashLight() {
-        shapeB.style.backgroundColor = "lightblue"
-    }
-
-     
-    function flashLight() {
-        shapeY.style.backgroundColor = "lightyellow";
-    }
    
-   
-    function flashLight() {
-        shapeG.style.backgroundColor = "SpringGreen" //#00FF7F
-    }
-
-
-    function flashLight() {
-        shapeO.style.backgroundColor = "OrangeRed" //#FF4500
-    }
-
-
     //user clicks
 
-    $("#shapeB").click(function(){
-       addplayerSequence(1);
-    });
-    
-     $("#shapeY").click(function() {
-
-         addplayerSequence(2);
-    });
-
-
-     $("#shapeG").click(function() {
-
-        addplayerSequence(3);
-    });
-
-      $("#shapeO").click(function() {
-           addplayerSequence(4);
-    });
-/************ */
-
-
-function addplayerSequence(id){
-            if (power){
-            playerSequence.push(id);
+  $("#shapeB").click(function() {
+        if (power){
+            playerSequence.push(1);
         check();
-        fOne(id);
+        seqOne();
+        if (!win) {
+            setTimeout(() => {
+                clearColor();
+            }, 200);
+
+        }
+
+        }
+    });
+
+
+ $("#shapeY").click(function() {
+        if (power){
+            playerSequence.push(2);
+        check();
+        seqTwo();
         if (!win) {
             setTimeout(() => {
                 clearColor();
@@ -272,59 +254,51 @@ function addplayerSequence(id){
 
         }
     }
-}
+});
+
+ $("#shapeG").click(function() {
+        if (power){
+            playerSequence.push(3);
+        check();
+        seqThree();
+        if (!win) {
+            setTimeout(() => {
+                clearColor();
+            }, 200);
+
+        }
+    }
+});
 
 
-//  $("#shapeY").click(function() {
-//         if (power){
-//             playerSequence.push(2);
-//         check();
-//         fOne();
-//         if (!win) {
-//             setTimeout(() => {
-//                 clearColor();
-//             }, 200);
+ $("#shapeO").click(function() {
+        if (power){
+            playerSequence.push(4);
+        check();
+        seqFour();
+        if (!win) {
+            setTimeout(() => {
+                clearColor();
+            }, 200);
+        };
 
-//         }
-//     }
-// })
+        }
+    });
 
-//  $("#shapeG").click(function() {
-//         if (power){
-//             playerSequence.push(3);
-//         check();
-//         fOne();
-//         if (!win) {
-//             setTimeout(() => {
-//                 clearColor();
-//             }, 200);
+//To check if players clicks respond to button sound.
 
-//         }
-//     }
-// })
-
-
-
-//  $("#shapeO").click(function() {
-//         if (power){
-//             playerSequence.push(4);
-//         check();
-//         fOne();
-//         if (!win) {
-//             setTimeout(() => {
-//                 clearColor();
-//             }, 200);
-
-//         }
-//     }
-// })
 
 function check(){
      if (playerSequence[playerSequence.length - 1] !== genSequence[playerSequence.length - 1]){
 positive =false;
-     }
+     };
 if (playerSequence.length == numLevels && positive){
     WinGame();
-    
+};
+if (positive == false){
+    flashColor();
+    displayCountMemory.innerHTML ="Err";
+    setTimeout() => {
+        clearColor();
+    }
 }
- }
