@@ -47,8 +47,6 @@ let flash;
 let sound = true;
 let win;
 
-// let clearColor;
-
 let positive; // To check players performance (true or false)
 // let newAudio;
 // let playGame; // start of the game 
@@ -119,14 +117,14 @@ $("#strictButton").click(function () {
         intervalId = 0;
         win = false;
         displayCount= 1;
-        // displayCountMemory.innerHTML = 1;
+        displayCountMemory.innerHTML = 1;
         positive = true;
         for (var i = 0; i < numLevels; i++) {
           genSequence.push(Math.floor(Math.random() * 4) + 1);
         }
+        
 
      }
-        
         simonCount =true;
         intervalId =  setInterval(gameCount, 1000);
                    
@@ -152,181 +150,181 @@ $("#strictButton").click(function () {
                 flash++;
             }, 300);
         }
+    };
+    function seqOne() {
+    if (noise) {
+        let audio = document.getElementById("soundB");
+       audio.play(sound);
+    };
+         noise = true;
+    $("#shapeB").css ("background-color","red");
+    };
 
-// function seqOne() {
-//     if (noise) {
-//         let audio = document.getElementById("soundB");
-//        audio.play(sound);
-//     };
-//          noise = true;
-//     $("#shapeB").css ("background-color","red");
-//     };
-
-//  function seqTwo() {
-//     if (noise) {
-//         let audio = document.getElementById("soundY");
-//        audio.play(sound);
-//     };
-//          noise = true;
-//     $("#shapeY").css ("background-color","HotPink"); //#FF69B4
-//     };
+function seqTwo() {
+    if (noise) {
+        let audio = document.getElementById("soundY");
+       audio.play(sound);
+    };
+         noise = true;
+    $("#shapeY").css ("background-color","HotPink"); //#FF69B4
+    };
 
 
-//  function seqThree() {
-//     if (noise) {
-//         let audio = document.getElementById("soundG");
-//        audio.play(sound);
-//     }
-//          noise = true;
-//     $("#shapeG").css ("background-color","LawnGreen"); //#7CFC00
-//     };
 
-// function seqFour() {
-//     if (noise) {
-//         let audio = document.getElementById("soundO");
-//        audio.play(sound);
-//     };
-//          noise = true;
-//     $("#shapeO").css ("background-color","Indigo"); //#4B0082
-//     }
+ function seqThree() {
+    if (noise) {
+        let audio = document.getElementById("soundG");
+       audio.play(sound);
+    }
+         noise = true;
+    $("#shapeG").css ("background-color","LawnGreen"); //#7CFC00
+    };
 
-//  function flashLight(lightblue) {
-//         shapeB.style.backgroundColor = "lightblue" ;
-//     };
+function seqFour() {
+    if (noise) {
+        let audio = document.getElementById("soundO");
+       audio.play(sound);
+    };
+         noise = true;
+    $("#shapeO").css ("background-color","Indigo"); //#4B0082
+    }
+
+ function flashLight(lightblue) {
+        shapeB.style.backgroundColor = "lightblue" ;
+    };
 
      
-//     function flashLight(lightyellow) {
-//         shapeY.style.backgroundColor = "lightyellow";
-//     };
+    function flashLight(lightyellow) {
+        shapeY.style.backgroundColor = "lightyellow";
+    };
    
    
-//     function flashLight(SpringGreen) {
-//         shapeG.style.backgroundColor = "SpringGreen" //#00FF7F
-//     };
+    function flashLight(SpringGreen) {
+        shapeG.style.backgroundColor = "SpringGreen" //#00FF7F
+    };
 
 
-//     function flashLight(OrangeRed) {
-//         shapeO.style.backgroundColor = "OrangeRed" //#FF4500
-//     };
+    function flashLight(OrangeRed) {
+        shapeO.style.backgroundColor = "OrangeRed" //#FF4500
+    };
 
 
-//     function clearColor() {
-//         shapeB.style.backgroundColor = "blue";
-//     };
-//  function clearColor() {
-//         shapeY.style.backgroundColor = "yellow";
-//     };
-//  function clearColor() {
-//         shapeG.style.backgroundColor = "green";
-//     };
 
-//      function clearColor() {
-//         shapeO.style.backgroundColor = "orange";
-//     };
+function clearColor() {
+        shapeB.style.backgroundColor = "blue";
+    };
+ function clearColor() {
+        shapeY.style.backgroundColor = "yellow";
+    };
+ function clearColor() {
+        shapeG.style.backgroundColor = "green";
+    };
 
-   
-//     //user clicks
+     function clearColor() {
+        shapeO.style.backgroundColor = "orange";
+    };
 
-//   $("#shapeB").click(function() {
-//         if (power){
-//             playerSequence.push(1);
-//         check();
-//         seqOne();
-//         if (!win) {
-//             setTimeout(() => {
-//                 clearColor();
-//             }, 200);
+     //user clicks
 
-//         }
+  $("#shapeB").click(function() {
+        if (power){
+            playerSequence.push(1);
+        check();
+        seqOne();
+        if (!win) {
+            setTimeout(() => {
+                clearColor();
+            }, 200);
 
-//         }
-//     });
+        }
 
+        }
+    });
+    
+ $("#shapeY").click(function() {
+        if (power){
+            playerSequence.push(2);
+        check();
+        seqTwo();
+        if (!win) {
+            setTimeout(() => {
+                clearColor();
+            }, 200);
 
-//  $("#shapeY").click(function() {
-//         if (power){
-//             playerSequence.push(2);
-//         check();
-//         seqTwo();
-//         if (!win) {
-//             setTimeout(() => {
-//                 clearColor();
-//             }, 200);
+        }
+    }
+});
 
-//         }
-//     }
-// });
+ $("#shapeG").click(function() {
+        if (power){
+            playerSequence.push(3);
+        check();
+        seqThree();
+        if (!win) {
+            setTimeout(() => {
+                clearColor();
+            }, 200);
 
-//  $("#shapeG").click(function() {
-//         if (power){
-//             playerSequence.push(3);
-//         check();
-//         seqThree();
-//         if (!win) {
-//             setTimeout(() => {
-//                 clearColor();
-//             }, 200);
-
-//         }
-//     }
-// });
-
-
-//  $("#shapeO").click(function() {
-//         if (power){
-//             playerSequence.push(4);
-//         check();
-//         seqFour();
-//         if (!win) {
-//             setTimeout(() => {
-//                 clearColor();
-//             }, 200);
-//         };
-
-//         }
-//     });
-
-// //To check if players clicks respond to button sound.
+        }
+    }
+});
 
 
-// function check(){
-//      if (playerSequence[playerSequence.length - 1] !== genSequence[playerSequence.length - 1]){
-// positive =false;
-//      };
-// if (playerSequence.length == numLevels && positive){
-//     WinGame();
-// };
-// if (positive == false){
-//     flashColor();
-//     displayCountMemory.innerHTML ="Err";
-//     setTimeout(() => {
-//         displayCountMemory.innerHTML = positive;
-//         clearColor();
-//  if(strict) {
-//      play();
-//  }else{
-//      simonCount = positive;
-//      flash=0;
-//      playerSequence =[];
-//      positive=true;
-//      intervalId = setInterval(gameCount,900);
-//  }
-// },900);
-//  noise = false;
-// }
-// if(displayCount == playerSequence.length && good && !win){
-//     displayCount++;
-//     playerSequence = [];
-//     simonCount = true;
-//     flash = 0;
-//     displayCountMemory.innerHTML = positive;
-//     intervalId = setInterval(gameCount,800);
-// }
+ $("#shapeO").click(function() {
+        if (power){
+            playerSequence.push(4);
+        check();
+        seqFour();
+        if (!win) {
+            setTimeout(() => {
+                clearColor();
+            }, 200);
+        };
 
-// }
-//  function winGame(){
-//   flashColor() ;
-//   displayCountMemory.innerHTML ="win"  ;
-// power= false;
-// win = true;
-//  };
+        }
+    });
+
+//To check if players clicks respond to button sound.
+
+
+function check(){
+     if (playerSequence[playerSequence.length - 1] !== genSequence[playerSequence.length - 1]){
+positive =false;
+     };
+if (playerSequence.length == numLevels && positive){
+    WinGame();
+};
+if (positive == false){
+    flashColor();
+    displayCountMemory.innerHTML ="Err";
+    setTimeout(() => {
+        displayCountMemory.innerHTML = positive;
+        clearColor();
+ if(strict) {
+     play();
+ }else{
+     simonCount = positive;
+     flash=0;
+     playerSequence =[];
+     positive=true;
+     intervalId = setInterval(gameCount,900);
+ }
+},900);
+ noise = false;
+}
+if(displayCount == playerSequence.length && positive && !win){
+    displayCount++;
+    playerSequence = [];
+    simonCount = true;
+    flash = 0;
+    displayCountMemory.innerHTML = positive;
+    intervalId = setInterval(gameCount,800);
+}
+
+}
+ function winGame(){
+  flashColor() ;
+  displayCountMemory.innerHTML ="win"  ;
+power= false;
+win = true;
+ };
