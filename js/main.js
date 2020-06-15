@@ -57,6 +57,9 @@ let yellowSound = new Audio("https://freesound.org/data/previews/156/156859_2538
 let greenSound = new Audio("https://freesound.org/data/previews/171/171495_2437358-lq.mp3")
 let orangeSound = new Audio("https://freesound.org/data/previews/191/191591_2437358-lq.mp3")
 let winSound = new Audio("https://freesound.org/data/previews/151/151605_57789-lq.mp3")
+/* ****  *** ********** */
+
+// Power button to test the game button switch//
 
 $("#onoffSwitch").click(function () {
     if (power == false) {
@@ -78,3 +81,59 @@ $("#onoffSwitch").click(function () {
 });
 
 
+//Strict Button Functionality //
+
+
+$("#strictButton").click(function () {
+    if (power == true) {
+        if (strict == false) {
+            $("#strictButton").css("background", "coral");
+            $("#strictButton").addClass("fa fa-check");
+            strict = true;
+            console.log(strict);
+
+        }
+
+        else if (strict == true) {
+            $("#strictButton").css("background", "white");
+            $("#strictButton").removeClass("fa fa-check");
+            $("#startButton").css("background", "red")
+            strict = false;
+            console.log(strict);
+        }
+    }
+});
+
+//Start Button Functionality //
+
+ $("#startButton").click(function () {
+        if (power || win) {
+            play(sound);
+            
+        };
+    });
+
+
+
+    //  Start of th game //
+
+     //function to start the game
+    function play(sound) {
+     genSequence = [];
+      playerSequence=[];
+        flash = 0;
+        intervalId = 0;
+        win = false;
+        displayCount= 1;
+        displayCountMemory.innerHTML = 1;
+        positive = true;
+        generateRandomNum();
+
+    function generateRandomNum(){
+           for (var i = 0; i < numLevels; i++) {
+               let randNum = (Math.floor(Math.random() * 4) + 1);
+    genSequence.push(randNum);
+    console.log(genSequence);
+        }
+    }
+    }
