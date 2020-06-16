@@ -148,7 +148,7 @@ function gameCount(){
     power= true;
     clearColor(button);
     
-};
+
 if (simonCount){
     power= false;
     clearColor();
@@ -157,8 +157,9 @@ if (simonCount){
         flash++;
     },300);
     }
+};
 
-function flash(id){
+function flashColor(id){
         shapeB.style.backgroundColor = "lightblue" ;
         shapeY.style.backgroundColor = "lightyellow";
         shapeG.style.backgroundColor = "SpringGreen" ;//#00FF7F
@@ -167,7 +168,94 @@ function flash(id){
 
     };
 function clearColor(){
+     shapeB.style.backgroundColor = "blue";
+     shapeY.style.backgroundColor = "yellow";
+     shapeG.style.backgroundColor = "green";
+     shapeO.style.backgroundColor = "orange";
 
-};;;;;
-     
-   
+};
+
+// Sounds for button clicks //
+ 
+
+$("#shapeB").click(function(){
+addpplayerSequence(0);
+
+});
+$("#shapeY").click(function(){
+addpplayerSequence(1);
+
+});
+
+$("#shapeG").click(function(){
+addpplayerSequence(2);
+
+});
+
+$("#shapeO").click(function(){
+addpplayerSequence(3);
+
+});
+
+
+
+ function addpplayerSequence(id){
+     if(power){
+   playerSequence.push(id);
+   checkSequence();
+   flashColor();
+           if (!win) {
+            setTimeout(() => {
+           clearColor();
+            }, 300);
+           
+        }
+
+     }
+};
+
+
+function play(sound){
+  
+if (noise) {
+        let audio = document.getElementById("soundB");
+       audio.play(sound);
+    }
+         noise = true;
+    $("#shapeB").css ("background-color","red");
+}
+
+if (noise) {
+        let audio = document.getElementById("soundY");
+       audio.play(sound);
+    }
+         noise = true;
+    $("#shapeY").css ("background-color","red");
+
+
+    if (noise) {
+        let audio = document.getElementById("soundG");
+       audio.play(sound);
+    
+         noise = true;
+    $("#shapeG").css ("background-color","LawnGreen"); //#7CFC00
+    }
+if (noise) {
+        let audio = document.getElementById("soundO");
+       audio.play(sound);
+}
+         noise = true;
+    $("#shapeO").css ("background-color","Indigo"); //#4B0082
+
+
+
+function checkSequence(){
+    if (playerSequence[playerSequence.length - 1] !== genSequence[playerSequence.length - 1]){
+positive =false;
+     };
+if (playerSequence.length == numLevels && positive){
+    WinGame();
+}
+
+
+};
