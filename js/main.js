@@ -137,3 +137,37 @@ $("#strictButton").click(function () {
         }
     }
     }
+
+    //flashing light  //
+
+function gameCount(){
+    power= false ;
+    if(flash==displayCount);
+    clearIntervalId(intervalId);
+    genSequence =false;
+    power= true;
+    clearColor(button);
+    
+};
+if (simonCount){
+    power= false;
+    clearColor();
+    setTimeOut(function(){
+        flashColor(genSequence[flash])
+        flash++;
+    },300);
+    }
+
+function flash(id){
+        shapeB.style.backgroundColor = "lightblue" ;
+        shapeY.style.backgroundColor = "lightyellow";
+        shapeG.style.backgroundColor = "SpringGreen" ;//#00FF7F
+        shapeO.style.backgroundColor = "OrangeRed" ;//#FF4500
+
+
+    };
+function clearColor(){
+
+};;;;;
+     
+   
