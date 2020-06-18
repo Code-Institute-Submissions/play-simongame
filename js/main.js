@@ -111,7 +111,6 @@ play(clickSound);
 startGame();
 
 
-
 };
 
     console.log('Start playing');
@@ -162,19 +161,47 @@ function gameCount() {
     }
 };
 
-function flashColor(id) {
-    if (id == 1) {
-        shapeB.style.backgroundColor = "lightblue";
-    } else if (id == 2) {
-        shapeY.style.backgroundColor = "lightyellow";
-    }
 
-
-    shapeG.style.backgroundColor = "SpringGreen";//#00FF7F
-    shapeO.style.backgroundColor = "OrangeRed";//#FF4500
+//The simonseq flash//
+function flashColor() {
+    
+ shapeB.style.backgroundColor = "lightblue";
+ shapeY.style.backgroundColor = "lightyellow";
+  shapeG.style.backgroundColor = "SpringGreen";//#00FF7F
+ shapeO.style.backgroundColor = "OrangeRed";//#FF4500
 
 
 };
+
+
+
+
+
+// Sound for simonSeq button//
+
+function playButtonPad(id){
+switch (id) {
+    case 0:
+    $(shapeB).addClass ('blue');
+    play(soundB);
+    break;
+
+case 1:
+    $(shapeY).addClass ('yellow');
+    play(soundY);
+    break;
+case 2:
+    $(shapeG).addClass('green');
+    play(soundG);
+    break;
+
+case 3:
+    $(shapeO).addClass ('orange');
+    play(soundO);
+    break;
+}
+};
+
 
 function clearColor() {
     shapeB.style.backgroundColor = "blue";
@@ -183,8 +210,7 @@ function clearColor() {
     shapeO.style.backgroundColor = "orange";
 };
 
-// Sounds for button clicks //
-
+// user Sounds for button clicks //
 
 $("#shapeB").click(function () {
     addpplayerSequence(0);
@@ -208,25 +234,38 @@ function addpplayerSequence(id) {
     if (power) {
         playerSequence.push(id);
         checkSequence();
+        playButtonPad(id);
         flashColor();
         if (!win) {
             setTimeout(() => {
                 clearColor();
-            }, 300);
+            }, 200);
         }
     }
 };
 
 
-function play(sound) {
+// PlaySound //
 
-    if (noise) {
-        let audio = document.getElementById("soundB");
-        audio.play(sound);
+function play(sound){
+    if(sound){
+        soundid.play();
+    } else{
+        soundid.stop();
     }
-    noise = true;
-    $("#shapeB").css("background-color", "red");
-}
+
+
+};
+
+// function play(sound) {
+
+//     if (noise) {
+//         let audio = document.getElementById("soundB");
+//         audio.play(sound);
+//     }
+//     noise = true;
+//     $("#shapeB").css("background-color", "red");
+// }
 
 // if (noise) {
 //         let audio = document.getElementById("soundY");
