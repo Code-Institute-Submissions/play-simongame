@@ -1,7 +1,7 @@
 // const game = {
 //     playerSequence: [],   //array containing the users selection
 //     // simonSequence: [], //array containing generated random buttons
-    
+
 //     // turn: 00, //
 
 
@@ -30,9 +30,11 @@ let displayCountMemory = document.getElementById("displayCount");
 //Variables
 
 let power = false;
-let playerSequence = [];
-let genSequence=[];
-let displayCount = 1;
+let playerSequence = []; // user sequence
+let simonSeq =[]; //computer sequence flash tracker//
+let genCompTurn; // computerturn or user turn (boolean)//
+let displayCount = 1; //  keep track of turn//
+ 
 let strict = false;
 let numLevels = 20; //Total number to declare a winner
 let simonCount; //computer turn
@@ -59,6 +61,7 @@ let yellowSound = new Audio("https://freesound.org/data/previews/156/156859_2538
 let greenSound = new Audio("https://freesound.org/data/previews/171/171495_2437358-lq.mp3")
 let orangeSound = new Audio("https://freesound.org/data/previews/191/191591_2437358-lq.mp3")
 let winSound = new Audio("https://freesound.org/data/previews/151/151605_57789-lq.mp3")
+let clickSound = new Audio("https://freesound.org/data/previews/522/522720_10058132-lq.mp3")
 /* ****  *** ********** */
 
 // Power button to test the game button switch//
@@ -101,10 +104,24 @@ $("#strictButton").click(function () {
 
 //Start Button Functionality //
 
-$("#startButton").click(function () {
+$("#startButton").click(function() {
+if(power){
+play(clickSound);
+
+startGame();
+
+
+
+};
+
     console.log('Start playing');
-    genSequence = [];
-    playerSequence = [];
+
+
+
+    //Fuction for game start //
+function startGame(){
+    simonSeq = [];
+    // playerSequence = [];
     flash = 0;
     intervalId = 0;
     win = false;
@@ -112,120 +129,103 @@ $("#startButton").click(function () {
     displayCountMemory.innerHTML = displayCount;
     positive = true;
     generateRandomNum();
+}
 });
 
-// Flash light and play sound of the first 
 
-
-
-//  Start of the game //
-//function to start the game
-// function play(){
-//     console.log('Start playing');
-//     genSequence = [];
-//     playerSequence = [];
-//     flash = 0;
-//     intervalId = 0;
-//     win = false;
-//     displayCount = 1;
-//     displayCountMemory.innerHTML = 1;
-//     positive = true;
-//     generateRandomNum();
-// }
-
-function generateRandomNum(){
+function generateRandomNum() {
     for (var i = 0; i < numLevels; i++) {
         let randNum = (Math.floor(Math.random() * 4) + 1);
-        genSequence.push(randNum);
+        simonSeq.push(randNum);
     }
-    console.log('Gen Sequence', genSequence);
+    console.log('simon Sequence', simonSeq);
 }
 
-    //flashing light  //
+//flashing light  //
 
-function gameCount(){
-    power= false ;
-    if(flash==displayCount);
+function gameCount() {
+    power = false;
+    if (flash == displayCount);
     clearIntervalId(intervalId);
-    genSequence =false;
-    power= true;
+   genCompTurn = false;
+    power = true;
     clearColor(button);
-    
 
-    if (simonCount){
+
+    if (genCompTurn) {
         power = false;
-        setTimeOut(function(){
-            flashColor(genSequence[flash])
+        setTimeOut(function () {
+            flashColor(simonSeq[flash])
             flash++;
-        },300);
+        }, 300);
         clearColor();
     }
 };
 
-function flashColor(id){
-    if (id == 1){
-        shapeB.style.backgroundColor = "lightblue" ;
+function flashColor(id) {
+    if (id == 1) {
+        shapeB.style.backgroundColor = "lightblue";
     } else if (id == 2) {
         shapeY.style.backgroundColor = "lightyellow";
     }
-    
-    
-    shapeG.style.backgroundColor = "SpringGreen" ;//#00FF7F
-    shapeO.style.backgroundColor = "OrangeRed" ;//#FF4500
+
+
+    shapeG.style.backgroundColor = "SpringGreen";//#00FF7F
+    shapeO.style.backgroundColor = "OrangeRed";//#FF4500
 
 
 };
 
-function clearColor(){
-     shapeB.style.backgroundColor = "blue";
-     shapeY.style.backgroundColor = "yellow";
-     shapeG.style.backgroundColor = "green";
-     shapeO.style.backgroundColor = "orange";
+function clearColor() {
+    shapeB.style.backgroundColor = "blue";
+    shapeY.style.backgroundColor = "yellow";
+    shapeG.style.backgroundColor = "green";
+    shapeO.style.backgroundColor = "orange";
 };
 
 // Sounds for button clicks //
- 
 
-$("#shapeB").click(function(){
+
+$("#shapeB").click(function () {
     addpplayerSequence(0);
 });
 
-$("#shapeY").click(function(){
+$("#shapeY").click(function () {
     addpplayerSequence(1);
 });
 
-$("#shapeG").click(function(){
+$("#shapeG").click(function () {
     addpplayerSequence(2);
 });
 
-$("#shapeO").click(function(){
+$("#shapeO").click(function () {
     addpplayerSequence(3);
 });
 
 
 
- function addpplayerSequence(id){
-    if(power){
+function addpplayerSequence(id) {
+    if (power) {
         playerSequence.push(id);
         checkSequence();
         flashColor();
-            if (!win) {
-                setTimeout(() => {
-                    clearColor();
-                }, 300);
-            }
+        if (!win) {
+            setTimeout(() => {
+                clearColor();
+            }, 300);
+        }
     }
 };
 
 
-function play(sound){
-  
+function play(sound) {
+
     if (noise) {
         let audio = document.getElementById("soundB");
         audio.play(sound);
     }
     noise = true;
-    $("#shapeB").css ("background-color","red");
+    $("#shapeB").css("background-color", "red");
 }
 
 // if (noise) {
@@ -251,11 +251,11 @@ function play(sound){
 // $("#shapeO").css ("background-color","Indigo"); //#4B0082
 
 
-function checkSequence(){
-    if (playerSequence[playerSequence.length - 1] !== genSequence[playerSequence.length - 1]){
-        positive =false;
-     };
-    if (playerSequence.length == numLevels && positive){
+function checkSequence() {
+    if (playerSequence[playerSequence.length - 1] !== simonSeq[playerSequence.length - 1]) {
+        positive = false;
+    };
+    if (playerSequence.length == numLevels && positive) {
         WinGame();
     }
 };
