@@ -1,21 +1,3 @@
-// const game = {
-//     playerSequence: [],   //array containing the users selection
-//     // simonSequence: [], //array containing generated random buttons
-
-//     // turn: 00, //
-
-
-
-// };
-// // const boardSound = [
-//     "https://freesound.org/data/previews/151/151022_1838182-lq.mp3",    // blue button
-//     "https://freesound.org/data/previews/156/156859_2538033-lq.mp3",	// yellow button
-//     "https://freesound.org/data/previews/171/171495_2437358-lq.mp3",   // green button
-//     "https://freesound.org/data/previews/191/191591_2437358-lq.mp3",    // orange button
-//     "https://freesound.org/data/previews/151/151605_57789-lq.mp3",    // winner button
-// ];
-
-
 let green = document.getElementById("shapeG");
 let blue = document.getElementById("shapeB");
 let orange = document.getElementById("shapeO");
@@ -30,10 +12,11 @@ let displayCountMemory = document.getElementById("displayCount");
 //Variables
 
 let power = false;
+let gameStarted = false;
 let playerSequence = []; // user sequence
-let simonSeq =[]; //computer sequence flash tracker//
+let simonSeq = []; //computer sequence flash tracker//
 let genCompTurn; // computerturn or user turn (boolean)//
-let displayCount = 1; //  keep track of turn//
+let level = 0; //  keep track of turn//
  
 let strict = false;
 let numLevels = 20; //Total number to declare a winner
@@ -42,14 +25,13 @@ let intervalId = 0;
 let clearIntervalId;
 let noise;
 let randNum;
-let level = 1;
 // let activeRunning = false;
 // let activeMemory;
 // let trackCount; //keep track of turn
 // let memoryArray=[];
 let flash;
 let sound = true;
-let win;
+let win = false;
 
 let positive; // To check players performance (true or false)
 // let newAudio;
@@ -70,10 +52,14 @@ $("#onoffSwitch").click(function () {
     if (power == false) {
         $("#displayCount").text("ON");
         power = true;
+        playSound(clickSound);
         console.log('Power', power);
     } else {
         $("#displayCount").text("OFF");
         power = false;
+        gameStarted = false;
+        let playerSequence = [];
+        let simonSeq = [];
         console.log('Power', power);
     }
 });
@@ -89,7 +75,6 @@ $("#strictButton").click(function () {
             $("#strictButton").addClass("fa fa-check");
             strict = true;
             console.log(strict);
-
         }
 
         else if (strict == true) {
@@ -105,32 +90,19 @@ $("#strictButton").click(function () {
 //Start Button Functionality //
 
 $("#startButton").click(function() {
-if(power){
-play(clickSound);
-
-startGame();
-
-
-};
-
-    console.log('Start playing');
-
-
+    if(power && !gameStarted){
+        startGame();
+        gameStarted = true
+    };
 
     //Fuction for game start //
-function startGame(){
-    simonSeq = [];
-    // playerSequence = [];
-    flash = 0;
-    intervalId = 0;
-    win = false;
-    displayCount = 1;
-    displayCountMemory.innerHTML = displayCount;
-    positive = true;
-    generateRandomNum();
-}
+    function startGame(){
+        console.log('Start Game');
+        level = 5;
+        generateRandomNum();
+        play(level)
+    }
 });
-
 
 function generateRandomNum() {
     for (var i = 0; i < numLevels; i++) {
@@ -139,6 +111,62 @@ function generateRandomNum() {
     }
     console.log('simon Sequence', simonSeq);
 }
+
+function play(stage){
+    displayCountMemory.innerHTML = stage;
+    for(i = 0; i < stage; i++){
+        playButton(i)
+    }
+}
+
+function playButton(index){
+    setTimeout(function(){
+        console.log("Play " + simonSeq[index])
+        playButtonPad(simonSeq[index])
+    }, 3000 * (index + 1))
+}
+
+// Sound for simonSeq button//
+
+function playButtonPad(id){
+    switch (id) {
+        case 0:
+            $("#shapeB").addClass('blue-active');
+            playSound(blueSound);
+            break;
+        case 1:
+            $("#shapeY").addClass('yellow-active');
+            playSound(yellowSound);
+            break;
+        case 2:
+            $("#shapeG").addClass('green-active');
+            playSound(greenSound);
+            break;
+        case 3:
+            $("#shapeO").addClass('orange-active');
+            playSound(orangeSound);
+            break;
+    }
+    removeClass(id)
+};
+
+function removeClass(id){
+    switch (id) {
+        case 0:
+            $("#shapeB").removeClass('blue-active');
+            break;
+        case 1:
+            $("#shapeY").removeClass('yellow-active');
+            break;
+        case 2:
+            $("#shapeG").removeClass('green-active');
+            break;
+        case 3:
+            $("#shapeO").removeClass('orange-active');
+            break;
+    }
+};
+
 
 //flashing light  //
 
@@ -162,53 +190,6 @@ function gameCount() {
 };
 
 
-//The simonseq flash//
-function flashColor() {
-    
- shapeB.style.backgroundColor = "lightblue";
- shapeY.style.backgroundColor = "lightyellow";
-  shapeG.style.backgroundColor = "SpringGreen";//#00FF7F
- shapeO.style.backgroundColor = "OrangeRed";//#FF4500
-
-
-};
-
-
-
-
-
-// Sound for simonSeq button//
-
-function playButtonPad(id){
-switch (id) {
-    case 0:
-    $(shapeB).addClass ('blue');
-    play(soundB);
-    break;
-
-case 1:
-    $(shapeY).addClass ('yellow');
-    play(soundY);
-    break;
-case 2:
-    $(shapeG).addClass('green');
-    play(soundG);
-    break;
-
-case 3:
-    $(shapeO).addClass ('orange');
-    play(soundO);
-    break;
-}
-};
-
-
-function clearColor() {
-    shapeB.style.backgroundColor = "blue";
-    shapeY.style.backgroundColor = "yellow";
-    shapeG.style.backgroundColor = "green";
-    shapeO.style.backgroundColor = "orange";
-};
 
 // user Sounds for button clicks //
 
@@ -231,30 +212,33 @@ $("#shapeO").click(function () {
 
 
 function addpplayerSequence(id) {
-    if (power) {
+    if (power && gameStarted) {
+        playButtonPad(id);
         playerSequence.push(id);
         checkSequence();
-        playButtonPad(id);
-        flashColor();
-        if (!win) {
-            setTimeout(() => {
-                clearColor();
-            }, 200);
+    }
+};
+
+function checkSequence() {
+    if (playerSequence[playerSequence.length - 1] !== simonSeq[playerSequence.length - 1]) {
+        // Change counter to NO and Replay the game from previous level
+        displayCountMemory.innerHTML = "NO"
+        play(level)
+    } else {
+        if (playerSequence.length == level){
+            displayCountMemory.innerHTML = "YES"
+            level ++
+            play(level)
         }
     }
 };
 
 
 // PlaySound //
-
-function play(sound){
+function playSound(soundId){
     if(sound){
-        soundid.play();
-    } else{
-        soundid.stop();
+        soundId.play();
     }
-
-
 };
 
 // function play(sound) {
@@ -290,11 +274,3 @@ function play(sound){
 // $("#shapeO").css ("background-color","Indigo"); //#4B0082
 
 
-function checkSequence() {
-    if (playerSequence[playerSequence.length - 1] !== simonSeq[playerSequence.length - 1]) {
-        positive = false;
-    };
-    if (playerSequence.length == numLevels && positive) {
-        WinGame();
-    }
-};

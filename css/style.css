@@ -62,17 +62,16 @@ width: 300px;
   }
       
 
-   .blue {
-
+.blue {
     background-color:rgb(26, 0, 170);
     border-top-left-radius: 300;
     -moz-border-radius: 300px 0 0 0;
     border-radius: 300px 0 0 0;    
 }
 
-/* .blue-active {
+.blue-active {
   background-color:  lightblue !important;
-} */
+}
 
 .yellow {
   background-color: yellow;
@@ -83,10 +82,9 @@ width: 300px;
   clear: right;
 }
 
-
-/* .yellow-active {
+.yellow-active {
   background-color: lightgoldenrodyellow !important;
-} */
+}
 
 .green {
   background-color: green;
@@ -95,9 +93,9 @@ width: 300px;
   clear: left;
 }
 
-/* .green-active {
-  background-color:	lightgreen  !important;
-} */
+.green-active {
+  background-color:	lightgreen !important;
+}
 
 .orange {
   background-color: orange;
@@ -105,10 +103,10 @@ width: 300px;
     float: left;
 }
 
-/* .orange-active {
-  background-color: lightsalmon!important;
+.orange-active {
+  background-color: lightsalmon !important;
+}
 
-} */
 .title {
   font-size: 30px;
   margin-top: auto;
