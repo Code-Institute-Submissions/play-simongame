@@ -70,8 +70,8 @@ Acceptance Criteria:  A game player was able to win the game and the notified wi
 ### Wireframes
 
 The Wireframe was initially created at the design phase to understand the basic functionality of the game and what users 
-will be expecetd to see at the final prodcut.
-
+will be expecetd to see as the final prodcut.
+knil eht ehtno[Simon Game Wireframe](https://bf2b76a3-0a99-4c4a-97ae-bb537da1bb8b.ws-eu01.gitpod.io/files/download/?id=585c3da3-b430-42cb-a6f3-0280f0524bda)
 
 # Features
 ----------------------------------
