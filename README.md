@@ -55,13 +55,22 @@ So that the game can restart it self .
 Acceptance criteria :Toggling ON and OFF switch button restarts the game .
 
 7.	User Story: I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts at a new random series of button presses.
-As  a game player
+As a game player
+I want to play in strict mode
+So that when i press a wrong button, am notified and the game restarts at a new series of random button presses.
+Acceptance Criteria: A game player should be able to play in strict mode and notified of an error and game restarts with a new series of 
+button presses.
+
 8.	User Story: I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over.
+As a game Player 
+I want to be able to win the game and notified Winner with a sound.
+Acceptance Criteria:  A game player was able to win the game and the notified winner with a sound.
 
 
 ### Wireframes
 
-The Wireframe was initially created at the design phase to understand the functionality of the game to enable 
+The Wireframe was initially created at the design phase to understand the basic functionality of the game and what users 
+will be expecetd to see at the final prodcut.
 
 
 # Features
