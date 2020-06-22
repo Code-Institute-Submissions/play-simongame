@@ -187,7 +187,7 @@ function checkSequence() {
         }
     }
 };
-// Play a sounnd by Id
+// Play a sound by Id
 function playSound(soundId){
     if(sound){
         soundId.play();
