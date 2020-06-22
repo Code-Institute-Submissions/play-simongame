@@ -8,9 +8,60 @@
  JavaScript, HTML, CSSS, JQuery and other concepts learnt in the module. My utmost achievement is i have been able to understand 
  the syntax of JavaScript.
  --------------------
+ ## UX 
+-------------------------------
 
- ## UX
- -----------------------------
+1.	User Story: I am presented with a random series of button presses.
+As a game player.
+I want to be presented with ON and Off buttton.
+So that I can press the ON and OFF button on the game board
+Acceptance criteria: Game player can press ON and OFF.
+
+1.1. As a game player, i want to be able to press the start button.
+So that i can interact with series of buttons on the game console.
+Acceptance Criteria :Game player can interact with game console at the click of the start button.
+
+
+2. User Story: Each time I input a series of button presses correctly, i see the same series of button presses but with an additional step.
+ As a game player,
+ I want to be able to see input of button presses.
+ So that i can interact with additional steps to play the game further.
+ Acceptance Criteria: Game player was able to press series of buttons with additional steps required to carry on playing the game.  
+ 
+3.	User Story: I hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button.
+ As a game player 
+ I want to press a series of buttons. 
+ So that i can hear the sound that corresponds to each button press.
+ Acceptance Criteria: Game Player was able to hear different sounds on the press of series of button. 
+
+4.	User Story: If I press the wrong button, I am notified that I have done so, and that series of button presses starts again to remind me of the pattern so I can try again.
+ As a game player, 
+ I want to press the wrong button.
+ So that i can be notified that i clicked on the wrong button and action to start the game again.
+ Acceptance Criteria: A game player was  notified of wrong button press and action to start the game again.
+ 
+
+5.	User Story: I can see how many steps are in the current series of button presses.
+
+As a game player 
+I want to see how many count levels.
+So that i can see how many count levels in current series of button presses.
+Acceptance Criteria: Game player can see the current count levels in the series of button presses.
+
+6.	User Story: If I want to restart, I can hit a button to do so, and the game will return to a  single step.
+As a game player
+I want to toggle the ON and OFF button 
+So that the game can restart it self .
+Acceptance criteria :Toggling ON and OFF switch button restarts the game .
+
+7.	User Story: I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts at a new random series of button presses.
+As  a game player
+8.	User Story: I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over.
+
+
+### Wireframes
+
+The Wireframe was initially created at the design phase to understand the functionality of the game to enable 
 
 
 # Features
