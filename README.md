@@ -3,14 +3,16 @@
 
 
 ## Project Concept
+
  The project is a popular Simon game.The initiative behind the project is to simulate 
  similar project for academic purposes to enable student to show understanding and display of knowledge in 
  JavaScript, HTML, CSSS, JQuery and other concepts learnt in the module. My utmost achievement is i have been able to understand 
  the syntax of JavaScript.
- --------------------
- ## UX 
--------------------------------
+ 
+ ----------
 
+
+ ## UX 
 1.	User Story: I am presented with a random series of button presses.
 As a game player.
 I want to be presented with ON and Off buttton.
@@ -67,33 +69,45 @@ I want to be able to win the game and notified Winner with a sound.
 Acceptance Criteria:  A game player was able to win the game and the notified winner with a sound.
 
 
+
 ### Wireframes
 
 The Wireframe was initially created at the design phase to understand the basic functionality of the game and what users 
 will be expecetd to see as the final prodcut.
-knil eht ehtno[Simon Game Wireframe](https://bf2b76a3-0a99-4c4a-97ae-bb537da1bb8b.ws-eu01.gitpod.io/files/download/?id=585c3da3-b430-42cb-a6f3-0280f0524bda)
+Click on the link to open the Wireframe.[Simon Game Wireframe](https://bf2b76a3-0a99-4c4a-97ae-bb537da1bb8b.ws-eu01.gitpod.io/files/download/?id=585c3da3-b430-42cb-a6f3-0280f0524bda)
 
 # Features
 ----------------------------------
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
-## Existing Features
 
-    Feature 1 - allows users X to achieve Y, by having them fill out Z
-    ...
+## Existing Features on the game board :
+ * ON/OFF Switch toggle button : This enable users to interact with the gameboard
+ initiate the game.
+ * Four Colored Buttons : These are interactive buttons for users to press to play the game and see the effects of each button presses.
+ * Start Button : This enable game player to start the game,a sound is heard to verify start button function.
+ * Strict Button :Enable game player to  play in the strict mode, a check mark is displayed in the box to verify strict mode 
+ is on and no check mark means users play in normal mode.
+ * Count Button : This button displays the game player levels as they press the buttons to interact with the game 
+ * Help Button ? These are PDF user manual to enable game player to understand how to play the game. 
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+    
 ## Features Left to Implement
+ Due to time constraint on the project have not been priviledge to implement Certain feartures such as :
+  Ideas to implement are :
+  *  Different levels of play mode : This will find it stimulating to users to build their memory strength .Such as 
+  Normal and Easy mode.
+  * Link to share game with friends on social media sites.
+  
 
-    Another feature idea
 
 ## Technologies Used
+ frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+    Semantic HTML [ HTML ] (https://www.w3schools.com/html/) The project uses HTML to write the code
+CSS CSS. The project uses CSS to give style to th code
 
-    JQuery
-        The project uses JQuery to simplify DOM manipulation.
+
+[Github] (https://github.com) Its used as repository for version control and commit update.
+[Markdown] ( https://raw.githubusercontent.com/Code-Institute-Solutions/readme-template/master/README.md) Used to write ReadMe file. ==
 
 ## Testing
 -----------------------------
