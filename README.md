@@ -6,8 +6,8 @@
 
  The project is a popular Simon game.The initiative behind the project is to simulate 
  similar project for academic purposes to enable student to show understanding and display of knowledge in 
- JavaScript, HTML, CSSS, JQuery and other concepts learnt in the module. My utmost achievement is i have been able to understand 
- the syntax of JavaScript.
+ JavaScript, HTML, CSSS, JQuery and other concepts learnt in the module. My utmost achievement is the project has enabled me to apply my knowledge and understanding  
+ of the syntax of JavaScript.
  
  ----------
 
@@ -91,13 +91,12 @@ Click on the link to open the Wireframe.[Simon Game Wireframe](https://bf2b76a3-
 
     
 ## Features Left to Implement
- Due to time constraint on the project have not been priviledge to implement Certain feartures such as :
+  Due to time constraint on the project have not been priviledge to implement Certain features :
   Ideas to implement are :
-  *  Different levels of play mode : This will find it stimulating to users to build their memory strength .Such as 
-  Normal and Easy mode.
+  * Different levels of play mode : This will find it stimulating to users to build their memory strength .Such as 
+    Normal and Easy mode.
   * Link to share game with friends on social media sites.
   
-
 
 ## Technologies Used
 ### Frameworks and libraries used in the project
@@ -167,56 +166,48 @@ This will enable the developer to open the project within its computer in the ed
 ---------------------------------
 ## Content
 Some of the ideas i used for some of the content were derived from watching videos on previous Simon game 
-on YouTube. See list of where ideas are built from :
+on YouTube and research on how JavaScript works to get indepth understanding in order to design the game functionality.
+Links to pages visited below:
+		
+								
+* https://www.toptal.com/designers/subtlepatterns/thumbnail-view/page/3/								
+								
+* https://goldfirestudios.com/blog/104/howler.js-Modern-Web-Audio-Javascript-Library								
+											
+* https://egonelbre.com/project/jsfx/								
+								
+* https://github.com/beaucarnes/simon-game								
+								
+* https://codepen.io/zentech/pen/XaYygR								
+								
+* https://www.toptal.com/designers/subtlepatterns/?s=vintage								
+								
+* https://egonelbre.com/project/jsfx/							
+																
+* https://www.the-art-of-web.com/css/border-radius/								
+																				
+* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator								
+								
+* https://www.geeksforgeeks.org/how-to-apply-important-in-css/								
+								
+* https://convertingcolors.com/rgb-color-50_50_50.html?search=RGB(50,%2050,%2050)								
+								
+* https://www.danpurdy.co.uk/tutorial/simon-says-game-in-jquery-tutorial/								
+													
+* https://www.cssmatic.com/box-shadow								
 
-https://www.coursera.org/learn/bootstrap-4/supplement/QjlKC/introduction-to-bootstrap-additional-resources								
-								
-https://www.toptal.com/designers/subtlepatterns/thumbnail-view/page/3/								
-								
-https://goldfirestudios.com/blog/104/howler.js-Modern-Web-Audio-Javascript-Library								
-								
-http://blog.jetienne.com/blog/2014/02/27/webaudiox-jsfx/								
-								
-http://jeromeetienne.github.io/webaudiox/examples/jsfx.html								
-								
-https://egonelbre.com/project/jsfx/								
-								
-https://github.com/beaucarnes/simon-game								
-								
-https://codepen.io/zentech/pen/XaYygR								
-								
-https://www.toptal.com/designers/subtlepatterns/?s=vintage								
-								
-https://egonelbre.com/project/jsfx/								
-								
-								
-http://jeromeetienne.github.io/webaudiox/examples/jsfx.html								
-								
-https://www.the-art-of-web.com/css/border-radius/								
-								
-https://developer.mozilla.org/en-US/docs/Web/CSS/:active								
-								
-https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator								
-								
-https://www.geeksforgeeks.org/how-to-apply-important-in-css/								
-								
-https://convertingcolors.com/rgb-color-50_50_50.html?search=RGB(50,%2050,%2050)								
-								
-https://www.danpurdy.co.uk/tutorial/simon-says-game-in-jquery-tutorial/								
-http://www.corelangs.com/css/box/shadow.html								
-								
-https://www.cssmatic.com/box-shadow								
+* https://commonmark.org/help/
 
-https://commonmark.org/help/
+* https://en.wikipedia.org/wiki/Markdown	
 
-https://en.wikipedia.org/wiki/Markdown	
+* https://www.youtube.com/watch?v=iXscqYgZ7HQ&list=PLCgJAO-QOmnxcbcgrx6mWcES5BxpoOVsg&index=26&t=0s
 
-https://www.youtube.com/watch?v=iXscqYgZ7HQ&list=PLCgJAO-QOmnxcbcgrx6mWcES5BxpoOVsg&index=26&t=0s
+* [freeCodeCamp]https://www.youtube.com/watch?v=n_ec3eowFLQ&list=PLCgJAO-QOmnxcbcgrx6mWcES5BxpoOVsg&index=50
 
+* https://codepen.io/BenLBlood/pen/LGLEoJ?editors=1010
 
-[freeCodeCamp]https://www.youtube.com/watch?v=n_ec3eowFLQ&list=PLCgJAO-QOmnxcbcgrx6mWcES5BxpoOVsg&index=50
+* https://proto.io/freebies/onoff/			
 
-https://codepen.io/BenLBlood/pen/LGLEoJ?editors=1010
 
     
 ## Media
@@ -224,20 +215,26 @@ https://codepen.io/BenLBlood/pen/LGLEoJ?editors=1010
  The sounds for the board are copied from (https://freesound.org/)
  Sounds for each button : 
 
- [blueSound] ("https://freesound.org/data/previews/151/151022_1838182-lq.mp3")
+ [blueSound] (https://freesound.org/data/previews/151/151022_1838182-lq.mp3)
 
- [yellowSound] ("https://freesound.org/data/previews/156/156859_2538033-lq.mp3")
+ [yellowSound] ("https://freesound.org/data/previews/156/156859_2538033-lq.mp3)
 
- [greenSound] ("https://freesound.org/data/previews/171/171495_2437358-lq.mp3")
+ [greenSound] (https://freesound.org/data/previews/171/171495_2437358-lq.mp3)
 
-[orangeSound] ("https://freesound.org/data/previews/191/191591_2437358-lq.mp3")
+[orangeSound] (https://freesound.org/data/previews/191/191591_2437358-lq.mp3)
 
- [winSound] ("https://freesound.org/data/previews/151/151605_57789-lq.mp3")
+ [winSound] (https://freesound.org/data/previews/151/151605_57789-lq.mp3)
 
- [clickSound] ("https://freesound.org/data/previews/522/522720_10058132-lq.mp3")
+ [clickSound] (https://freesound.org/data/previews/522/522720_10058132-lq.mp3)
 
 ## Acknowledgements
 
-    I received inspiration for this project from X
+ I received inspiration for this project from :
+* Code Institute.
+* Ignatius Ukwuoma (Mentor).
+* My appreciation for unrelenting support to Ann Greaves( CI Tutor Support).
+* Neil  Kavanagh 
+
+    
 
 
