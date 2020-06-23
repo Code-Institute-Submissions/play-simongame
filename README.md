@@ -100,14 +100,24 @@ Click on the link to open the Wireframe.[Simon Game Wireframe](https://bf2b76a3-
 
 
 ## Technologies Used
- frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+### Frameworks and libraries used in the project
 
-    Semantic HTML [ HTML ] (https://www.w3schools.com/html/) The project uses HTML to write the code
-CSS CSS. The project uses CSS to give style to th code
+[JavaScript:](https://www.w3schools.com/js/)The project is heavily based on JavaScript used to build the project.
 
+[SemanticHTML:](https://www.w3schools.com/html/) The project uses HTML to write the code.
 
-[Github] (https://github.com) Its used as repository for version control and commit update.
-[Markdown] ( https://raw.githubusercontent.com/Code-Institute-Solutions/readme-template/master/README.md) Used to write ReadMe file. ==
+[CSS:](https://www.w3schools.com/css/) Used style the gameboard.
+
+[Gitpod:](https://gitpod.io/workspaces/) Workspace Editor for writing the code.
+
+[Github:](https://github.com) It's used as repository for version control and commit update.
+
+[Markdown:](https://raw.githubusercontent.com/Code-Institute-Solutions/readme-template/master/README.md) Used to write ReadMe file.
+
+[Jquery:](https://jquery.com/). Used to manupulate  the DOM elements.
+
+[Balsamic:](https://balsamiq.com/) I have used this tool to design the interface of the game functionality.
+
 
 ## Testing
 -----------------------------
@@ -130,24 +140,101 @@ You should also mention in this section any interesting bugs or problems you dis
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 ## Deployment
 ------------------------
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+Deployment process followed to deploy to Github Pages :
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
+Deployment steps : Go into settings> github pages> master branch.
+The project is deployed in [Github pages](https://daat2.github.io/play-simongame/)
 
-    Different values for environment variables (Heroku Config Vars)?
-    Different configuration files?
-    Separate git branch?
+### Steps for a developer to run the project locally.
 
-In addition, if it is not obvious, you should also describe how to run your code locally.
+
+Link to be sent to developer (https://daat2.github.io/play-simongame/ ).
+
+Click on cloan or download highlighted in green.
+
+Go to your location in your terminal.
+
+Do git clone and paste the link.
+
+This will clone the project on your computer.
+
+Enter CD change directory (Name of project).
+
+This will enable the developer to open the project within its computer in the editor.
+
+
 # Credits
 ---------------------------------
 ## Content
+Some of the ideas i used for some of the content were derived from watching videos on previous Simon game 
+on YouTube. See list of where ideas are built from :
 
-    The text for section Y was copied from the Wikipedia article Z
+https://www.coursera.org/learn/bootstrap-4/supplement/QjlKC/introduction-to-bootstrap-additional-resources								
+								
+https://www.toptal.com/designers/subtlepatterns/thumbnail-view/page/3/								
+								
+https://goldfirestudios.com/blog/104/howler.js-Modern-Web-Audio-Javascript-Library								
+								
+http://blog.jetienne.com/blog/2014/02/27/webaudiox-jsfx/								
+								
+http://jeromeetienne.github.io/webaudiox/examples/jsfx.html								
+								
+https://egonelbre.com/project/jsfx/								
+								
+https://github.com/beaucarnes/simon-game								
+								
+https://codepen.io/zentech/pen/XaYygR								
+								
+https://www.toptal.com/designers/subtlepatterns/?s=vintage								
+								
+https://egonelbre.com/project/jsfx/								
+								
+								
+http://jeromeetienne.github.io/webaudiox/examples/jsfx.html								
+								
+https://www.the-art-of-web.com/css/border-radius/								
+								
+https://developer.mozilla.org/en-US/docs/Web/CSS/:active								
+								
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator								
+								
+https://www.geeksforgeeks.org/how-to-apply-important-in-css/								
+								
+https://convertingcolors.com/rgb-color-50_50_50.html?search=RGB(50,%2050,%2050)								
+								
+https://www.danpurdy.co.uk/tutorial/simon-says-game-in-jquery-tutorial/								
+http://www.corelangs.com/css/box/shadow.html								
+								
+https://www.cssmatic.com/box-shadow								
 
+https://commonmark.org/help/
+
+https://en.wikipedia.org/wiki/Markdown	
+
+https://www.youtube.com/watch?v=iXscqYgZ7HQ&list=PLCgJAO-QOmnxcbcgrx6mWcES5BxpoOVsg&index=26&t=0s
+
+
+[freeCodeCamp]https://www.youtube.com/watch?v=n_ec3eowFLQ&list=PLCgJAO-QOmnxcbcgrx6mWcES5BxpoOVsg&index=50
+
+https://codepen.io/BenLBlood/pen/LGLEoJ?editors=1010
+
+    
 ## Media
 
-    The photos used in this site were obtained from ...
+ The sounds for the board are copied from (https://freesound.org/)
+ Sounds for each button : 
+
+ [blueSound] ("https://freesound.org/data/previews/151/151022_1838182-lq.mp3")
+
+ [yellowSound] ("https://freesound.org/data/previews/156/156859_2538033-lq.mp3")
+
+ [greenSound] ("https://freesound.org/data/previews/171/171495_2437358-lq.mp3")
+
+[orangeSound] ("https://freesound.org/data/previews/191/191591_2437358-lq.mp3")
+
+ [winSound] ("https://freesound.org/data/previews/151/151605_57789-lq.mp3")
+
+ [clickSound] ("https://freesound.org/data/previews/522/522720_10058132-lq.mp3")
 
 ## Acknowledgements
 
