@@ -229,11 +229,11 @@ Links to pages visited below:
 
 ## Acknowledgements
 
- I received inspiration for this project from :
+ I received inspiration for this project from : 
 * Code Institute.
 * Ignatius Ukwuoma (Mentor).
 * My appreciation for unrelenting support to Ann Greaves( CI Tutor Support).
-* Neil  Kavanagh 
+* Neil Kavanagh for his encouraging words (CI Student care adviser team)
 
     
 
