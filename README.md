@@ -123,7 +123,7 @@ Click on the link to open the Wireframe.[Simon Game Wireframe](https://bf2b76a3-
 Testing was carried out in two stages :
 [Automated](https://daat2.github.io/jasmine-simonTest/)
 
-[Manual](https://gitpod.io/#snapshot/adfc57bb-1451-42db-a151-98eb20d17145)
+[Manual]
 
 
 
@@ -224,9 +224,7 @@ Links to pages visited below:
  I received inspiration for this project from : 
 * Code Institute.
 * Ignatius Ukwuoma (Mentor).
-* My appreciation for unrelenting support to Ann Greaves( CI Tutor Support).
-* Neil Kavanagh for his encouraging words (CI Student care adviser team)
-
+* 
     
 
 
