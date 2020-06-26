@@ -150,7 +150,7 @@ function removeClass(id){
         }
     }, 1000)
 };
-// Allow user clicks
+// Allow ing user clicks
 $("#shapeB").click(function () {
     addpplayerSequence(1);
 });
@@ -170,6 +170,7 @@ function addpplayerSequence(id) {
         checkSequence();
     }
 };
+//checking user sequence against simon Seq
 function checkSequence() {
     if (playerSequence[playerSequence.length - 1] !== simonSeq[playerSequence.length - 1]) {
         // Change counter to NO and Replay the game from same level
@@ -192,4 +193,10 @@ function playSound(soundId){
     if(sound){
         soundId.play();
     }
+};
+//checking user won the game 
+function win(){
+  $("#displayCount").text("win");
+    playSound(winSound)
+    console.log(win)
 };

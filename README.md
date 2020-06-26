@@ -123,10 +123,8 @@ Click on the link to open the Wireframe.[Simon Game Wireframe](https://bf2b76a3-
 Testing was carried out in two stages :
 [Automated](https://daat2.github.io/jasmine-simonTest/)
 
-[Manual]
 
-
-
+[Manual](../assets/images/testing/manualTest-simon.pdf)
 
  
 ## Deployment
