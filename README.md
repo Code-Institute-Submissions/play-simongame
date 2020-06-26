@@ -120,7 +120,11 @@ Click on the link to open the Wireframe.[Simon Game Wireframe](https://bf2b76a3-
 
 ## Testing
 -----------------------------
-Testing was carried out 
+Testing was carried out in two stages :
+[Automated](https://daat2.github.io/jasmine-simonTest/)
+
+[Manual](https://gitpod.io/#snapshot/adfc57bb-1451-42db-a151-98eb20d17145)
+
 
 
 
@@ -137,7 +141,7 @@ The project is deployed in [Github pages](https://daat2.github.io/play-simongame
 
 Link sent to developer [simongame](https://daat2.github.io/play-simongame/ ).
 
-Click on cloan or download highlighted in green.
+-Click on cloan or download highlighted in green.
 
 Go to your location in your terminal.
 
