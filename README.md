@@ -117,6 +117,17 @@ Automated testing would have been done, but my mentor said is not needed for my 
 
 [Manual Testing](https://github.com/daat2/play-simongame/blob/master/assets/images/manualTest-simon.pdf)
 
+* The project was tested on the mobile devices [IOS,Android, desktop and Laptop].
+
+* The test was conducted across all browsers- Firefox,Google Chrome and Microsoft Edge
+
+* Operating System used for testing : Windows 8 and Windows 10.
+
+* I carried out User Acceptance test by sending link to friends to test the basic game functioanlity and feedback received.
+
+* The part of the requirements for the test is based on the user stories in the UX header.
+
+* The objective of the test is for players to be able to interact with the game.
  
 ## Deployment
 ------------------------
