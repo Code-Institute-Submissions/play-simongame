@@ -6,8 +6,7 @@
 
  The project is a popular Simon game.The initiative behind the project is to simulate 
  similar project for academic purposes to enable student to show understanding and display of knowledge in 
- JavaScript, HTML, CSSS, JQuery and other concepts learnt in the module. My utmost achievement is the project has enabled me to apply my knowledge and understanding  
- of the syntax of JavaScript.
+ JavaScript, HTML, CSSS, JQuery and other concepts learnt in the module. My utmost achievement is the project has enabled me to apply my knowledge and understanding of the syntax of JavaScript.
  
  ----------
 
@@ -19,46 +18,46 @@ The game user experiene has been built to help user to navigate and interact wit
 
    As a game player,
    I want to be presented with ON and Off buttton,
-  so that I can press the ON and OFF button on the game board.  
-Acceptance criteria: Game player can press ON and OFF.
+   so that I can press the ON and OFF button on the game board.  
+   **Acceptance criteria**: Game player can press ON and OFF.
 
    1.1. As a game player, i want to be able to press the start button,So that i can interact with series of buttons on the game console.  
-Acceptance Criteria :Game player can interact with game console at the click of the start button.
+  **Acceptance Criteria** :Game player can interact with game console at the click of the start button.
 
 
 2. User Story: Each time I input a series of button presses correctly, i see the same series of button presses but with an additional step.\
- As a game player,
- I want to be able to see input of button presses.
- So that i can interact with additional steps to play the game further.\
- Acceptance Criteria: Game player was able to press series of buttons with additional steps required to carry on playing the game.  
+  As a game player,
+  I want to be able to see input of button presses.
+  So that i can interact with additional steps to play the game further.\
+ **Acceptance Criteria**: Game player was able to press series of buttons with additional steps required to carry on playing the game.  
  
 3.	User Story: I hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button.\
  As a game player, I want to press a series of buttons,
  So that i can hear the sound that corresponds to each button press.\
- Acceptance Criteria: Game Player was able to hear different sounds on the press of series of button. 
+ **Acceptance Criteria**: Game Player was able to hear different sounds on the press of series of button. 
 
 4.	User Story: If I press the wrong button, I am notified that I have done so, and that series of button presses starts again to remind me of the pattern so I can try again.\
  As a game player,  I want to press the wrong button, So that i can be notified that i clicked on the wrong button and action to start the game again.\
- Acceptance Criteria: A game player was  notified of wrong button press and action to start the game again.
+ **Acceptance Criteria**: A game player was  notified of wrong button press and action to start the game again.
  
 
 5.	User Story: I can see how many steps are in the current series of button presses.\
 As a game player,
 I want to see how many count levels,So that i can see how many count levels in current series of button presses.\
-Acceptance Criteria: Game player can see the current count levels in the series of button presses.
+**Acceptance Criteria**: Game player can see the current count levels in the series of button presses.
 
 6. User Story: If I want to restart, I can hit a button to do so, and the game will return to a single step.\
 As a game player,I want to toggle the ON and OFF button,so that the game can restart itself. \
-Acceptance criteria :Toggling ON and OFF switch button restarts the game.
+**Acceptance criteria** :Toggling ON and OFF switch button restarts the game.
 
 7.	User Story: I can play in strict mode where if I get a button press wrong,it notifies me that I have done so, and the game restarts at a new random series of button presses.\
 As a game player,I want to play in strict mode,So that when i press a wrong button, am notified and the game restarts at a new series of random button presses.\
-Acceptance Criteria: A game player should be able to play in strict mode and notified of an error and game restarts with a new series of 
+**Acceptance Criteria**: A game player should be able to play in strict mode and notified of an error and game restarts with a new series of 
 button presses.
 
 8.	User Story: I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over.
 As a game Player,I want to be able to win the game and notified Winner with a sound.\
-Acceptance Criteria:  A game player was able to win the game and the notified winner with a sound.
+**Acceptance Criteria**:  A game player was able to win the game and the notified winner with a sound.
 
 
 
