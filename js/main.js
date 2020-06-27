@@ -19,7 +19,7 @@ let level = 0; //  keep track of turn
 let power = false;
 let gameStarted = false;
 let strict = false;
-let numLevels = 3; //Total number to declare a winner
+let numLevels = 2; //Total number to declare a winner
 let flashes = 0
 let sound = true;
 let onoffSwitch = false; //power button on or off function
@@ -196,15 +196,22 @@ function playSound(soundId){
     }
 };
 //checking user won the game 
-function win(){
-    if(playerSequence.length ===numLevels){
-        level++;
-         displayCountMemory.innerHTML = "WIN"
-        displaycount=0;
+function win(playSound){
+    if(playerSequence.length === numLevels){
+        // level++;
+        $("#displayCount").text("WIN") 
+       clearInterval(winInterval);
         setTimeout(function(){play(level)}, 1000)
-      soundId.play(winSound);
-      win();
-    console.log(win)
-   
+    
+       
     }
+}
+ win(winSound);
+console.log(win)
+
+function restartGame(){
+    playerSequence= [];
+    simonSeq=[];
+    level=0;
+     $("#displayCount").text("") 
 }
