@@ -85,7 +85,7 @@ Click on the link to open the Wireframe.[Simon Game Wireframe](https://github.co
 ## Features Left to Implement
   Due to time constraint on the project have not been priviledge to implement Certain features :
   Ideas to implement are :
-  * Different levels of play mode : This will find it stimulating to users to build their memory strength .Such as 
+  * Different levels of play mode : This will enable player to find it stimulating to build their memory strength.Such as 
     Normal and Easy mode.
   * Link to share game with friends on social media sites.
   
@@ -115,7 +115,7 @@ Click on the link to open the Wireframe.[Simon Game Wireframe](https://github.co
 See attached link for detailed manual testing.\
 Automated testing would have been done, but my mentor said is not needed for my code.
 
-[Manual] (https://github.com/daat2/play-simongame/blob/master/assets/images/manualTest-simon.pdf)
+[Manual Testing](https://github.com/daat2/play-simongame/blob/master/assets/images/manualTest-simon.pdf)
 
  
 ## Deployment
@@ -151,43 +151,42 @@ on YouTube and research on how JavaScript works to get indepth understanding in 
 Links to pages visited below:
 		
 								
-* https://www.toptal.com/designers/subtlepatterns/thumbnail-view/page/3/								
-								
-* https://goldfirestudios.com/blog/104/howler.js-Modern-Web-Audio-Javascript-Library								
+* [ConvertingColors](https://convertingcolors.com/rgb-color-50_50_50.html?search=RGB(50,%2050,%2050)	
+
+* [Board Patterns](https://www.toptal.com/designers/subtlepatterns/thumbnail-view/page/3/)
+
+* [Ideas for Audio files](https://goldfirestudios.com/blog/104/howler.js-Modern-Web-Audio-Javascript-Library	)							
 											
-* https://egonelbre.com/project/jsfx/								
+* [ideas for Audios](https://egonelbre.com/project/jsfx/)								
 								
-* https://github.com/beaucarnes/simon-game								
+* [Research used for Simon game tutorial](https://github.com/beaucarnes/simon-game)							
 								
-* https://codepen.io/zentech/pen/XaYygR								
+* [Used  ideas to design Simon board](https://codepen.io/zentech/pen/XaYygR)								
 								
-* https://www.toptal.com/designers/subtlepatterns/?s=vintage								
+* [Used for board Patterns](https://www.toptal.com/designers/subtlepatterns/?s=vintage)								
 								
-* https://egonelbre.com/project/jsfx/							
-																
-* https://www.the-art-of-web.com/css/border-radius/								
+																	
+* [Used to get border radius properties](https://www.the-art-of-web.com/css/border-radius/)							
 																				
-* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator								
+* [Research on various css/javaScritp Syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator)								
 								
-* https://www.geeksforgeeks.org/how-to-apply-important-in-css/								
-								
-* https://convertingcolors.com/rgb-color-50_50_50.html?search=RGB(50,%2050,%2050)								
-								
-* https://www.danpurdy.co.uk/tutorial/simon-says-game-in-jquery-tutorial/								
+* [Used for CSS ideas for styling](https://www.geeksforgeeks.org/how-to-apply-important-in-css/)	
+						
+* [Game Board Ideas](https://www.danpurdy.co.uk/tutorial/simon-says-game-in-jquery-tutorial/)								
 													
-* https://www.cssmatic.com/box-shadow								
+* [Used to design board colors](https://www.cssmatic.com/box-shadow)								
 
-* https://commonmark.org/help/
+* [Markdown Tutorial](https://commonmark.org/help/)
 
-* https://en.wikipedia.org/wiki/Markdown	
+* [Markdown Research](https://en.wikipedia.org/wiki/Markdown)
 
-* https://www.youtube.com/watch?v=iXscqYgZ7HQ&list=PLCgJAO-QOmnxcbcgrx6mWcES5BxpoOVsg&index=26&t=0s
+* [Rootech idea for game function help](https://www.youtube.com/watch?v=iXscqYgZ7HQ&list=PLCgJAO-QOmnxcbcgrx6mWcES5BxpoOVsg&index=26&t=0s)
 
-* [freeCodeCamp-video](https://www.youtube.com/watch?v=n_ec3eowFLQ&list=PLCgJAO-QOmnxcbcgrx6mWcES5BxpoOVsg&index=50
+* [freeCodeCampvideo](https://www.youtube.com/watch?v=n_ec3eowFLQ&list=PLCgJAO-QOmnxcbcgrx6mWcES5BxpoOVsg&index=50)
    
-* https://codepen.io/BenLBlood/pen/LGLEoJ?editors=1010
+* [Idea for the game controls](https://codepen.io/BenLBlood/pen/LGLEoJ?editors=1010) 
 
-* https://proto.io/freebies/onoff/			
+* [used for my board switch](https://proto.io/freebies/onoff/)			
 
 
     
@@ -196,25 +195,25 @@ Links to pages visited below:
  The sounds for the board are copied from (https://freesound.org/)
  Sounds for each button : 
 
- [blueSound] (https://freesound.org/data/previews/151/151022_1838182-lq.mp3)
+ [blueSound](https://freesound.org/data/previews/151/151022_1838182-lq.mp3)
 
- [yellowSound] ("https://freesound.org/data/previews/156/156859_2538033-lq.mp3)
+ [yellowSound]("https://freesound.org/data/previews/156/156859_2538033-lq.mp3)
 
- [greenSound] (https://freesound.org/data/previews/171/171495_2437358-lq.mp3)
+ [greenSound](https://freesound.org/data/previews/171/171495_2437358-lq.mp3)
 
-[orangeSound] (https://freesound.org/data/previews/191/191591_2437358-lq.mp3)
+[orangeSound](https://freesound.org/data/previews/191/191591_2437358-lq.mp3)
 
- [winSound] (https://freesound.org/data/previews/151/151605_57789-lq.mp3)
+ [winSound](https://freesound.org/data/previews/151/151605_57789-lq.mp3)
 
- [clickSound] (https://freesound.org/data/previews/522/522720_10058132-lq.mp3)
+ [clickSound](https://freesound.org/data/previews/522/522720_10058132-lq.mp3)
 
 ## Acknowledgements
 
- I received inspiration for this project from : 
+ I received inspirations for this project from : 
 * Code Institute.
 * My appreciation for unrelenting support to Ann Greaves( CI Tutor Support).			
-* Neil Kavanagh for his encouraging words and inspirations (CI Student care adviser team)			
-* To my Slack team mates.
+* Neil Kavanagh for his words of strenghth in me, "his words: I believe you can do it" (CI Student care adviser team)			
+* To my Slack team mates for the time spared.
 * Ignatius Ukwuoma (Mentor).
  
     
