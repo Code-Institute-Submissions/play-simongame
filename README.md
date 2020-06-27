@@ -74,7 +74,7 @@ Acceptance Criteria:  A game player was able to win the game and the notified wi
 
 The Wireframe was initially created at the design phase to understand the basic functionality of the game and what users 
 will be expecetd to see as the final prodcut.
-Click on the link to open the Wireframe.[Simon Game Wireframe](https://bf2b76a3-0a99-4c4a-97ae-bb537da1bb8b.ws-eu01.gitpod.io/files/download/?id=585c3da3-b430-42cb-a6f3-0280f0524bda)
+Click on the link to open the Wireframe.[Simon Game Wireframe](https://github.com/daat2/play-simongame/blob/master/assets/wireframe/simonGame-wireframe.pdf)
 
 # Features
 ----------------------------------
@@ -120,11 +120,9 @@ Click on the link to open the Wireframe.[Simon Game Wireframe](https://bf2b76a3-
 
 ## Testing
 -----------------------------
-Testing was carried out in two stages :
-[Automated](https://daat2.github.io/jasmine-simonTest/)
+See attached files for detailed manual testing .
 
-
-[Manual](../assets/images/testing/manualTest-simon.pdf)
+[Manual] (https://github.com/daat2/play-simongame/blob/master/assets/images/manualTest-simon.pdf)
 
  
 ## Deployment
@@ -192,8 +190,8 @@ Links to pages visited below:
 
 * https://www.youtube.com/watch?v=iXscqYgZ7HQ&list=PLCgJAO-QOmnxcbcgrx6mWcES5BxpoOVsg&index=26&t=0s
 
-* [freeCodeCamp]https://www.youtube.com/watch?v=n_ec3eowFLQ&list=PLCgJAO-QOmnxcbcgrx6mWcES5BxpoOVsg&index=50
-
+* [freeCodeCamp-video](https://www.youtube.com/watch?v=n_ec3eowFLQ&list=PLCgJAO-QOmnxcbcgrx6mWcES5BxpoOVsg&index=50
+   
 * https://codepen.io/BenLBlood/pen/LGLEoJ?editors=1010
 
 * https://proto.io/freebies/onoff/			
@@ -221,8 +219,11 @@ Links to pages visited below:
 
  I received inspiration for this project from : 
 * Code Institute.
+* My appreciation for unrelenting support to Ann Greaves( CI Tutor Support).			
+* Neil Kavanagh for his encouraging words and inspirations (CI Student care adviser team)			
+* To my Slack team mates.
 * Ignatius Ukwuoma (Mentor).
-* 
+ 
     
 
 
