@@ -19,7 +19,7 @@ let level = 0; //  keep track of turn
 let power = false;
 let gameStarted = false;
 let strict = false;
-let numLevels = 20; //Total number to declare a winner
+let numLevels = 3; //Total number to declare a winner
 let flashes = 0
 let sound = true;
 let onoffSwitch = false; //power button on or off function
@@ -103,10 +103,10 @@ function play(stage){
 }
 function playButton(index){
     setTimeout(function(){
-        console.log("Play " + simonSeq[index])
+        // console.log("Play " + simonSeq[index])
         playButtonPad(simonSeq[index])
         flashes++
-    }, 2000 * (index + 1))
+    }, 1000 * (index + 1))
 }
 // Plays a button by Id
 function playButtonPad(id){
@@ -150,7 +150,7 @@ function removeClass(id){
         }
     }, 1000)
 };
-// Allow ing user clicks
+// Allowing user clicks
 $("#shapeB").click(function () {
     addpplayerSequence(1);
 });
@@ -185,7 +185,8 @@ function checkSequence() {
             flashes = 0
             playerSequence = []
             setTimeout(function(){play(level)}, 2000)
-        }
+            }
+        
     }
 };
 // Play a sound by Id
@@ -196,7 +197,14 @@ function playSound(soundId){
 };
 //checking user won the game 
 function win(){
-  $("#displayCount").text("win");
-    playSound(winSound)
+    if(playerSequence.length ===numLevels){
+        level++;
+         displayCountMemory.innerHTML = "WIN"
+        displaycount=0;
+        setTimeout(function(){play(level)}, 1000)
+      soundId.play(winSound);
+      win();
     console.log(win)
-};
+   
+    }
+}
