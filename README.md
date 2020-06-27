@@ -13,66 +13,58 @@
 
 
  ## UX 
+The game user experiene has been built to help user to navigate and interact with the game board with ease.
+
 1.	User Story: I am presented with a random series of button presses.
-As a game player.
-I want to be presented with ON and Off buttton.
-So that I can press the ON and OFF button on the game board
+
+   As a game player,
+   I want to be presented with ON and Off buttton,
+  so that I can press the ON and OFF button on the game board.  
 Acceptance criteria: Game player can press ON and OFF.
 
-1.1. As a game player, i want to be able to press the start button.
-So that i can interact with series of buttons on the game console.
+   1.1. As a game player, i want to be able to press the start button,So that i can interact with series of buttons on the game console.  
 Acceptance Criteria :Game player can interact with game console at the click of the start button.
 
 
-2. User Story: Each time I input a series of button presses correctly, i see the same series of button presses but with an additional step.
+2. User Story: Each time I input a series of button presses correctly, i see the same series of button presses but with an additional step.\
  As a game player,
  I want to be able to see input of button presses.
- So that i can interact with additional steps to play the game further.
+ So that i can interact with additional steps to play the game further.\
  Acceptance Criteria: Game player was able to press series of buttons with additional steps required to carry on playing the game.  
  
-3.	User Story: I hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button.
- As a game player 
- I want to press a series of buttons. 
- So that i can hear the sound that corresponds to each button press.
+3.	User Story: I hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button.\
+ As a game player, I want to press a series of buttons,
+ So that i can hear the sound that corresponds to each button press.\
  Acceptance Criteria: Game Player was able to hear different sounds on the press of series of button. 
 
-4.	User Story: If I press the wrong button, I am notified that I have done so, and that series of button presses starts again to remind me of the pattern so I can try again.
- As a game player, 
- I want to press the wrong button.
- So that i can be notified that i clicked on the wrong button and action to start the game again.
+4.	User Story: If I press the wrong button, I am notified that I have done so, and that series of button presses starts again to remind me of the pattern so I can try again.\
+ As a game player,  I want to press the wrong button, So that i can be notified that i clicked on the wrong button and action to start the game again.\
  Acceptance Criteria: A game player was  notified of wrong button press and action to start the game again.
  
 
-5.	User Story: I can see how many steps are in the current series of button presses.
-
-As a game player 
-I want to see how many count levels.
-So that i can see how many count levels in current series of button presses.
+5.	User Story: I can see how many steps are in the current series of button presses.\
+As a game player,
+I want to see how many count levels,So that i can see how many count levels in current series of button presses.\
 Acceptance Criteria: Game player can see the current count levels in the series of button presses.
 
-6.	User Story: If I want to restart, I can hit a button to do so, and the game will return to a  single step.
-As a game player
-I want to toggle the ON and OFF button 
-So that the game can restart it self .
-Acceptance criteria :Toggling ON and OFF switch button restarts the game .
+6. User Story: If I want to restart, I can hit a button to do so, and the game will return to a single step.\
+As a game player,I want to toggle the ON and OFF button,so that the game can restart itself. \
+Acceptance criteria :Toggling ON and OFF switch button restarts the game.
 
-7.	User Story: I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts at a new random series of button presses.
-As a game player
-I want to play in strict mode
-So that when i press a wrong button, am notified and the game restarts at a new series of random button presses.
+7.	User Story: I can play in strict mode where if I get a button press wrong,it notifies me that I have done so, and the game restarts at a new random series of button presses.\
+As a game player,I want to play in strict mode,So that when i press a wrong button, am notified and the game restarts at a new series of random button presses.\
 Acceptance Criteria: A game player should be able to play in strict mode and notified of an error and game restarts with a new series of 
 button presses.
 
 8.	User Story: I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over.
-As a game Player 
-I want to be able to win the game and notified Winner with a sound.
+As a game Player,I want to be able to win the game and notified Winner with a sound.\
 Acceptance Criteria:  A game player was able to win the game and the notified winner with a sound.
 
 
 
 ### Wireframes
 
-The Wireframe was initially created at the design phase to understand the basic functionality of the game and what users 
+The Wireframe was initially created at the design phase to understand the basic functionalities of the game and what users 
 will be expecetd to see as the final prodcut.
 Click on the link to open the Wireframe.[Simon Game Wireframe](https://github.com/daat2/play-simongame/blob/master/assets/wireframe/simonGame-wireframe.pdf)
 
@@ -120,7 +112,8 @@ Click on the link to open the Wireframe.[Simon Game Wireframe](https://github.co
 
 ## Testing
 -----------------------------
-See attached files for detailed manual testing .
+See attached link for detailed manual testing.\
+Automated testing would have been done, but my mentor said is not needed for my code.
 
 [Manual] (https://github.com/daat2/play-simongame/blob/master/assets/images/manualTest-simon.pdf)
 
@@ -137,24 +130,24 @@ The project is deployed in [Github pages](https://daat2.github.io/play-simongame
 
 Link sent to developer [simongame](https://daat2.github.io/play-simongame/ ).
 
--Click on cloan or download highlighted in green.
+- Click on cloan or download highlighted in green.
 
-Go to your location in your terminal.
+- Go to your location in your terminal.
 
-Do git clone and paste the link.
+- Do git clone and paste the link.
 
-This will clone the project on your computer.
+- This will clone the project on your computer.
 
-Enter CD change directory (Name of project).
+- Enter CD change directory (Name of project).
 
-This will enable the developer to open the project within its computer in the editor.
+- This will enable the developer to open the project within its computer in the editor.
 
 
 # Credits
 ---------------------------------
 ## Content
 Some of the ideas i used for some of the content were derived from watching videos on previous Simon game 
-on YouTube and research on how JavaScript works to get indepth understanding in order to design the game functionality.
+on YouTube and research on how JavaScript works to get indepth understanding in order to replicate the game.
 Links to pages visited below:
 		
 								
