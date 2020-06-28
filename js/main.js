@@ -23,6 +23,7 @@ let numLevels = 2; //Total number to declare a winner
 let flashes = 0
 let sound = true;
 let onoffSwitch = false; //power button on or off function
+let win =false;
 
 
 // Sound Variables //
@@ -152,18 +153,18 @@ function removeClass(id){
 };
 // Allowing user clicks
 $("#shapeB").click(function () {
-    addpplayerSequence(1);
+    addplayerSequence(1);
 });
 $("#shapeY").click(function () {
-    addpplayerSequence(2);
+    addplayerSequence(2);
 });
 $("#shapeG").click(function () {
-    addpplayerSequence(3);
+    addplayerSequence(3);
 });
 $("#shapeO").click(function () {
-    addpplayerSequence(4);
+    addplayerSequence(4);
 });
-function addpplayerSequence(id) {
+function addplayerSequence(id) {
     if (power && gameStarted && flashes === level) {
         playButtonPad(id);
         playerSequence.push(id);
@@ -187,7 +188,7 @@ function checkSequence() {
             setTimeout(function(){play(level)}, 2000)
             }
         
-    }
+    };
 };
 // Play a sound by Id
 function playSound(soundId){
@@ -196,22 +197,15 @@ function playSound(soundId){
     }
 };
 //checking user won the game 
-function win(playSound){
-    if(playerSequence.length === numLevels){
-        // level++;
-        $("#displayCount").text("WIN") 
-       clearInterval(winInterval);
-        setTimeout(function(){play(level)}, 1000)
-    
-       
-    }
-}
- win(winSound);
-console.log(win)
 
-function restartGame(){
-    playerSequence= [];
-    simonSeq=[];
-    level=0;
-     $("#displayCount").text("") 
-}
+    
+
+
+
+
+// function restartGame(){
+//     playerSequence= [];
+//     simonSeq=[];
+//     level=0;
+//      $("#displayCount").text("") 
+// }
