@@ -26,6 +26,7 @@ let onoffSwitch = false; //power button on or off function
 let win =false;
 
 
+
 // Sound Variables //
 
 let blueSound = new Audio("https://freesound.org/data/previews/151/151022_1838182-lq.mp3")
@@ -190,22 +191,33 @@ function checkSequence() {
         
     };
 };
-// Play a sound by Id
-function playSound(soundId){
+
+if (playerSequence.length===numLevels)
+playerWin();
+
+//Checking winnner
+ function playerWin(){
+     playSound(winSound);
+     displayCountMemory.innerHTML ="win"
+     win = true;
+   console.log("win") 
+
+ }
+
+
+//  Play a sound by Id
+ function playSound(soundId){
     if(sound){
         soundId.play();
-    }
-};
+     }
+ };
+ 
 //checking user won the game 
-
     
 
+ function restartGame(){
+  playerSequence= [];
+  win= false;
+}
 
 
-
-// function restartGame(){
-//     playerSequence= [];
-//     simonSeq=[];
-//     level=0;
-//      $("#displayCount").text("") 
-// }
