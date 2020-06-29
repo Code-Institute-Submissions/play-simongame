@@ -23,14 +23,14 @@ $("#onoffSwitch").click(function () {
         $("#displayCount").text("ON");
         power = true;
         playSound(clickSound);
-        console.log('Power', power);
+        
     } else {
         $("#displayCount").text("OFF");
         power = false;
         gameStarted = false;
         let playerSequence = [];
         let simonSeq = [];
-        console.log('Power', power);
+       
     }
 });
 //Strict Button Functionality
@@ -40,14 +40,14 @@ $("#strictButton").click(function () {
             $("#strictButton").css("background", "coral");
             $("#strictButton").addClass("fa fa-check");
             strict = true;
-            console.log(strict);
+           
         }
         else if (strict == true) {
             $("#strictButton").css("background", "white");
             $("#strictButton").removeClass("fa fa-check");
             $("#startButton").css("background", "red")
             strict = false;
-            console.log(strict);
+            
         }
     }
 });
@@ -58,7 +58,6 @@ $("#startButton").click(function() {
         gameStarted = true
     };
     function startGame(){
-        console.log('Start Game');
         level = 1;
         generateRandomNum();
         play(level)
@@ -69,7 +68,7 @@ function generateRandomNum() {
         let randNum = (Math.floor(Math.random() * 4) + 1);
         simonSeq.push(randNum);
     }
-    console.log('simon Sequence', simonSeq);
+    
 }
 function play(stage){
     displayCountMemory.innerHTML = stage;
@@ -80,7 +79,7 @@ function play(stage){
 }
 function playButton(index){
     setTimeout(function(){
-        console.log("Play " + simonSeq[index])
+        // console.log("Play " + simonSeq[index])
         playButtonPad(simonSeq[index])
         flashes++
     }, 2000 * (index + 1))
