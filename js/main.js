@@ -201,10 +201,17 @@ playerWin();
      playSound(winSound);
      displayCountMemory.innerHTML ="win"
      win = true;
-   console.log("win") 
+     setTimeout(function(){
+         power= false
+         playerSequence=[]
+         restartGame();
+     },800);
+        console.log("win") 
 
- }
+    }
+    
 
+ 
 
 //  Play a sound by Id
  function playSound(soundId){
@@ -212,7 +219,7 @@ playerWin();
         soundId.play();
      }
  };
- 
+
 //checking user won the game 
     
 
@@ -221,4 +228,3 @@ playerWin();
   win= false;
 }
 
-restartGame();
