@@ -184,6 +184,7 @@ function checkSequence() {
         if (playerSequence.length === level){
             displayCountMemory.innerHTML = "YES"
             level ++
+            playerWin();
             flashes = 0
             playerSequence = []
             setTimeout(function(){play(level)}, 2000)
