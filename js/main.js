@@ -187,7 +187,7 @@ function checkSequence() {
             playerWin();
             flashes = 0
             playerSequence = []
-            setTimeout(function(){play(level)}, 2000)
+          setTimeout(function(){play(level)}, 2000)
             }
         
     };
@@ -199,20 +199,19 @@ playerWin();
 //Checking winnner
  function playerWin(){
      playSound(winSound);
-     displayCountMemory.innerHTML ="win"
+     displayCountMemory.innerHTML ="win!"
      win = true;
      setTimeout(function(){
          power= false
          playerSequence=[]
          restartGame();
-     },800);
+     },300);
         console.log("win") 
 
     }
     
 
  
-
 //  Play a sound by Id
  function playSound(soundId){
     if(sound){
@@ -225,6 +224,11 @@ playerWin();
 
  function restartGame(){
   playerSequence= [];
+  simonSeq =[];
+  level= 0;
   win= false;
+  
+
 }
+
 
