@@ -1,16 +1,3 @@
-
-//Variables
-let green = document.getElementById("shapeG");
-let blue = document.getElementById("shapeB");
-let orange = document.getElementById("shapeO");
-let yellow = document.getElementById("shapeY");
-let onoffButton = document.getElementById("#onoffSwitch");
-// let displayCount = document.getElementById("displayText");
-// let boardSwitch = document.querySelector(".boardSwitch");
-let strictButton = document.getElementById("strict");
-let startButton = document.getElementById("start");
-
-/*************************/
 //Variables
 let displayCountMemory = document.getElementById("displayCount");
 let playerSequence = []; // user sequence
@@ -23,25 +10,13 @@ let numLevels = 20; //Total number to declare a winner
 let flashes = 0
 let sound = true;
 let onoffSwitch = false; //power button on or off function
-let win =false;
-
-
-
-// Sound Variables //
-
 let blueSound = new Audio("https://freesound.org/data/previews/151/151022_1838182-lq.mp3")
 let yellowSound = new Audio("https://freesound.org/data/previews/156/156859_2538033-lq.mp3")
 let greenSound = new Audio("https://freesound.org/data/previews/171/171495_2437358-lq.mp3")
 let orangeSound = new Audio("https://freesound.org/data/previews/191/191591_2437358-lq.mp3")
 let winSound = new Audio("https://freesound.org/data/previews/151/151605_57789-lq.mp3")
 let clickSound = new Audio("https://freesound.org/data/previews/522/522720_10058132-lq.mp3")
-
-
-
-
 /* ****  *** ********** */
-
-
 // Power button to test the game button switch
 $("#onoffSwitch").click(function () {
     if (power == false) {
@@ -105,10 +80,10 @@ function play(stage){
 }
 function playButton(index){
     setTimeout(function(){
-        // console.log("Play " + simonSeq[index])
+        console.log("Play " + simonSeq[index])
         playButtonPad(simonSeq[index])
         flashes++
-    }, 1000 * (index + 1))
+    }, 2000 * (index + 1))
 }
 // Plays a button by Id
 function playButtonPad(id){
@@ -152,27 +127,26 @@ function removeClass(id){
         }
     }, 1000)
 };
-// Allowing user clicks
+// Allow user clicks
 $("#shapeB").click(function () {
-    addplayerSequence(1);
+    addpplayerSequence(1);
 });
 $("#shapeY").click(function () {
-    addplayerSequence(2);
+    addpplayerSequence(2);
 });
 $("#shapeG").click(function () {
-    addplayerSequence(3);
+    addpplayerSequence(3);
 });
 $("#shapeO").click(function () {
-    addplayerSequence(4);
+    addpplayerSequence(4);
 });
-function addplayerSequence(id) {
+function addpplayerSequence(id) {
     if (power && gameStarted && flashes === level) {
         playButtonPad(id);
         playerSequence.push(id);
         checkSequence();
     }
 };
-//checking user sequence against simon Seq
 function checkSequence() {
     if (playerSequence[playerSequence.length - 1] !== simonSeq[playerSequence.length - 1]) {
         // Change counter to NO and Replay the game from same level
@@ -184,50 +158,15 @@ function checkSequence() {
         if (playerSequence.length === level){
             displayCountMemory.innerHTML = "YES"
             level ++
-            playerWin();
             flashes = 0
             playerSequence = []
-          setTimeout(function(){play(level)}, 2000)
-            }
-        
-    };
-};
-
-if (playerSequence.length === numLevels)
-playerWin();
-
-//Checking winnner
- function playerWin(){
-     playSound(winSound);
-     displayCountMemory.innerHTML ="win!"
-     win = true;
-     setTimeout(function(){
-         power= false
-         restartGame();
-     },300);
-        console.log("win") 
-
+            setTimeout(function(){play(level)}, 2000)
+        }
     }
-    
-
- 
-//  Play a sound by Id
- function playSound(soundId){
+};
+// Play a sounnd by Id
+function playSound(soundId){
     if(sound){
         soundId.play();
-     }
- };
-
-//checking user won the game 
-    
-
- function restartGame(){
-  playerSequence= [];
-  simonSeq =[];
-  level= 0;
-  win= false;
-  
-
-}
-
-
+    }
+};
