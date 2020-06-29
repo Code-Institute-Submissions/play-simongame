@@ -10,12 +10,12 @@ let numLevels = 20; //Total number to declare a winner
 let flashes = 0
 let sound = true;
 let onoffSwitch = false; //power button on or off function
-let blueSound = new Audio("https://freesound.org/data/previews/151/151022_1838182-lq.mp3")
-let yellowSound = new Audio("https://freesound.org/data/previews/156/156859_2538033-lq.mp3")
-let greenSound = new Audio("https://freesound.org/data/previews/171/171495_2437358-lq.mp3")
-let orangeSound = new Audio("https://freesound.org/data/previews/191/191591_2437358-lq.mp3")
-let winSound = new Audio("https://freesound.org/data/previews/151/151605_57789-lq.mp3")
-let clickSound = new Audio("https://freesound.org/data/previews/522/522720_10058132-lq.mp3")
+let blueSound = new Audio("https://freesound.org/data/previews/151/151022_1838182-lq.mp3");
+let yellowSound = new Audio("https://freesound.org/data/previews/156/156859_2538033-lq.mp3");
+let greenSound = new Audio("https://freesound.org/data/previews/171/171495_2437358-lq.mp3");
+let orangeSound = new Audio("https://freesound.org/data/previews/191/191591_2437358-lq.mp3");
+let winSound = new Audio("https://freesound.org/data/previews/151/151605_57789-lq.mp3");
+let clickSound = new Audio("https://freesound.org/data/previews/522/522720_10058132-lq.mp3");
 /* ****  *** ********** */
 // Power button to test the game button switch
 $("#onoffSwitch").click(function () {
@@ -45,7 +45,7 @@ $("#strictButton").click(function () {
         else if (strict == true) {
             $("#strictButton").css("background", "white");
             $("#strictButton").removeClass("fa fa-check");
-            $("#startButton").css("background", "red")
+            $("#startButton").css("background", "red");
             strict = false;
             
         }
@@ -55,12 +55,12 @@ $("#strictButton").click(function () {
 $("#startButton").click(function() {
     if(power && !gameStarted){
         startGame();
-        gameStarted = true
-    };
+        gameStarted = true;
+    }
     function startGame(){
         level = 1;
         generateRandomNum();
-        play(level)
+        play(level);
     }
 });
 function generateRandomNum() {
@@ -72,17 +72,17 @@ function generateRandomNum() {
 }
 function play(stage){
     displayCountMemory.innerHTML = stage;
-    flashes = 0
+    flashes = 0 ;
     for(let i = 0; i < stage; i++){
-        playButton(i)
+        playButton(i);
     }
 }
 function playButton(index){
     setTimeout(function(){
         // console.log("Play " + simonSeq[index])
-        playButtonPad(simonSeq[index])
-        flashes++
-    }, 2000 * (index + 1))
+        playButtonPad(simonSeq[index]);
+        flashes++;
+    }, 2000 * (index + 1));
 }
 // Plays a button by Id
 function playButtonPad(id){
@@ -105,9 +105,9 @@ function playButtonPad(id){
                 playSound(orangeSound);
                 break;
         }
-        removeClass(id)
+        removeClass(id);
     }
-};
+}
 function removeClass(id){
     setTimeout(function(){
         switch (id) {
@@ -124,8 +124,8 @@ function removeClass(id){
                 $("#shapeO").removeClass('orange-active');
                 break;
         }
-    }, 1000)
-};
+    }, 1000);
+}
 // Allow user clicks
 $("#shapeB").click(function () {
     addpplayerSequence(1);
@@ -145,24 +145,24 @@ function addpplayerSequence(id) {
         playerSequence.push(id);
         checkSequence();
     }
-};
+}
 function checkSequence() {
     if (playerSequence[playerSequence.length - 1] !== simonSeq[playerSequence.length - 1]) {
         // Change counter to NO and Replay the game from same level
-        displayCountMemory.innerHTML = "NO"
-        flashes = 0
-        playerSequence = []
-        setTimeout(function(){play(level)}, 2000)
+        displayCountMemory.innerHTML = "NO";
+        flashes = 0 ;
+        playerSequence = [];
+        setTimeout(function(){play(level)}, 2000);
     } else {
         if (playerSequence.length === level){
-            displayCountMemory.innerHTML = "YES"
-            level ++
-            flashes = 0
-            playerSequence = []
-            setTimeout(function(){play(level)}, 2000)
+            displayCountMemory.innerHTML = "YES";
+            level ++;
+            flashes = 0 ;
+            playerSequence = [];
+            setTimeout(function(){play(level)}, 2000);
         }
     }
-};
+}
 
 function playerWin(){
 playSound(winSound);
@@ -180,7 +180,7 @@ function playSound(soundId){
     if(sound){
         soundId.play();
     }
-};
+}
 //function to restart game when player wins
 function restartGame(){
     playerSequence=[];
