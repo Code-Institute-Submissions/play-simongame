@@ -87,6 +87,7 @@ Click on the link to open the Wireframe.[Simon Game Wireframe](https://github.co
   * Different levels of play mode : This will enable player to find it stimulating to build their memory strength.Such as 
     Normal and Easy mode.
   * Link to share game with friends on social media sites.
+  * Further improvements to be made for responsiveness using media queries.
   
 
 ## Technologies Used
@@ -116,9 +117,9 @@ Automated testing would have been done, but my mentor said is not needed for my 
 
 [Manual Testing](https://github.com/daat2/play-simongame/blob/master/assets/images/manualTest-simon.pdf)
 
-* The project was tested on the mobile devices [IOS,Android, desktop and Laptop].
+* The project was tested on the different devices [IOS,Android, desktop and Laptop].
 
-* The test was conducted across all browsers- Firefox,Google Chrome and Microsoft Edge
+* The test was conducted across two browsers- Firefox and Google Chrome. 
 
 * Operating System used for testing : Windows 8 and Windows 10.
 
@@ -221,7 +222,7 @@ Links to pages visited below:
 
  I received inspirations for this project from : 
 * Code Institute.
-* My appreciation for unrelenting support to Ann Greaves( CI Tutor Support).			
+* My appreciation for support to Ann Greaves( CI Tutor Support).			
 * Neil Kavanagh for his words of strenghth in me, "his words: I believe you can do it" (CI Student care adviser team)			
 * To my Slack team mates for the time spared.
 * Ignatius Ukwuoma (Mentor).
