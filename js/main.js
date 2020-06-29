@@ -19,7 +19,7 @@ let level = 0; //  keep track of turn
 let power = false;
 let gameStarted = false;
 let strict = false;
-let numLevels = 2; //Total number to declare a winner
+let numLevels = 20; //Total number to declare a winner
 let flashes = 0
 let sound = true;
 let onoffSwitch = false; //power button on or off function
@@ -193,7 +193,7 @@ function checkSequence() {
     };
 };
 
-if (playerSequence.length===numLevels)
+if (playerSequence.length === numLevels)
 playerWin();
 
 //Checking winnner
@@ -203,7 +203,6 @@ playerWin();
      win = true;
      setTimeout(function(){
          power= false
-         playerSequence=[]
          restartGame();
      },300);
         console.log("win") 
