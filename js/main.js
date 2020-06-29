@@ -164,9 +164,28 @@ function checkSequence() {
         }
     }
 };
+
+function playerWin(){
+playSound(winSound);
+displayCountMemory.innerHTML =("WIN!");
+win= true;
+setTimeout(function(){
+    power = false;
+    restartGame();
+},300);
+}
+
+
 // Play a sounnd by Id
 function playSound(soundId){
     if(sound){
         soundId.play();
     }
 };
+//function to restart game when player wins
+function restartGame(){
+    playerSequence=[];
+    simonSeq=[];
+    level=0;
+    win =false;
+}
