@@ -220,4 +220,4 @@ playerWin();
   win= false;
 }
 
-
+restartGame();
